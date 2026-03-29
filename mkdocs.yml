@@ -1,0 +1,95 @@
+site_name: "Systems Thinking — From SE to STPA"
+site_url: https://ccabos.github.io/systems/
+site_description: "Applying Systems Engineering Decomposition, Product Line Thinking, and STPA to Social and Technical Systems"
+site_author: C. Cabos
+
+repo_url: https://github.com/ccabos/systems
+repo_name: ccabos/systems
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  font:
+    text: Source Serif 4
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ccabos/systems
+
+copyright: "&copy; 2026 C. Cabos"
+
+nav:
+  - Home: index.md
+  - "Part I — Foundations":
+    - part1/index.md
+    - "The Five-Level SE Hierarchy": part1/se-hierarchy.md
+    - "Product Line Thinking": part1/product-lines.md
+    - "STPA and STAMP": part1/stpa-introduction.md
+  - "Part II — Social Systems":
+    - part2/index.md
+    - "Religion": part2/religion.md
+    - "Kingdom & Republic": part2/kingdom-republic.md
+    - "Ten Social Systems Compared": part2/ten-systems.md
+    - "The Social System Platform": part2/platform.md
+    - "Variation Points in Social Systems": part2/variation-points.md
+  - "Part III — Development Frameworks":
+    - part3/index.md
+    - "Eight Frameworks Decomposed": part3/frameworks.md
+    - "The Framework Platform": part3/framework-platform.md
+    - "Hybrid Architectures": part3/hybrids.md
+  - "Part IV — STPA Applied":
+    - part4/index.md
+    - "STPA on Religion": part4/religion-stpa.md
+    - "Control Structures in Social Systems": part4/control-structures.md
+    - "Architectural Remedies": part4/remedies.md
+  - About: about.md

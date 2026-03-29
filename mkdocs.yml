@@ -82,6 +82,15 @@ nav:
     - "Ten Social Systems Compared": part2/ten-systems.md
     - "The Social System Platform": part2/platform.md
     - "Variation Points in Social Systems": part2/variation-points.md
+    - "Worked Examples":
+      - "Verein (e.V.)": part2/examples/verein.md
+      - "Democracy": part2/examples/democracy.md
+      - "Theocracy": part2/examples/theocracy.md
+      - "Corporation": part2/examples/corporation.md
+      - "University": part2/examples/university.md
+      - "Military": part2/examples/military.md
+      - "Family": part2/examples/family.md
+      - "One-Party State": part2/examples/one-party-state.md
   - "Part III — Development Frameworks":
     - part3/index.md
     - "Eight Frameworks Decomposed": part3/frameworks.md

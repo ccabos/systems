@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporation (For-Profit) — SE Decomposition</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e17;color:#e2e8f0;font-family:'DM Sans',system-ui,sans-serif;min-height:100vh}
+.header{border-bottom:1px solid #2a3a5c;padding:18px 24px;background:linear-gradient(180deg,#1a2236,#0a0e17)}
+.header-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.logo{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,#f59e0b,#3b82f6,#ec4899);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0}
+h1{font-size:20px;font-weight:700;font-family:'Playfair Display',Georgia,serif}
+.sub{font-size:11px;color:#8899b4;margin-top:2px}
+.tabs{display:flex;gap:6px;margin-top:14px}
+.tab{padding:7px 18px;font-size:12px;font-weight:600;font-family:'DM Sans';background:transparent;color:#8899b4;border:1px solid #2a3a5c;border-radius:7px;cursor:pointer}
+.tab.active{background:#3b82f6;color:#fff;border-color:#3b82f6}
+.content{max-width:1000px;margin:0 auto;padding:20px 16px}
+.tip{background:#1a2236;border-radius:10px;padding:14px 18px;margin-bottom:16px;max-width:480px;display:none}
+.tip.show{display:block}
+.gc{background:#111827;border:1px solid #2a3a5c;border-radius:12px;overflow:hidden}
+.gh{text-align:center;padding:8px 16px;color:#556b8a;font-size:10px;font-style:italic;border-top:1px solid #1e2a42}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{padding:10px 14px;text-align:left;color:#8899b4;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;border-bottom:1px solid #2a3a5c;background:#111827;position:sticky;top:0;z-index:1}
+td{padding:9px 14px;border-bottom:1px solid #1e2a42}
+.tc{background:#111827;border:1px solid #2a3a5c;border-radius:12px;overflow:auto}
+tr{cursor:pointer;transition:background .15s}tr:hover{background:rgba(59,130,246,.05)}tr.sel{background:rgba(59,130,246,.1)}
+.back{display:inline-block;margin-bottom:16px;color:#8899b4;font-size:12px;text-decoration:none;border:1px solid #2a3a5c;padding:6px 14px;border-radius:6px}
+.back:hover{color:#e2e8f0;border-color:#556b8a}
+</style>
+</head>
+<body>
+<div class="header"><div class="header-inner">
+<div class="logo">⟐</div>
+<div style="flex:1;min-width:0"><h1>Corporation (For-Profit)</h1>
+<div class="sub">G = Goals · R = Requirements · F = Functions · L = Logical Architecture · P = Physical Implementation</div>
+<div class="tabs">
+<button class="tab active" onclick="showV('graph',this)">Graph</button>
+<button class="tab" onclick="showV('table',this)">Table</button>
+<button class="tab" onclick="showV('both',this)">Both</button>
+</div></div></div></div>
+<div class="content">
+<a class="back" href="../part2/ten-systems/">← Back to book</a>
+<div id="tip" class="tip"></div>
+<div id="gv"><div class="gc"><svg id="svg"></svg><div class="gh">Click a node to inspect · click background to deselect</div></div></div>
+<div id="tv" style="display:none;margin-top:16px"><div class="tc"><table id="tbl"><thead><tr><th>Level</th><th>ID</th><th>Description</th><th>↑</th><th>↓</th></tr></thead><tbody></tbody></table></div></div>
+</div>
+<script>
+var LV=[{k:"goals",l:"Goals",i:"◎"},{k:"requirements",l:"Requirements",i:"◈"},{k:"functions",l:"Functions",i:"◇"},{k:"logical",l:"Logical Architecture",i:"⬡"},{k:"physical",l:"Physical Implementation",i:"▣"}];
+var LC=["#f59e0b","#10b981","#3b82f6","#8b5cf6","#ec4899"];
+var D={"goals": [{"id": "G1", "text": "Generate sustainable profit and shareholder value", "children": ["R1", "R3"]}, {"id": "G2", "text": "Deliver products/services satisfying market demand", "children": ["R3", "R5"]}, {"id": "G3", "text": "Provide livelihood and purpose to employees", "children": ["R4", "R5"]}, {"id": "G4", "text": "Ensure organizational continuity", "children": ["R1", "R2"]}], "requirements": [{"id": "R1", "text": "Legal incorporation with limited liability", "children": ["F1", "F5"]}, {"id": "R2", "text": "Board accountable to shareholders", "children": ["F1"]}, {"id": "R3", "text": "Revenue exceeding costs", "children": ["F2", "F3"]}, {"id": "R4", "text": "Hierarchical management with clear authority", "children": ["F1", "F4"]}, {"id": "R5", "text": "Employment contracts", "children": ["F4"]}], "functions": [{"id": "F1", "text": "Strategic direction \u2014 vision, budgets, appointments", "children": ["L1"]}, {"id": "F2", "text": "Product/service delivery", "children": ["L2"]}, {"id": "F3", "text": "Financial management \u2014 accounting, treasury", "children": ["L3"]}, {"id": "F4", "text": "HR management \u2014 recruit, develop, compensate", "children": ["L4"]}, {"id": "F5", "text": "Legal and compliance", "children": ["L5"]}], "logical": [{"id": "L1", "text": "Governance \u2014 board, shareholders meeting, audit", "children": ["P1", "P2"]}, {"id": "L2", "text": "Operations \u2014 product dev, manufacturing, supply chain", "children": ["P3"]}, {"id": "L3", "text": "Financial \u2014 accounting, treasury, controlling", "children": ["P4"]}, {"id": "L4", "text": "HR \u2014 recruiting, payroll, training", "children": ["P5"]}, {"id": "L5", "text": "Legal & Compliance \u2014 counsel, regulatory", "children": ["P1"]}], "physical": [{"id": "P1", "text": "Articles of incorporation, board resolutions"}, {"id": "P2", "text": "CEO, C-suite, management hierarchy"}, {"id": "P3", "text": "Factories, offices, IT, supply chain"}, {"id": "P4", "text": "ERP (SAP/Oracle), bank accounts, annual report"}, {"id": "P5", "text": "Employment contracts, HR software, training"}]};
+var sel=null,lu={};
+LV.forEach(function(v,li){(D[v.k]||[]).forEach(function(it){lu[it.id]={t:it.text,c:it.children||[],li:li}})});
+function gp(id){var p=[];LV.forEach(function(v){(D[v.k]||[]).forEach(function(it){if((it.children||[]).indexOf(id)>=0)p.push(it.id)})});return p}
+function showV(v,b){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});b.classList.add('active');var g=document.getElementById('gv'),t=document.getElementById('tv');g.style.display=v==='table'?'none':'block';t.style.display=v==='graph'?'none':'block'}
+function showTip(id){var el=document.getElementById('tip');if(!id||!lu[id]){el.classList.remove('show');return}var n=lu[id],c=LC[n.li],lv=LV[n.li],par=gp(id);el.style.border='1.5px solid '+c+'60';el.innerHTML='<span style="color:'+c+';font-size:15px;font-weight:800;font-family:JetBrains Mono,monospace">'+id+'</span><span style="color:'+c+'aa;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-left:8px">'+lv.i+' '+lv.l+'</span><div style="color:#e2e8f0;margin-top:6px;font-size:14px;line-height:1.6;font-family:Source Serif 4,Georgia,serif">'+n.t+'</div><div style="margin-top:8px;font-size:10px;font-family:JetBrains Mono,monospace;color:#8899b4">'+(par.length?'↑ '+par.join(' '):'')+(par.length&&n.c.length?' · ':'')+(n.c.length?'↓ '+n.c.join(' '):'')+'</div>';el.classList.add('show')}
+function pick(id){sel=sel===id?null:id;showTip(sel);draw();hlTbl()}
+function draw(){var svg=d3.select('#svg');svg.selectAll('*').remove();var w=svg.node().parentNode.clientWidth||900,h=Math.max(480,LV.length*110+60);svg.attr('width',w).attr('height',h);var pt=50,pb=20,lh=(h-pt-pb)/(LV.length-1),nw=52,nh=30,nr=6;var nodes=[],pm={};LV.forEach(function(v,li){var items=D[v.k]||[],cnt=items.length,gap=18,tw=cnt*nw+(cnt-1)*gap,sx=(w-tw)/2;items.forEach(function(it,i){var x=sx+i*(nw+gap)+nw/2,y=pt+li*lh;nodes.push({id:it.id,text:it.text,children:it.children||[],x:x,y:y,li:li});pm[it.id]={x:x,y:y}})});var edges=[];nodes.forEach(function(n){(n.children||[]).forEach(function(c){if(pm[c])edges.push({s:n.id,t:c})})});var hl=new Set(),he=new Set();if(sel&&pm[sel]){hl.add(sel);edges.forEach(function(e,i){if(e.s===sel||e.t===sel){hl.add(e.s);hl.add(e.t);he.add(i)}})}var defs=svg.append('defs');edges.forEach(function(e,i){var sL=lu[e.s]?lu[e.s].li:0,tL=lu[e.t]?lu[e.t].li:0;var g=defs.append('linearGradient').attr('id','eg'+i).attr('gradientUnits','userSpaceOnUse').attr('x1',pm[e.s].x).attr('y1',pm[e.s].y).attr('x2',pm[e.t].x).attr('y2',pm[e.t].y);g.append('stop').attr('offset','0%').attr('stop-color',LC[sL]);g.append('stop').attr('offset','100%').attr('stop-color',LC[tL])});LV.forEach(function(v,li){var y=pt+li*lh;svg.append('rect').attr('x',0).attr('y',y-lh*.42).attr('width',w).attr('height',lh*.84).attr('fill',LC[li]+'06');svg.append('text').attr('x',12).attr('y',y+4).attr('fill',LC[li]).attr('font-size',10).attr('font-weight',700).attr('font-family','DM Sans,system-ui').text(v.i+' '+v.l)});var eg=svg.append('g');edges.forEach(function(e,i){var s=pm[e.s],t=pm[e.t],isH=he.has(i),my=(s.y+t.y)/2;eg.append('path').attr('d','M'+s.x+','+(s.y+nh/2)+' C'+s.x+','+my+' '+t.x+','+my+' '+t.x+','+(t.y-nh/2)).attr('fill','none').attr('stroke','url(#eg'+i+')').attr('stroke-width',isH?2.5:1).attr('stroke-opacity',sel?(isH?.9:.08):.25)});var ng=svg.append('g');nodes.forEach(function(n){var isSel=n.id===sel,isH=hl.has(n.id),dim=sel&&!isH,c=LC[n.li];var g=ng.append('g').attr('transform','translate('+n.x+','+n.y+')').style('cursor','pointer');if(isSel)g.append('rect').attr('x',-nw/2-3).attr('y',-nh/2-3).attr('width',nw+6).attr('height',nh+6).attr('rx',nr+2).attr('fill','none').attr('stroke',c).attr('stroke-width',2).attr('stroke-opacity',.5);g.append('rect').attr('x',-nw/2).attr('y',-nh/2).attr('width',nw).attr('height',nh).attr('rx',nr).attr('fill',isSel?c+'30':'#111827').attr('stroke',isSel?c:isH?c:'#2a3a5c').attr('stroke-width',isSel?2:isH?1.5:1).attr('opacity',dim?.3:1);g.append('text').attr('text-anchor','middle').attr('dominant-baseline','central').attr('fill',dim?'#556':c).attr('font-size',12).attr('font-weight',700).attr('font-family','JetBrains Mono,monospace').text(n.id);g.on('click',function(ev){ev.stopPropagation();pick(n.id)})}); svg.on('click',function(){pick(null)})}
+function buildTbl(){var tb=document.querySelector('#tbl tbody');tb.innerHTML='';LV.forEach(function(v,li){(D[v.k]||[]).forEach(function(it,idx){var tr=document.createElement('tr');tr.dataset.id=it.id;tr.onclick=function(){pick(it.id)};var par=gp(it.id);tr.innerHTML='<td style="color:'+LC[li]+';font-weight:600;font-size:11px;border-left:3px solid '+LC[li]+'40;white-space:nowrap">'+(idx===0?v.i+' '+v.l:'')+'</td><td style="font-family:JetBrains Mono,monospace;font-weight:800;color:'+LC[li]+';font-size:13px">'+it.id+'</td><td style="color:#e2e8f0;font-family:Source Serif 4,Georgia,serif;line-height:1.5">'+it.text+'</td><td style="font-family:JetBrains Mono,monospace;font-size:11px;color:#8899b4">'+(par.join(' ')||'—')+'</td><td style="font-family:JetBrains Mono,monospace;font-size:11px;color:#8899b4">'+((it.children||[]).join(' ')||'—')+'</td>';tb.appendChild(tr)})})}
+function hlTbl(){document.querySelectorAll('#tbl tbody tr').forEach(function(tr){tr.classList.toggle('sel',tr.dataset.id===sel)})}
+window.addEventListener('resize',draw);
+draw();buildTbl();
+</script>
+</body>
+</html>

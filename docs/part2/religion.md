@@ -45,3 +45,9 @@ Religion was the first social system we decomposed through the five-level SE hie
 **R6 (in-group/out-group) is a double-edged mechanism.** It serves G3 (social cohesion) but contains no built-in limit. The same mechanism that creates belonging can escalate to dehumanization. The absence of a structural "circuit breaker" is a key hazard identified in the STPA.
 
 **The Liturgical and Pastoral subsystems (L1, L2) serve different goals** that can conflict. L1 (liturgy) serves G1 (meaning) and G3 (cohesion) through shared ritual. L2 (pastoral care) serves G4 (comfort) through individual attention. When institutional resources are scarce, L1 tends to win — communal performance is more visible than individual care.
+
+---
+
+## See Also
+
+The political system that fuses religious authority with state governance shares many structural elements with this decomposition. Explore it in the [Theocracy Interactive Explorer](../interactive/theocracy.html).

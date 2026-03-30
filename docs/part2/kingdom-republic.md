@@ -2,6 +2,8 @@
 
 ## The Constitutional Monarchy as a Product-Line Variant
 
+[→ Interactive Explorer: Republic/Democracy](../interactive/democracy.html){ .md-button }
+
 !!! abstract "Key Finding"
     A constitutional monarchy reuses approximately **80% of the republican physical implementation** and **60% of its logical architecture**, while preserving the one goal-level requirement (dynastic continuity) that defines it as a distinct system variant.
 
@@ -28,7 +30,7 @@
 ### Incompatible — Cannot Reuse Without Abolishing the Monarchy
 
 | Republican Element | Why Incompatible |
-|-------------------|-----------------|
+|-------------------|----------------|
 | Popular sovereignty as *sole* source of authority | Eliminates hereditary authority by definition |
 | Periodic election of head of state | Replaces hereditary succession |
 | Electoral administration for choosing the executive | Structurally replaces dynastic succession |

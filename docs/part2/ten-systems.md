@@ -88,6 +88,8 @@ These systems share the core problem of *ruling a territory and its population*.
 
 #### 2.1.2 Republic (Modern Democratic)
 
+[→ Interactive Explorer](../interactive/democracy.html){ .md-button }
+
 | Level | ID | Description |
 |-------|----|-------------|
 | Goal | RG1 | Derive governing authority from consent of the governed (popular sovereignty) |
@@ -121,6 +123,8 @@ These systems share the core problem of *ruling a territory and its population*.
 
 #### 2.1.3 Theocracy
 
+[→ Interactive Explorer](../interactive/theocracy.html){ .md-button }
+
 | Level | ID | Description |
 |-------|----|-------------|
 | Goal | TG1 | Implement divine law as the foundation of all governance |
@@ -153,6 +157,8 @@ These systems share the core problem of *ruling a territory and its population*.
 | Physical | TP6 | Seminaries (Hawza, Yeshiva), madrasas, religious universities |
 
 #### 2.1.4 One-Party State
+
+[→ Interactive Explorer](../interactive/one-party-state.html){ .md-button }
 
 | Level | ID | Description |
 |-------|----|-------------|
@@ -191,6 +197,8 @@ These systems share the core problem of *coordinating collective human effort to
 
 #### 2.2.1 Corporation (For-Profit)
 
+[→ Interactive Explorer](../interactive/corporation.html){ .md-button }
+
 | Level | ID | Description |
 |-------|----|-------------|
 | Goal | CG1 | Generate sustainable profit and shareholder value |
@@ -222,6 +230,8 @@ These systems share the core problem of *coordinating collective human effort to
 
 #### 2.2.2 University
 
+[→ Interactive Explorer](../interactive/university.html){ .md-button }
+
 | Level | ID | Description |
 |-------|----|-------------|
 | Goal | UG1 | Advance human knowledge through research |
@@ -251,6 +261,8 @@ These systems share the core problem of *coordinating collective human effort to
 | Physical | UP5 | Endowment, state funding agreements, DFG/ERC grants |
 
 #### 2.2.3 Military
+
+[→ Interactive Explorer](../interactive/military.html){ .md-button }
 
 | Level | ID | Description |
 |-------|----|-------------|
@@ -320,6 +332,8 @@ These systems operate at the scale of direct human relationships.
 
 #### 2.3.1 The Family
 
+[→ Interactive Explorer](../interactive/family.html){ .md-button }
+
 | Level | ID | Description |
 |-------|----|-------------|
 | Goal | FG1 | Ensure biological reproduction and survival of offspring |
@@ -350,6 +364,8 @@ These systems operate at the scale of direct human relationships.
 | Physical | FP5 | School enrollment, pediatrician, community/religious membership |
 
 #### 2.3.2 The Verein (Voluntary Association)
+
+[→ Interactive Explorer](../interactive/verein.html){ .md-button }
 
 | Level | ID | Description |
 |-------|----|-------------|

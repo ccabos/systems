@@ -70,6 +70,7 @@ copyright: "&copy; 2026 C. Cabos"
 
 nav:
   - Home: index.md
+  - Introduction: introduction.md
   - "Part I — Foundations":
     - part1/index.md
     - "What Is a System?": part1/what-is-a-system.md

@@ -72,6 +72,7 @@ nav:
   - Home: index.md
   - "Part I — Foundations":
     - part1/index.md
+    - "What Is a System?": part1/what-is-a-system.md
     - "The Five-Level SE Hierarchy": part1/se-hierarchy.md
     - "Product Line Thinking": part1/product-lines.md
     - "STPA and STAMP": part1/stpa-introduction.md

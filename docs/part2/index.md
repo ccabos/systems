@@ -18,7 +18,7 @@ Systems that coordinate collective effort toward a declared purpose:
 - Corporation (For-Profit)
 - University
 - Military
-- Church / Religious Organization
+- Religion (Church / Religious Organisation)
 
 ### Intimate Systems Family
 Systems at the scale of direct human relationships:

@@ -12,9 +12,10 @@ The answer turned out to be more interesting than expected.
 
 Every analysis in this book follows the same method:
 
+0. **Define** what a system is — establishing a precise working definition before any decomposition begins
 1. **Decompose** the system through the five-level SE hierarchy
 2. **Compare** systems by identifying their shared platform and variation points (product line thinking)
-3. **Analyze** the control structure using STPA to identify how the system can produce outcomes opposite to its goals
+3. **Analyse** the control structure using STPA to identify how the system can produce outcomes opposite to its goals
 4. **Propose** architectural remedies — structural changes, not just policy adjustments
 
 ## Technology

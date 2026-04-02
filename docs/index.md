@@ -4,6 +4,11 @@
 
 ---
 
+!!! example "A place to start"
+    In 1975, Kodak built the world's first digital camera — and buried it. Twenty years later, digital photography destroyed the company that invented it. The engineers were excellent. The technology was real. The failure was structural: the organisation was wired to protect film revenues, and it reliably smothered anything that threatened them. No personnel change could have fixed it. The design had to change. Most institutional failures look like this. **[The Introduction](introduction.md)** develops this argument through several cases before any framework or equation appears.
+
+---
+
 This book explores a single, powerful idea: **the tools we use to engineer safe aircraft and reliable software apply with surprising precision to human institutions** — political regimes, religions, corporations, families, and development methodologies.
 
 We use three frameworks, layered on top of each other:
@@ -18,11 +23,12 @@ We use three frameworks, layered on top of each other:
 
 The book is organized in four parts:
 
-| Part | Focus |
-|------|-------|
-| [**Part I — Foundations**](part1/index.md) | The three frameworks: SE hierarchy, product lines, STPA |
+| | Focus |
+|--|-------|
+| [**Introduction**](introduction.md) | Why structural analysis beats moral exhortation — argued through concrete cases |
+| [**Part I — Foundations**](part1/index.md) | What is a system? The three frameworks: SE hierarchy, product lines, STPA |
 | [**Part II — Social Systems**](part2/index.md) | Ten social systems decomposed and compared |
-| [**Part III — Development Frameworks**](part3/index.md) | Waterfall, Scrum, Kanban, DevOps, and others — analyzed as a product family |
+| [**Part III — Development Frameworks**](part3/index.md) | Waterfall, Scrum, Kanban, DevOps, and others — analysed as a product family |
 | [**Part IV — STPA Applied**](part4/index.md) | STPA applied to religion and other social systems |
 
 ## The Core Insight

@@ -24,6 +24,18 @@ Why? Because the *connections* in the system — the feedback loops that link be
 
 The fix is not to motivate teachers more, threaten students more, or exhort administrators to care about real learning. None of those interventions touch the structure. The fix requires changing *what is measured, how it feeds back, and what it controls* — which means changing the connections. That is an architectural intervention, not a moral one.
 
+But what does that architectural fix look like, concretely? This is where the engineering approach earns its keep. Once you have traced the causal chain — teacher evaluation derives from class exam scores, school ranking derives from published test data, university admission derives from GPA — each link in that chain becomes a candidate for redesign:
+
+| Misconfigured connection | Architectural remedy |
+|---|---|
+| Teacher appraisal tied only to exam averages | Add peer review of lesson quality and longitudinal tracking of how former students actually perform |
+| School ranking uses only test results | Require portfolio assessment, inspection reports, and employer or university feedback as parallel signals |
+| Single high-stakes exam controls university entry | Reduce the stakes of any one instrument; distribute the selection signal across multiple independent measures |
+
+The remedies are not exotic. Several school systems have implemented versions of them. Finland removed published school rankings and standardised national testing before age 16; teacher evaluation shifted to professional peer review; the feedback loops changed. The outcomes changed with them — not because Finnish children or teachers are different, but because the control structure is different.
+
+This is the pattern the methods in this book are designed to produce: not merely a diagnosis of what went wrong, but a precise identification of *which connection to change* — and confidence that changing it will change the outcome. The analysis generates the remedy. The two are the same work.
+
 ---
 
 ## The Pattern Appears Everywhere

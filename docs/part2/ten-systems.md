@@ -683,3 +683,20 @@ The five-level SE decomposition is the analytical instrument. The variation poin
 ---
 
 *This analysis was produced using a systems engineering decomposition framework applied to social and political systems. The SE hierarchy (Goals → Requirements → Functions → Logical Architecture → Physical Implementation) with full traceability provides the analytical backbone; the product line concepts (platform, variation point, binding, reuse classification) provide the comparative methodology.*
+
+---
+
+## Interactive Explorers
+
+Explore each social system's SE decomposition interactively:
+
+| System | Explorer |
+|--------|----------|
+| Corporation | [→ Open](../interactive/corporation.html) |
+| Democracy (Republic) | [→ Open](../interactive/democracy.html) |
+| Family | [→ Open](../interactive/family.html) |
+| Military | [→ Open](../interactive/military.html) |
+| One-Party State | [→ Open](../interactive/one-party-state.html) |
+| Theocracy | [→ Open](../interactive/theocracy.html) |
+| University | [→ Open](../interactive/university.html) |
+| Verein | [→ Open](../interactive/verein.html) |

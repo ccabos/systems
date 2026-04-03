@@ -14,7 +14,7 @@ VP1 = biological/legal bond (unique), VP2 = birth/adoption (non-voluntary for ch
 
 ## Platform Mapping
 
-This system fills all ten universal functional slots identified in the [Social System Platform](../platform.md):
+This system fills all ten universal functional slots identified in the [Ten Social Systems Compared](../ten-systems.md):
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|

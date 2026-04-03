@@ -14,7 +14,7 @@ The Verein binds VP1 (authority) to *voluntary democratic participation*, VP2 (m
 
 ## Platform Mapping
 
-This system fills all ten universal functional slots identified in the [Social System Platform](../platform.md):
+This system fills all ten universal functional slots identified in the [Ten Social Systems Compared](../ten-systems.md):
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|

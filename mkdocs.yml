@@ -23,12 +23,10 @@ theme:
         icon: material/brightness-4
         name: Switch to dark mode
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.indexes
-    - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link

@@ -112,6 +112,45 @@ def md_to_html(md_text):
     return html
 
 
+def widen_third_column(html):
+    """For any table with >=3 columns, widen the third column so long descriptive
+    text does not wrap. fpdf2's write_html reads width attributes (as percentages)
+    from the cells of the first row to size columns."""
+
+    def process_table(match):
+        table_html = match.group(0)
+        first_row_match = re.search(r'<tr[^>]*>.*?</tr>', table_html, flags=re.DOTALL)
+        if not first_row_match:
+            return table_html
+        first_row = first_row_match.group(0)
+
+        n = len(re.findall(r'<(?:th|td)\b', first_row))
+        if n < 3:
+            return table_html
+
+        # Give column 3 a large share; split the remainder equally across the rest.
+        third_width = 60
+        remaining = 100 - third_width
+        other_width = remaining // (n - 1)
+        widths = [other_width] * n
+        widths[2] = third_width
+        widths[0] += 100 - sum(widths)  # correct rounding drift into col 1
+
+        cell_idx = [0]
+        def replace_cell(m):
+            tag = m.group(1)
+            attrs = m.group(2)
+            attrs = re.sub(r'\s*width\s*=\s*"[^"]*"', '', attrs)
+            w = widths[cell_idx[0]]
+            cell_idx[0] += 1
+            return f'<{tag}{attrs} width="{w}%">'
+
+        new_first_row = re.sub(r'<(th|td)((?:\s[^>]*)?)>', replace_cell, first_row)
+        return table_html.replace(first_row, new_first_row, 1)
+
+    return re.sub(r'<table[^>]*>.*?</table>', process_table, html, flags=re.DOTALL)
+
+
 class BookPDF(FPDF):
     def __init__(self):
         super().__init__(orientation='P', unit='mm', format='A4')
@@ -206,6 +245,7 @@ class BookPDF(FPDF):
 
         cleaned = clean_markdown(md_content)
         html = md_to_html(cleaned)
+        html = widen_third_column(html)
 
         self.set_font('LibSerif', '', 11)
         self.set_text_color(30, 30, 30)

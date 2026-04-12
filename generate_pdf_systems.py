@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 """Generate a single PDF of the Systems Thinking book from the MkDocs markdown sources."""
 
+import glob
+import io
 import os
 import re
 import sys
 import logging
 import markdown
 from fpdf import FPDF
+from PIL import Image as PILImage
 
 # Suppress fpdf2's noisy HTML parser warnings
 logging.getLogger("fpdf.html").setLevel(logging.ERROR)
 
-DOCS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs")
+REPO_DIR = os.path.dirname(os.path.abspath(__file__))
+DOCS_DIR = os.path.join(REPO_DIR, "docs")
+INTERACTIVE_DIR = os.path.join(DOCS_DIR, "interactive")
+VENDOR_DIR = os.path.join(REPO_DIR, "vendor")
+RENDERED_DIR = os.path.join(REPO_DIR, ".interactive_renders")
 
 FONTS = {
     "Serif": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
@@ -77,16 +84,25 @@ def clean_markdown(text):
         admonition_sub, text, flags=re.MULTILINE
     )
 
+    # Replace links to docs/interactive/*.html with rendered PNG embeds
+    # (must run BEFORE attribute-list stripping so the { .md-button } suffix
+    # is consumed by the same regex).
+    text = replace_interactive_links(text)
+
     # Remove MkDocs attribute lists: { .md-button }, { .lg }, etc.
     text = re.sub(r'\{[^}]*\.md-button[^}]*\}', '', text)
     text = re.sub(r'\{\s*[^}]*(?:width|loading|\.lg|\.middle)[^}]*\}', '', text)
 
-    # Convert interactive visualization links to plain text notes
+    # Any remaining non-embedded interactive links fall through to plain text.
     text = re.sub(
         r'\[([^\]]*Interactive[^\]]*)\]\([^)]*\.html[^)]*\)',
         r'*[\1 -- see online version]*',
         text, flags=re.IGNORECASE
     )
+
+    # Compact "Level | ID | Description" hierarchy tables into grouped bullet
+    # lists (much denser than the default bordered-table rendering).
+    text = compact_hierarchy_tables(text)
 
     # Convert internal .md links to plain text
     text = re.sub(r'\[([^\]]+)\]\([^)]*\.md[^)]*\)', r'\1', text)
@@ -110,6 +126,206 @@ def md_to_html(md_text):
     """Convert markdown to HTML suitable for fpdf2's write_html."""
     html = markdown.markdown(md_text, extensions=['tables'], output_format='html')
     return html
+
+
+# ---------------------------------------------------------------------------
+# Rendering interactive D3 pages to PNG via headless Chromium
+# ---------------------------------------------------------------------------
+
+_CHROMIUM_PATH = None
+_D3_BODY = None
+
+
+def find_chromium():
+    """Locate a headless Chromium executable that Playwright can drive."""
+    global _CHROMIUM_PATH
+    if _CHROMIUM_PATH:
+        return _CHROMIUM_PATH
+    candidates = []
+    for pat in (
+        "/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell",
+        "/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+    ):
+        candidates.extend(sorted(glob.glob(pat)))
+    for c in candidates:
+        if os.path.exists(c):
+            _CHROMIUM_PATH = c
+            return c
+    return None
+
+
+def _load_d3_body():
+    global _D3_BODY
+    if _D3_BODY is not None:
+        return _D3_BODY
+    d3_path = os.path.join(VENDOR_DIR, "d3.min.js")
+    if os.path.exists(d3_path):
+        with open(d3_path, "rb") as f:
+            _D3_BODY = f.read()
+    else:
+        _D3_BODY = b""
+    return _D3_BODY
+
+
+def render_interactive_to_png(html_filename, playwright_instance=None):
+    """Render docs/interactive/<html_filename> to a PNG image and return its path.
+
+    Uses a headless Chromium to execute the page's D3 script, switches to the
+    table view (which shows the full Level / ID / Description / parents /
+    children data), and screenshots the table container. Cached on disk."""
+    html_path = os.path.join(INTERACTIVE_DIR, html_filename)
+    if not os.path.exists(html_path):
+        return None
+
+    os.makedirs(RENDERED_DIR, exist_ok=True)
+    png_name = os.path.splitext(html_filename)[0] + ".png"
+    png_path = os.path.join(RENDERED_DIR, png_name)
+
+    # Cache: skip if existing PNG is newer than its source HTML.
+    if os.path.exists(png_path) and os.path.getmtime(png_path) >= os.path.getmtime(html_path):
+        return png_path
+
+    chromium = find_chromium()
+    if not chromium:
+        print(f"  No Chromium found; cannot render {html_filename}")
+        return None
+
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("  playwright not installed; cannot render interactive pages")
+        return None
+
+    d3_body = _load_d3_body()
+
+    def _render(pw):
+        browser = pw.chromium.launch(executable_path=chromium)
+        try:
+            context = browser.new_context(
+                viewport={"width": 1200, "height": 1800},
+                device_scale_factor=2,
+            )
+            page = context.new_page()
+
+            def handle_route(route):
+                url = route.request.url
+                if d3_body and "d3" in url and url.endswith(".js"):
+                    route.fulfill(
+                        status=200,
+                        content_type="application/javascript",
+                        body=d3_body,
+                    )
+                elif "fonts.googleapis" in url or "fonts.gstatic" in url:
+                    route.fulfill(status=200, content_type="text/css", body=b"")
+                else:
+                    try:
+                        route.continue_()
+                    except Exception:
+                        route.abort()
+
+            page.route("**/*", handle_route)
+            page.goto("file://" + os.path.abspath(html_path))
+            try:
+                page.wait_for_selector(".gc svg g", timeout=15000)
+            except Exception:
+                pass
+            # Switch to table-only view - the highest information density
+            page.evaluate(
+                "showV('table', document.querySelectorAll('.tab')[1])"
+            )
+            page.wait_for_timeout(400)
+            page.locator(".tc").first.screenshot(path=png_path)
+        finally:
+            browser.close()
+
+    try:
+        if playwright_instance is not None:
+            _render(playwright_instance)
+        else:
+            from playwright.sync_api import sync_playwright
+            with sync_playwright() as pw:
+                _render(pw)
+    except Exception as e:
+        print(f"  Render failed for {html_filename}: {e}")
+        return None
+
+    print(f"  Rendered: {png_name}")
+    return png_path
+
+
+# Regex for [label](interactive/x.html) with optional { ... } attrs
+_INTERACTIVE_LINK_RE = re.compile(
+    r'\[([^\]]+)\]\(([^)]*interactive/[^)]+\.html)\)(?:\s*\{[^}]*\})?'
+)
+
+
+def replace_interactive_links(text):
+    def _sub(m):
+        alt = m.group(1)
+        filename = os.path.basename(m.group(2))
+        png_path = render_interactive_to_png(filename)
+        if png_path:
+            return "\n\n![{}]({})\n\n".format(alt.strip(), png_path)
+        return "*[{} -- see online version]*".format(alt)
+    return _INTERACTIVE_LINK_RE.sub(_sub, text)
+
+
+# ---------------------------------------------------------------------------
+# Compact rendering of "Level | ID | Description" hierarchy tables
+# ---------------------------------------------------------------------------
+
+_HIER_HEADER_RE = re.compile(
+    r'^\s*\|\s*\*{0,2}Level\*{0,2}\s*\|\s*\*{0,2}ID\*{0,2}\s*\|\s*\*{0,2}Description\*{0,2}\s*\|\s*$',
+    re.IGNORECASE,
+)
+_HIER_SEP_RE = re.compile(r'^\s*\|[-:\s|]+\|\s*$')
+
+
+def compact_hierarchy_tables(text):
+    """Find `| Level | ID | Description |` markdown tables and rewrite them as
+    compact grouped bullet lists — one heading per level, one line per item.
+    This avoids the borders, per-row level repetition, and table-wrap
+    overhead that inflate the PDF."""
+    lines = text.split('\n')
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if _HIER_HEADER_RE.match(line) and i + 1 < len(lines) and _HIER_SEP_RE.match(lines[i + 1]):
+            j = i + 2
+            rows = []
+            while j < len(lines) and lines[j].strip().startswith('|'):
+                rows.append(lines[j])
+                j += 1
+            groups = {}
+            order = []
+            for row in rows:
+                cells = [c.strip() for c in row.strip().strip('|').split('|')]
+                if len(cells) < 3:
+                    continue
+                lvl = re.sub(r'\*+', '', cells[0]).strip().rstrip('.')
+                if not lvl:
+                    continue
+                if lvl not in groups:
+                    groups[lvl] = []
+                    order.append(lvl)
+                groups[lvl].append((cells[1], cells[2]))
+            if not groups:
+                out.append(line)
+                i += 1
+                continue
+            out.append('')
+            for lvl in order:
+                out.append('**{}**'.format(lvl))
+                out.append('')
+                for ident, desc in groups[lvl]:
+                    out.append('- **{}** — {}'.format(ident, desc))
+                out.append('')
+            i = j
+            continue
+        out.append(line)
+        i += 1
+    return '\n'.join(out)
 
 
 def widen_third_column(html):
@@ -237,6 +453,58 @@ class BookPDF(FPDF):
             self.cell(title_w, 7, title, new_x="RIGHT")
             self.cell(20, 7, str(page_num), align='R', new_x="LMARGIN", new_y="NEXT")
 
+    def place_image(self, img_path, alt_text=""):
+        """Embed an image centered on the current (or next) page. Handles
+        downscaling, format conversion, and page breaks so callers don't
+        have to worry about layout."""
+        if not img_path or not os.path.exists(img_path):
+            return
+        try:
+            with PILImage.open(img_path) as pil_img:
+                iw, ih = pil_img.size
+
+                # Downscale oversized images for reasonable PDF size
+                max_px = 1800
+                if iw > max_px or ih > max_px:
+                    pil_img.thumbnail((max_px, max_px), PILImage.LANCZOS)
+                    iw, ih = pil_img.size
+
+                if pil_img.mode in ("RGBA", "P", "LA"):
+                    bg = PILImage.new("RGB", pil_img.size, (255, 255, 255))
+                    if pil_img.mode == "P":
+                        pil_img = pil_img.convert("RGBA")
+                    bg.paste(pil_img, mask=pil_img.split()[-1] if "A" in pil_img.mode else None)
+                    pil_img = bg
+                elif pil_img.mode != "RGB":
+                    pil_img = pil_img.convert("RGB")
+
+                buf = io.BytesIO()
+                pil_img.save(buf, format="JPEG", quality=82, optimize=True)
+                buf.seek(0)
+
+            aspect = ih / iw
+            max_w = 170  # mm
+            w = min(max_w, iw * 0.264583)
+            h = w * aspect
+            available = self.h - self.get_y() - 30
+            if h > available:
+                max_h = 240
+                if h > max_h:
+                    h = max_h
+                    w = h / aspect
+                self.add_page()
+            x = (210 - w) / 2
+            self.image(buf, x=x, w=w)
+            self.ln(3)
+            if alt_text:
+                self.set_font("LibSans", "I", 8)
+                self.set_text_color(100, 100, 100)
+                self.cell(0, 4, alt_text, align="C", new_x="LMARGIN", new_y="NEXT")
+                self.set_text_color(30, 30, 30)
+            self.ln(4)
+        except Exception as e:
+            print(f"    Image error ({os.path.basename(img_path)}): {e}")
+
     def render_section(self, nav_title, md_content, level=0):
         """Render a section and return its starting page number."""
         self.add_page()
@@ -250,16 +518,35 @@ class BookPDF(FPDF):
         self.set_font('LibSerif', '', 11)
         self.set_text_color(30, 30, 30)
 
-        try:
-            self.write_html(html)
-        except Exception as e:
-            # Fallback: strip HTML and write as plain text
-            plain = re.sub(r'<[^>]+>', ' ', html)
-            plain = re.sub(r'  +', ' ', plain).strip()
-            if plain:
+        # Split the HTML on <img> tags so we can handle them with place_image
+        segments = re.split(r'(<img\s[^>]+/?>)', html)
+        for segment in segments:
+            if not segment:
+                continue
+            img_match = re.match(r'<img\s[^>]*src="([^"]+)"[^>]*/?>', segment)
+            if img_match:
+                img_path = img_match.group(1)
+                alt_match = re.search(r'alt="([^"]*)"', segment)
+                alt_text = alt_match.group(1) if alt_match else ""
+                self.place_image(img_path, alt_text)
+                continue
+
+            # Remove any stray img tags inside text segments
+            segment = re.sub(r'<img[^>]*/?>', '', segment)
+            if not segment.strip():
+                continue
+
+            try:
                 self.set_font('LibSerif', '', 11)
                 self.set_text_color(30, 30, 30)
-                self.multi_cell(0, 6, plain)
+                self.write_html(segment)
+            except Exception:
+                plain = re.sub(r'<[^>]+>', ' ', segment)
+                plain = re.sub(r'  +', ' ', plain).strip()
+                if plain:
+                    self.set_font('LibSerif', '', 11)
+                    self.set_text_color(30, 30, 30)
+                    self.multi_cell(0, 6, plain)
 
         return page_num
 

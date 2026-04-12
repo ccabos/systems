@@ -9,6 +9,7 @@ import sys
 import logging
 import markdown
 from fpdf import FPDF
+from fpdf.fonts import FontFace, TextStyle
 from PIL import Image as PILImage
 
 # Suppress fpdf2's noisy HTML parser warnings
@@ -29,6 +30,10 @@ FONTS = {
     "SansB": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
     "SansI": "/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf",
     "SansBI": "/usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf",
+    "Mono": "/usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf",
+    "MonoB": "/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf",
+    "MonoI": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+    "MonoBI": "/usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf",
 }
 
 # Navigation from mkdocs.yml with hierarchy level:
@@ -167,23 +172,30 @@ def _load_d3_body():
     return _D3_BODY
 
 
-def render_interactive_to_png(html_filename, playwright_instance=None):
-    """Render docs/interactive/<html_filename> to a PNG image and return its path.
+def render_interactive_to_png(html_filename):
+    """Render docs/interactive/<html_filename> to TWO PNG images using
+    headless Chromium: one of the D3 graph view, one of the Table view.
+    Returns (graph_png_path, table_png_path) or None on failure.
 
-    Uses a headless Chromium to execute the page's D3 script, switches to the
-    table view (which shows the full Level / ID / Description / parents /
-    children data), and screenshots the table container. Cached on disk."""
+    Results are cached on disk under .interactive_renders/ and only
+    re-generated when the HTML source is newer than the cached PNGs."""
     html_path = os.path.join(INTERACTIVE_DIR, html_filename)
     if not os.path.exists(html_path):
         return None
 
     os.makedirs(RENDERED_DIR, exist_ok=True)
-    png_name = os.path.splitext(html_filename)[0] + ".png"
-    png_path = os.path.join(RENDERED_DIR, png_name)
+    base = os.path.splitext(html_filename)[0]
+    graph_png = os.path.join(RENDERED_DIR, base + ".graph.png")
+    table_png = os.path.join(RENDERED_DIR, base + ".table.png")
 
-    # Cache: skip if existing PNG is newer than its source HTML.
-    if os.path.exists(png_path) and os.path.getmtime(png_path) >= os.path.getmtime(html_path):
-        return png_path
+    src_mtime = os.path.getmtime(html_path)
+    if (
+        os.path.exists(graph_png)
+        and os.path.exists(table_png)
+        and os.path.getmtime(graph_png) >= src_mtime
+        and os.path.getmtime(table_png) >= src_mtime
+    ):
+        return (graph_png, table_png)
 
     chromium = find_chromium()
     if not chromium:
@@ -198,59 +210,61 @@ def render_interactive_to_png(html_filename, playwright_instance=None):
 
     d3_body = _load_d3_body()
 
-    def _render(pw):
-        browser = pw.chromium.launch(executable_path=chromium)
-        try:
-            context = browser.new_context(
-                viewport={"width": 1200, "height": 1800},
-                device_scale_factor=2,
-            )
-            page = context.new_page()
-
-            def handle_route(route):
-                url = route.request.url
-                if d3_body and "d3" in url and url.endswith(".js"):
-                    route.fulfill(
-                        status=200,
-                        content_type="application/javascript",
-                        body=d3_body,
-                    )
-                elif "fonts.googleapis" in url or "fonts.gstatic" in url:
-                    route.fulfill(status=200, content_type="text/css", body=b"")
-                else:
-                    try:
-                        route.continue_()
-                    except Exception:
-                        route.abort()
-
-            page.route("**/*", handle_route)
-            page.goto("file://" + os.path.abspath(html_path))
-            try:
-                page.wait_for_selector(".gc svg g", timeout=15000)
-            except Exception:
-                pass
-            # Switch to table-only view - the highest information density
-            page.evaluate(
-                "showV('table', document.querySelectorAll('.tab')[1])"
-            )
-            page.wait_for_timeout(400)
-            page.locator(".tc").first.screenshot(path=png_path)
-        finally:
-            browser.close()
-
     try:
-        if playwright_instance is not None:
-            _render(playwright_instance)
-        else:
-            from playwright.sync_api import sync_playwright
-            with sync_playwright() as pw:
-                _render(pw)
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(executable_path=chromium)
+            try:
+                context = browser.new_context(
+                    viewport={"width": 1200, "height": 1800},
+                    device_scale_factor=2,
+                )
+                page = context.new_page()
+
+                def handle_route(route):
+                    url = route.request.url
+                    if d3_body and "d3" in url and url.endswith(".js"):
+                        route.fulfill(
+                            status=200,
+                            content_type="application/javascript",
+                            body=d3_body,
+                        )
+                    elif "fonts.googleapis" in url or "fonts.gstatic" in url:
+                        route.fulfill(status=200, content_type="text/css", body=b"")
+                    else:
+                        try:
+                            route.continue_()
+                        except Exception:
+                            route.abort()
+
+                page.route("**/*", handle_route)
+                page.goto("file://" + os.path.abspath(html_path))
+                try:
+                    page.wait_for_selector(".gc svg g", timeout=15000)
+                except Exception:
+                    pass
+                page.wait_for_timeout(400)
+
+                # Graph view
+                page.evaluate(
+                    "showV('graph', document.querySelectorAll('.tab')[0])"
+                )
+                page.wait_for_timeout(300)
+                page.locator(".gc").first.screenshot(path=graph_png)
+
+                # Table view
+                page.evaluate(
+                    "showV('table', document.querySelectorAll('.tab')[1])"
+                )
+                page.wait_for_timeout(300)
+                page.locator(".tc").first.screenshot(path=table_png)
+            finally:
+                browser.close()
     except Exception as e:
         print(f"  Render failed for {html_filename}: {e}")
         return None
 
-    print(f"  Rendered: {png_name}")
-    return png_path
+    print(f"  Rendered: {base}.graph.png + {base}.table.png")
+    return (graph_png, table_png)
 
 
 # Regex for [label](interactive/x.html) with optional { ... } attrs
@@ -261,12 +275,16 @@ _INTERACTIVE_LINK_RE = re.compile(
 
 def replace_interactive_links(text):
     def _sub(m):
-        alt = m.group(1)
+        alt = m.group(1).strip()
         filename = os.path.basename(m.group(2))
-        png_path = render_interactive_to_png(filename)
-        if png_path:
-            return "\n\n![{}]({})\n\n".format(alt.strip(), png_path)
-        return "*[{} -- see online version]*".format(alt)
+        result = render_interactive_to_png(filename)
+        if not result:
+            return "*[{} -- see online version]*".format(alt)
+        graph_png, table_png = result
+        return (
+            "\n\n![{} — graph]({})\n\n"
+            "![{} — table]({})\n\n"
+        ).format(alt, graph_png, alt, table_png)
     return _INTERACTIVE_LINK_RE.sub(_sub, text)
 
 
@@ -328,6 +346,26 @@ def compact_hierarchy_tables(text):
     return '\n'.join(out)
 
 
+def strip_inline_tags_in_table_cells(html):
+    """fpdf2's write_html raises NotImplementedError on any nested tag inside
+    a <td> or <th> element (e.g. <em>, <strong>, <code>, <a>...). That error
+    fires MID-RENDER, which corrupts output because write_html has already
+    emitted partial content before raising. To stay safe we strip all inline
+    tags inside table cells up front, keeping only their text."""
+    def process_cell(m):
+        tag = m.group(1)
+        attrs = m.group(2)
+        content = m.group(3)
+        content = re.sub(r'<[^>]+>', '', content)
+        return f'<{tag}{attrs}>{content}</{tag}>'
+    return re.sub(
+        r'<(td|th)((?:\s[^>]*)?)>(.*?)</\1>',
+        process_cell,
+        html,
+        flags=re.DOTALL,
+    )
+
+
 def widen_third_column(html):
     """For any table with >=3 columns, widen the third column so long descriptive
     text does not wrap. fpdf2's write_html reads width attributes (as percentages)
@@ -367,6 +405,14 @@ def widen_third_column(html):
     return re.sub(r'<table[^>]*>.*?</table>', process_table, html, flags=re.DOTALL)
 
 
+HTML_TAG_STYLES = {
+    # Override fpdf2's default Courier-based pre/code styles with a Unicode
+    # font so ASCII box-drawing characters (┌ └ ├ │ ─) render correctly.
+    "pre": TextStyle(font_family="LibMono", t_margin=4 + 7 / 30),
+    "code": FontFace(family="LibMono"),
+}
+
+
 class BookPDF(FPDF):
     def __init__(self):
         super().__init__(orientation='P', unit='mm', format='A4')
@@ -379,6 +425,10 @@ class BookPDF(FPDF):
         self.add_font('LibSans', 'B', FONTS["SansB"])
         self.add_font('LibSans', 'I', FONTS["SansI"])
         self.add_font('LibSans', 'BI', FONTS["SansBI"])
+        self.add_font('LibMono', '', FONTS["Mono"])
+        self.add_font('LibMono', 'B', FONTS["MonoB"])
+        self.add_font('LibMono', 'I', FONTS["MonoI"])
+        self.add_font('LibMono', 'BI', FONTS["MonoBI"])
         self.toc_entries = []
 
     def header(self):
@@ -513,6 +563,7 @@ class BookPDF(FPDF):
 
         cleaned = clean_markdown(md_content)
         html = md_to_html(cleaned)
+        html = strip_inline_tags_in_table_cells(html)
         html = widen_third_column(html)
 
         self.set_font('LibSerif', '', 11)
@@ -536,17 +587,17 @@ class BookPDF(FPDF):
             if not segment.strip():
                 continue
 
+            # Important: do NOT wrap write_html in a fallback that re-renders
+            # the whole segment — write_html commits output incrementally, so
+            # a retry would duplicate everything that rendered before the
+            # error. Just log and continue; strip_inline_tags_in_table_cells
+            # already removes the common offender.
+            self.set_font('LibSerif', '', 11)
+            self.set_text_color(30, 30, 30)
             try:
-                self.set_font('LibSerif', '', 11)
-                self.set_text_color(30, 30, 30)
-                self.write_html(segment)
-            except Exception:
-                plain = re.sub(r'<[^>]+>', ' ', segment)
-                plain = re.sub(r'  +', ' ', plain).strip()
-                if plain:
-                    self.set_font('LibSerif', '', 11)
-                    self.set_text_color(30, 30, 30)
-                    self.multi_cell(0, 6, plain)
+                self.write_html(segment, tag_styles=HTML_TAG_STYLES)
+            except Exception as exc:
+                print(f"    write_html error in '{nav_title}': {exc}")
 
         return page_num
 

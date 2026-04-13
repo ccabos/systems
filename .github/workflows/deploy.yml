@@ -26,7 +26,9 @@ jobs:
 
       - run: pip install mkdocs mkdocs-material pymdown-extensions
 
-      - run: mkdocs build --strict
+      - name: Build MkDocs site
+        working-directory: projects/systems-introduction-book
+        run: mkdocs build --strict --site-dir ../../site
 
       - uses: actions/upload-pages-artifact@v3
         with:

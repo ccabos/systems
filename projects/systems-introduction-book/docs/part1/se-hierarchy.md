@@ -1,5 +1,8 @@
 # The Five-Level SE Hierarchy
 
+!!! info "Canonical reference"
+    The normative definition of the five-level hierarchy, its traceability rules, ID conventions, decomposition order, and failure pathologies is maintained as the project's knowledge base under `knowledge/se-techniques/goals-requirements-hierarchy/`. This chapter is the narrative introduction; the knowledge base is the reference.
+
 ## A Universal Decomposition Instrument
 
 Systems engineering decomposes any system — technical or social — into five levels of abstraction. Each level answers a different question, and each item at one level traces to items at the next level down, forming a directed acyclic graph with full traceability.

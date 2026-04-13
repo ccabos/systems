@@ -1,5 +1,8 @@
 # What Is a System?
 
+!!! info "Canonical reference"
+    The normative statement of the foundational concepts in this chapter — the working definition, the replaceability hierarchy, emergence, boundaries, and the distinction between technical and non-technical systems — is maintained as the project's knowledge base under `knowledge/foundations/`. This chapter is the narrative discussion; the knowledge base is the reference.
+
 ## Before We Decompose, We Must Define
 
 Every analytical framework rests on an ontology — a theory of what kinds of things exist. Before applying the SE hierarchy, product line thinking, or STPA, we need a precise answer to the question that precedes all of them: *what makes something a system in the first place?*

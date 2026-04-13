@@ -1,5 +1,8 @@
 # STPA and STAMP
 
+!!! info "Canonical reference"
+    The normative statements of STAMP (the accident model) and STPA (the four-step hazard analysis procedure, the four UCA types, and the rules for translating an SE decomposition into STPA inputs) are maintained as the project's knowledge base under `knowledge/se-techniques/stamp/` and `knowledge/se-techniques/stpa/`. This chapter is the narrative introduction; the knowledge base is the reference.
+
 ## System-Theoretic Process Analysis
 
 ### The STAMP Accident Model

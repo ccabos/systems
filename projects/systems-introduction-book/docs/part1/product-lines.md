@@ -1,5 +1,8 @@
 # Product Line Thinking
 
+!!! info "Canonical reference"
+    The normative definitions of platform, variation points, binding decisions, the reuse gradient, the coherence rule, the workaround principle, and the product-line architect's toolkit are maintained as the project's knowledge base under `knowledge/se-techniques/product-line-engineering/`. This chapter is the narrative introduction; the knowledge base is the reference.
+
 ## Platform, Variation Points, and Reuse
 
 A **product line** (or product family) is a set of systems that share a **common platform** but differ at defined **variation points**. The engineering discipline has three core ideas:

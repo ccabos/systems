@@ -1,74 +1,71 @@
-# Systems Thinking — From SE to STPA
+# Systems — Applying Systems Engineering to Non-Technical Systems
 
-Applying Systems Engineering Decomposition, Product Line Thinking, and STPA to Social and Technical Systems.
+A research project on whether the methods engineers use to design safe,
+reliable, goal-directed systems can be applied with benefit to
+non-technical systems — political regimes, religions, corporations,
+universities, families, development processes, and others.
 
-## Website
+## Repository layout
 
-The book is published at [https://ccabos.github.io/systems/](https://ccabos.github.io/systems/)
-
-## About
-
-This book explores a single idea: the tools we use to engineer safe aircraft and reliable software apply with surprising precision to human institutions — political regimes, religions, corporations, families, and development methodologies.
-
-Three frameworks, layered:
-
-1. **Five-Level SE Hierarchy** — Goals → Requirements → Functions → Logical Architecture → Physical Implementation
-2. **Product Line Thinking** — Platform, variation points, and reuse across system types
-3. **STPA** — System-Theoretic Process Analysis for identifying unsafe control actions
-
-## Structure
+This repository is split into two top-level trees:
 
 ```
-├── docs/
-│   ├── index.md                    # Home page
-│   ├── part1/                      # Foundations
-│   │   ├── se-hierarchy.md         # The five-level decomposition
-│   │   ├── product-lines.md        # Platform & variation points
-│   │   └── stpa-introduction.md    # STAMP and STPA
-│   ├── part2/                      # Social Systems
-│   │   ├── religion.md             # The founding decomposition
-│   │   ├── kingdom-republic.md     # Reuse analysis
-│   │   ├── ten-systems.md          # Full comparative analysis
-│   │   ├── platform.md             # The social system platform
-│   │   └── variation-points.md     # Six variation points
-│   ├── part3/                      # Development Frameworks
-│   │   ├── frameworks.md           # Eight frameworks decomposed
-│   │   ├── framework-platform.md   # Ten functional slots
-│   │   └── hybrids.md              # Three hybrid architectures
-│   ├── part4/                      # STPA Applied
-│   │   ├── religion-stpa.md        # Full STPA on religion
-│   │   ├── control-structures.md   # Control architectures compared
-│   │   └── remedies.md             # Design principles
-│   └── about.md
-├── mkdocs.yml                      # MkDocs configuration
-└── .github/workflows/deploy.yml    # GitHub Pages deployment
+systems/
+├── knowledge/     # The systematic foundation — the evidence base
+└── projects/      # Derived artefacts that draw on knowledge/
 ```
 
-## Local Development
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the rules that keep them
+separate.
 
-### Prerequisites
+### `knowledge/`
 
-- Python 3.x
+The evidence base the project draws upon. Dry, exhaustive, and
+listing-heavy on purpose. It holds:
 
-### Installation
+- `foundations/` — what a system is
+- `se-techniques/` — SE skills (SE hierarchy, product lines, STPA, …)
+- `system-catalogues/` — case studies of real systems
+  - `social-systems/` — religions, polities, organisations, families…
+  - `dev-frameworks/` — Waterfall, V-Model, PRINCE2, Scrum, Kanban,
+    Design Thinking, DevOps, SAFe
+- `references/` — bibliography and glossary
+
+More catalogues will be added under `system-catalogues/` as scope grows.
+
+### `projects/`
+
+Derived artefacts:
+
+- `systems-introduction-book/` — a readable book introducing the ideas
+  for readers unfamiliar with SE. Published as a MkDocs site and a PDF.
+- `problems/` — problem-driven application area. One folder per
+  concrete problem; each folder has a `problem.md` at its root.
+- `agent-skill/` — an AI agent skill to apply SE to a new system or
+  problem.
+- `textbook/` — placeholder for a future derived textbook.
+
+## The book
+
+The readable book is published at
+[https://ccabos.github.io/systems/](https://ccabos.github.io/systems/)
+and distributed as a PDF
+([`projects/systems-introduction-book/Systems_Thinking_Book.pdf`](projects/systems-introduction-book/Systems_Thinking_Book.pdf)).
+
+To build it locally:
 
 ```bash
+cd projects/systems-introduction-book
 pip install mkdocs mkdocs-material pymdown-extensions
+mkdocs serve    # local preview at http://127.0.0.1:8000
+mkdocs build    # static site in ./site
+python generate_pdf.py
 ```
 
-### Local Server
+## Historical state
 
-```bash
-mkdocs serve
-```
-
-The site is available at `http://127.0.0.1:8000`
-
-### Build
-
-```bash
-mkdocs build
-```
+The monolithic book layout that existed before this restructure is
+preserved under the `Release` tag.
 
 ## License
 

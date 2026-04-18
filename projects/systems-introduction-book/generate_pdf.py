@@ -337,8 +337,10 @@ def compact_hierarchy_tables(text):
                 out.append('**{}**'.format(lvl))
                 out.append('')
                 for ident, desc in groups[lvl]:
-                    out.append('- **{}** — {}'.format(ident, desc))
-                out.append('')
+                    # Plain paragraphs avoid fpdf2's bullet rendering bugs
+                    # (oversized/coloured bullet, list broken across pages).
+                    out.append('**{}** \u2014 {}'.format(ident, desc))
+                    out.append('')
             i = j
             continue
         out.append(line)
@@ -366,10 +368,11 @@ def strip_inline_tags_in_table_cells(html):
     )
 
 
-def widen_third_column(html):
-    """For any table with >=3 columns, widen the third column so long descriptive
-    text does not wrap. fpdf2's write_html reads width attributes (as percentages)
-    from the cells of the first row to size columns."""
+def widen_long_column(html):
+    """For tables with >=2 columns, give 60% width to whichever column has the
+    most text content (sampled across the first few rows). The remaining 40% is
+    split equally among the other columns. This handles tables where the long
+    column is not always column 3."""
 
     def process_table(match):
         table_html = match.group(0)
@@ -377,18 +380,29 @@ def widen_third_column(html):
         if not first_row_match:
             return table_html
         first_row = first_row_match.group(0)
-
         n = len(re.findall(r'<(?:th|td)\b', first_row))
-        if n < 3:
+        if n < 2:
             return table_html
 
-        # Give column 3 a large share; split the remainder equally across the rest.
-        third_width = 60
-        remaining = 100 - third_width
+        # Sample up to 6 rows to find which column carries the most text.
+        all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, flags=re.DOTALL)
+        col_lengths = [0] * n
+        for row_html in all_rows[:6]:
+            cells = re.findall(r'<(?:th|td)[^>]*>(.*?)</(?:th|td)>', row_html, flags=re.DOTALL)
+            for i, cell in enumerate(cells[:n]):
+                col_lengths[i] += len(re.sub(r'<[^>]+>', '', cell).strip())
+
+        long_col = col_lengths.index(max(col_lengths))
+
+        # Scale the long-column share down for wide tables so the other
+        # columns stay wide enough to avoid mid-word line breaks.
+        # n=2→60, n=3→60, n=4→40, n=5→35, n=6→30
+        long_width = max(30, 60 - max(0, n - 3) * 10)
+        remaining = 100 - long_width
         other_width = remaining // (n - 1)
         widths = [other_width] * n
-        widths[2] = third_width
-        widths[0] += 100 - sum(widths)  # correct rounding drift into col 1
+        widths[long_col] = long_width
+        widths[0] += 100 - sum(widths)  # absorb rounding drift into col 1
 
         cell_idx = [0]
         def replace_cell(m):
@@ -403,6 +417,18 @@ def widen_third_column(html):
         return table_html.replace(first_row, new_first_row, 1)
 
     return re.sub(r'<table[^>]*>.*?</table>', process_table, html, flags=re.DOTALL)
+
+
+def convert_ul_to_paragraphs(html):
+    """Replace <ul>…</ul> blocks with plain <p>• item</p> paragraphs.
+
+    fpdf2's built-in <li> renderer draws a filled disc in a hardcoded red
+    colour regardless of li_prefix_color kwargs in some versions. Converting
+    to plain paragraphs gives us full control over bullet colour and size."""
+    def replace_list(m):
+        items = re.findall(r'<li[^>]*>(.*?)</li>', m.group(1), flags=re.DOTALL)
+        return '\n'.join(f'<p>\u2022\u00a0{item.strip()}</p>' for item in items)
+    return re.sub(r'<ul[^>]*>(.*?)</ul>', replace_list, html, flags=re.DOTALL)
 
 
 HTML_TAG_STYLES = {
@@ -564,7 +590,8 @@ class BookPDF(FPDF):
         cleaned = clean_markdown(md_content)
         html = md_to_html(cleaned)
         html = strip_inline_tags_in_table_cells(html)
-        html = widen_third_column(html)
+        html = widen_long_column(html)
+        html = convert_ul_to_paragraphs(html)
 
         self.set_font('LibSerif', '', 11)
         self.set_text_color(30, 30, 30)

@@ -18,16 +18,16 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|
-| Authority & Decision-Making | See Goals and Requirements in the interactive view |
-| Membership & Belonging | See R-level items defining who belongs |
-| Resource Allocation | See F-level financial/economic functions |
-| Norm Setting & Enforcement | See F3/F4-type functions |
-| Dispute Resolution | Embedded in governance and judicial subsystems |
-| Legitimation | See the Goals level — the system's stated purpose |
-| Succession & Continuity | See VP4 binding above |
-| External Representation | See executive/diplomatic functions |
-| Socialization | See education/onboarding functions |
-| Activity Delivery | See operations/delivery subsystem |
+| Authority & Decision-Making | Faculty senate (academic matters); rector/president (executive); board of trustees (strategic oversight) |
+| Membership & Belonging | Matriculated students; academic and administrative staff; alumni (honorary standing) |
+| Resource Allocation | Rector/president budget; competitive grant allocation; tuition and third-party research funding |
+| Norm Setting & Enforcement | Academic regulations; research ethics boards; HR policy; accreditation standards |
+| Dispute Resolution | Academic appeals committees; disciplinary panels; employment tribunals |
+| Legitimation | Knowledge creation and transmission; accreditation; academic freedom as constitutive value |
+| Succession & Continuity | Rector election or appointment; academic tenure; departmental and programme continuity |
+| External Representation | Rector; research partnerships; international agreements; alumni relations |
+| Socialisation | Academic induction; doctoral mentorship; collegiate culture; peer learning communities |
+| Activity Delivery | Teaching; research; knowledge transfer; community engagement and public scholarship |
 
 ---
 

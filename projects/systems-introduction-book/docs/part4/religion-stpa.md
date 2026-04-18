@@ -177,7 +177,35 @@ STAMP models systems as hierarchical control structures where controllers issue 
                     └─────────────────────────────┘
 ```
 
-### 3.2 Key Observations about the Control Structure
+### 3.2 Why these control loops — and why only these?
+
+STPA requires each arrow in a control structure to satisfy three conditions: (a) the upstream element is a **controller** that issues observable, authoritative control actions; (b) the downstream element is a **controlled process** whose state is expected to change in response; (c) a **feedback channel**, however weak, closes the loop. Anything that fails any of these conditions is modelled elsewhere — as peer coordination that aggregates into an existing feedback channel, as an environmental disturbance, or as a belief inside a controller's process model. Applying these conditions to religion yields exactly four loops.
+
+**The four loops are forced by the SE decomposition.** Each loop corresponds to a controller–controlled pair already named in §1.1. The authority that makes each pair a control relationship rather than mere influence is supplied by R4 ("authority structure to interpret and enforce norms"), which the system explicitly requires.
+
+| Loop | Controller (SE ID) | Controlled Process | Authority Source | Primary Control Actions |
+|------|-------------------|-------------------|------------------|------------------------|
+| 1 | Central Authority (P5, P6) | Clergy (P3) | R4 + claimed divine mandate | Doctrine (F1, F4), canon law (F3), appointment/removal |
+| 2 | Clergy (P3) | Congregation (P4) | R4, delegated downward | Preaching (F1), sacraments (F5), pastoral rules (F2), discipline |
+| 3 | Congregation (P4) | Individual | R5, R6 (shared identity, in/out-group) | Social norms, inclusion/exclusion, reputation |
+| 4 | Individual (self) | Own behaviour | Internalised R1–R3 | Self-regulation, conscience, confession, prayer |
+
+These are the only pairs in the decomposition where one element has designated authority to issue control actions the other is structurally expected to obey. Remove any of them and the path from doctrine to behaviour breaks — no alternative channel carries an authoritative control action to the individual.
+
+**Why other plausible relationships are not control loops.**
+
+- **Clergy ↔ clergy (lateral).** Clergy of equal rank do not issue authoritative control actions to each other. Synods, councils, and theological deliberations are coordination inputs that aggregate into Loop 1's feedback channel, not independent loops. Where rank differences exist internally (bishop over priest, abbot over monk), they are Loop 1 or Loop 2 at finer granularity, not a new loop.
+- **Congregation ↔ congregation.** Parish networks are parallel peers. Binding coordination between them routes through Loop 1 — the authority that owns both. Direct inter-congregational pressure exists socially but carries no structural control action.
+- **Individual or congregation → Authority (upward control).** In the hierarchical institutional forms this analysis targets, laity have no structural authority to issue control actions upward; their upward channel is *feedback*, which is already represented on every loop. Congregationalist Protestant, Quaker, and Reform Jewish polities genuinely invert Loop 1 and would require their own control structure — they are a different system under the same family name.
+- **God → Authority.** The system claims this loop, but it cannot be modelled as an STPA controller: divine control actions are not observably issued or measurably received. What actually operates is the Authority's *belief that it is divinely controlled* — a feature of its process model, visible inside the top box of the diagram, rather than a separate loop. STPA models what exists, not what is asserted.
+- **Civil state, science, secular media.** These lie in the system's environment, not its control structure. They can disturb the system or supply external feedback, but they do not issue control actions the religion is architecturally bound to obey. They appear in §7 as *externally imposed circuit breakers*, not internal loops.
+- **Other religions.** No cross-denominational authority exists by definition of denomination. Influence is cultural; control is absent.
+- **Schism and sect formation.** Not a loop but a phase transition — when Loop 1 fails to correct accumulating error, a fragment of the controlled process exits the hierarchy and becomes the top of a new control structure. It is a symptom of loop failure, analysed in §5, not a separate control relationship.
+- **The reverse arrows on the four loops.** Every loop already has an upward feedback channel (shown in the diagram). Those arrows are feedback, not control, and are analysed under §6.1.
+
+The four loops are therefore not an analyst's modelling choice but a consequence of applying STPA's definition of "controller" to the SE decomposition in §1.1. A different decomposition — congregational polity, decentralised charismatic movement, household-religion — would yield a different structure. Within the hierarchical institutional decomposition under analysis, no fifth loop exists.
+
+### 3.3 Key Observations about the Control Structure
 
 **Feedback poverty at the top.** The Central Doctrinal Authority receives feedback primarily through its own appointees (clergy), who have incentives to report compliance rather than problems. External feedback (scientific findings, secular criticism, abuse reports) is structurally classified as hostile input, not corrective signal.
 

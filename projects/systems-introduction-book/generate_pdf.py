@@ -129,7 +129,7 @@ def clean_markdown(text):
 
 def md_to_html(md_text):
     """Convert markdown to HTML suitable for fpdf2's write_html."""
-    html = markdown.markdown(md_text, extensions=['tables'], output_format='html')
+    html = markdown.markdown(md_text, extensions=['tables', 'fenced_code'], output_format='html')
     return html
 
 

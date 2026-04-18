@@ -31,8 +31,18 @@ cd projects/systems-introduction-book
 pip install mkdocs mkdocs-material pymdown-extensions
 mkdocs serve       # local preview at http://127.0.0.1:8000
 mkdocs build       # static site in ./site
+
+# PDF build (adds fpdf2, markdown, Pillow, and Playwright for
+# rendering the interactive D3 pages to PNG):
+pip install -r requirements-pdf.txt
+python -m playwright install chromium
 python generate_pdf.py
 ```
+
+If Playwright or its Chromium binary are unavailable, `generate_pdf.py`
+still runs but interactive pages are replaced with placeholders.
+`find_chromium()` also picks up a pre-installed Chromium under
+`/opt/pw-browsers/chromium{,_headless_shell}-*/chrome-linux/`.
 
 ## Published
 

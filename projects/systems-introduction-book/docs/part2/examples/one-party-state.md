@@ -18,16 +18,16 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|
-| Authority & Decision-Making | See Goals and Requirements in the interactive view |
-| Membership & Belonging | See R-level items defining who belongs |
-| Resource Allocation | See F-level financial/economic functions |
-| Norm Setting & Enforcement | See F3/F4-type functions |
-| Dispute Resolution | Embedded in governance and judicial subsystems |
-| Legitimation | See the Goals level — the system's stated purpose |
-| Succession & Continuity | See VP4 binding above |
-| External Representation | See executive/diplomatic functions |
-| Socialization | See education/onboarding functions |
-| Activity Delivery | See operations/delivery subsystem |
+| Authority & Decision-Making | Party standing committee / Politburo; general secretary; parliament exists but cannot exercise independent legislative function |
+| Membership & Belonging | Compulsory territorial citizenship; party membership is the pathway to political power and state resources |
+| Resource Allocation | Central planning or party-directed state capitalism; no independent budget process; allocation serves party priorities |
+| Norm Setting & Enforcement | Party line; security apparatus; censorship and information control; surveillance of population |
+| Dispute Resolution | Party-controlled courts; no independent judiciary; internal party discipline for cadres |
+| Legitimation | Ideological narrative (socialism, nationalism, historical necessity); economic performance where available |
+| Succession & Continuity | Internal cadre promotion; party congress ratification; consolidation of power by dominant faction |
+| External Representation | General secretary / paramount leader; state diplomatic corps; party-to-party international relations |
+| Socialisation | State education system; propaganda apparatus; party youth organisations; patriotic education campaigns |
+| Activity Delivery | State enterprises; party-directed civil service; public services as instrument of social control |
 
 ---
 

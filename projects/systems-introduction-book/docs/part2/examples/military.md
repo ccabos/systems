@@ -18,16 +18,16 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|
-| Authority & Decision-Making | See Goals and Requirements in the interactive view |
-| Membership & Belonging | See R-level items defining who belongs |
-| Resource Allocation | See F-level financial/economic functions |
-| Norm Setting & Enforcement | See F3/F4-type functions |
-| Dispute Resolution | Embedded in governance and judicial subsystems |
-| Legitimation | See the Goals level — the system's stated purpose |
-| Succession & Continuity | See VP4 binding above |
-| External Representation | See executive/diplomatic functions |
-| Socialization | See education/onboarding functions |
-| Activity Delivery | See operations/delivery subsystem |
+| Authority & Decision-Making | Chain of command from civilian minister to field commander; joint chiefs as strategic advisory body |
+| Membership & Belonging | Voluntary enlistment or compulsory conscription; rank and unit assignment define standing |
+| Resource Allocation | Parliamentary defence budget; theatre commanders; logistics chain under operational command |
+| Norm Setting & Enforcement | Military law (UCMJ / national equivalent); rules of engagement; code of conduct; Geneva Conventions |
+| Dispute Resolution | Courts-martial; military ombudsman; administrative review boards; civilian oversight tribunal |
+| Legitimation | State mandate for territorial defence; professional military ethos; oath of service |
+| Succession & Continuity | Promotion boards; officer commissioning pipeline; doctrinal continuity through staff colleges |
+| External Representation | Joint chiefs; defence attachés; alliance structures (NATO, bilateral treaties) |
+| Socialisation | Basic training and indoctrination; unit cohesion rituals; rank culture and esprit de corps |
+| Activity Delivery | Combat operations; deterrence; logistics; intelligence; peacekeeping; training and readiness |
 
 ---
 

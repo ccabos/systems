@@ -18,16 +18,16 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|
-| Authority & Decision-Making | See Goals and Requirements in the interactive view |
-| Membership & Belonging | See R-level items defining who belongs |
-| Resource Allocation | See F-level financial/economic functions |
-| Norm Setting & Enforcement | See F3/F4-type functions |
-| Dispute Resolution | Embedded in governance and judicial subsystems |
-| Legitimation | See the Goals level — the system's stated purpose |
-| Succession & Continuity | See VP4 binding above |
-| External Representation | See executive/diplomatic functions |
-| Socialization | See education/onboarding functions |
-| Activity Delivery | See operations/delivery subsystem |
+| Authority & Decision-Making | Parental authority over children; negotiated consensus between adult partners |
+| Membership & Belonging | Biological kinship or legal adoption; marriage or partnership; non-voluntary for children |
+| Resource Allocation | Household income pooling; parental discretion over expenditure; children's allowances |
+| Norm Setting & Enforcement | Parental rules; shared household norms; enforced primarily through relationship and love rather than coercion |
+| Dispute Resolution | Direct negotiation between adults; parental arbitration for child conflicts; family mediation as last resort |
+| Legitimation | Biological bond; legal recognition (marriage, guardianship); emotional attachment and mutual care |
+| Succession & Continuity | Children reaching independence and founding their own families — the system reproduces itself |
+| External Representation | Parents as legal guardians; household as the legal and fiscal unit in dealings with the state |
+| Socialisation | Primary socialisation — language, values, emotional regulation, identity, basic social norms |
+| Activity Delivery | Care, nutrition, housing, educational support, emotional support — the full welfare of members |
 
 ---
 

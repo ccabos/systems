@@ -18,16 +18,16 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|
-| Authority & Decision-Making | See Goals and Requirements in the interactive view |
-| Membership & Belonging | See R-level items defining who belongs |
-| Resource Allocation | See F-level financial/economic functions |
-| Norm Setting & Enforcement | See F3/F4-type functions |
-| Dispute Resolution | Embedded in governance and judicial subsystems |
-| Legitimation | See the Goals level — the system's stated purpose |
-| Succession & Continuity | See VP4 binding above |
-| External Representation | See executive/diplomatic functions |
-| Socialization | See education/onboarding functions |
-| Activity Delivery | See operations/delivery subsystem |
+| Authority & Decision-Making | Supreme religious authority (Pope, Supreme Leader, Caliph); clerical council; no independent secular check |
+| Membership & Belonging | Territorial citizenship combined with required religious conformity; apostasy carries legal or social penalty |
+| Resource Allocation | Religious endowments (waqf, church estates); state budget under clerical control; no separation of sacred and fiscal authority |
+| Norm Setting & Enforcement | Religious law (canon law, sharia, halakha); clerical courts; religious police where applicable |
+| Dispute Resolution | Religious courts; clerical arbitration; all dispute resolution channels pass through the religious hierarchy |
+| Legitimation | Divine mandate; sacred texts as constitutional authority; clerical monopoly on authoritative interpretation |
+| Succession & Continuity | Clerical selection: conclave, council deliberation, or dynastic clerical succession |
+| External Representation | Supreme religious leader conducts state diplomacy; religious and foreign policy are indistinguishable |
+| Socialisation | Mandatory religious education (madrasas, seminaries, religious schools); ritual participation as civic obligation |
+| Activity Delivery | Religious services; welfare distribution (zakat, tithing); education; governance fused with religious practice |
 
 ---
 

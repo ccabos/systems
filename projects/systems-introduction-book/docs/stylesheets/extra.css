@@ -1,22 +1,18 @@
 /* ── Compact tables ─────────────────────────────────────────────────────── */
 
+/* Size each column to its content — prevents leftover space being handed
+   to the wrong column in 4+ column tables.  The table itself stays inside
+   the content area; if it would overflow the browser scrolls it.          */
+.md-typeset table:not([class]) {
+  width: auto;
+  max-width: 100%;
+}
+
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
   padding: 0.3em 0.65em;
   vertical-align: top;
   line-height: 1.35;
-}
-
-/* Narrow ID/label columns never wrap — keeps description column wide
-   so long text needs fewer lines, reducing total table height          */
-.md-typeset table:not([class]) th:first-child,
-.md-typeset table:not([class]) td:first-child {
-  white-space: nowrap;
-}
-
-.md-typeset table:not([class]) th:nth-child(2),
-.md-typeset table:not([class]) td:nth-child(2) {
-  white-space: nowrap;
 }
 
 /* ── Compact lists ───────────────────────────────────────────────────────── */

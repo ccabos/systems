@@ -59,8 +59,26 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - hooks.py
+
 plugins:
   - search
+  - with-pdf:
+      author: C. Cabos
+      copyright: "© 2026 C. Cabos"
+      cover: true
+      cover_title: "Systems Thinking"
+      cover_subtitle: "From SE to STPA"
+      back_cover: false
+      toc_title: "Table of Contents"
+      heading_shift: false
+      toc_level: 3
+      ordered_chapter_level: 2
+      excludes_children:
+        - "about"
+      output_path: "Systems_Thinking_Book_MkDocs.pdf"
+      enabled_if_env: ENABLE_PDF_EXPORT
 
 extra:
   social:

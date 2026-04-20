@@ -11,9 +11,38 @@ Document purpose. This planning document translates the product intent into a co
 
 Prepared for concept planning and execution alignment | Date: 18 April 2026
 
-![Target product architecture](./stpa_copilot_planning_document_assets/architecture.png)
+```mermaid
+flowchart LR
+    U["User / Domain Expert"] --> UX["Low-jargon interaction layer\nconversation, review screens, diagram editor"]
 
-Figure 1. Target product architecture showing the low-jargon user experience, structured STPA core, AI and rule services, human acceptance gate, and dual output model.
+    UX --> ORCH["Workflow orchestration\nnext-best-question, stage control, acceptance gates"]
+
+    ORCH --> ART["Structured STPA artifact model\nscope, losses, hazards, constraints, control structure, issues, scenarios, recommendations, evidence"]
+
+    ART --> QSEL["Gap finder and question selector"]
+    ART --> DOC["Technical background document authoring"]
+    ART --> OPS["Operational guidance output"]
+
+    ORCH --> LLM["LLM services\nintake extraction, drafting, scenario and recommendation generation, terminology translation"]
+    ORCH --> RULES["Deterministic rule services\ncoverage, consistency, deduplication, trace checks"]
+    ORCH --> RET["Retrieval and grounding\nrequirements, procedures, incidents, architecture notes"]
+
+    QSEL --> UX
+    LLM --> ORCH
+    RULES --> ORCH
+    RET --> ORCH
+
+    UX --> REVIEW{"Human review and validation"}
+    REVIEW -->|accept / edit| ART
+    REVIEW -->|reject / needs evidence| ORCH
+
+    OPS --> OUT1["Plain-language practitioner output\nwhat may go wrong, why it matters, what to improve"]
+    DOC --> OUT2["Formal STPA technical background document\nderivation path, nomenclature, traceability matrix"]
+```
+
+Figure 1. Target product architecture showing the low-jargon user experience, workflow orchestration, structured STPA core, AI and rule services, human acceptance gate, and dual output model.
+
+Static image version of the same diagram: ![Target product architecture](./stpa_copilot_planning_document_assets/architecture.png)
 
 ## 1. Executive summary
 

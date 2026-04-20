@@ -59,6 +59,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - hooks.py
+
 plugins:
   - search
   - with-pdf:

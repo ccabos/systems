@@ -13,7 +13,7 @@ Prepared for concept planning and execution alignment | Date: 18 April 2026
 
 ```mermaid
 flowchart LR
-    U["User / Domain Expert"] --> UX["Low-jargon interaction layer\nconversation, review screens, diagram editor"]
+    U["User / Domain Expert\n(non-technical primary, or technical secondary)"] --> UX["Low-jargon interaction layer\nconversation, review screens, diagram editor"]
 
     UX --> ORCH["Workflow orchestration\nnext-best-question, stage control, acceptance gates"]
 
@@ -90,7 +90,9 @@ Primary value proposition. Describe a system in your own words, answer a focused
 
 ## 5. Target users and usage modes
 
-Primary users. Safety engineers, systems engineers, architects, domain experts, operators, and product teams working on complex socio-technical systems.
+Primary users. Ordinary, reasonably educated people with no background in systems engineering, safety analysis, or STPA. They have a vague or intuitive sense that an institution, organisation, or system is not working as it should, but they do not know what a UCA, a control action, or a traceability link is. Examples include a civil servant who suspects a ministry is structurally unable to implement its own policy, a journalist investigating why a regulator consistently fails to act, a board member who cannot articulate why their organisation keeps producing outcomes nobody wants, and a community organiser trying to understand why a public institution systematically harms the people it serves. The product must work for these users without any prior study. It must never assume they know a technical term, and it must never present STPA findings without first explaining what they mean in plain language for the specific system under discussion.
+
+Secondary users. Safety engineers, systems engineers, architects, domain experts, operators, and product teams applying these methods to non-technical or social domains rather than engineered artefacts. For these users the tool provides structured procedure and catalogue access. Technique education can be abbreviated but must not be skipped entirely, because even technical users need to understand how the methods transfer from engineering to social and institutional contexts.
 
 Usage modes. The same platform should support three practical modes:
 
@@ -290,8 +292,8 @@ Purpose. When the analysis has produced results, especially hazards and recommen
 
 | Output | Audience and tone | Typical contents |
 | --- | --- | --- |
-| Operational guidance | Domain experts, operators, project teams; plain language | What might go wrong, why it matters, what to improve, what to validate next |
-| Technical background document | Safety engineers, auditors, program leads; formal STPA language allowed | Losses, hazards, constraints, control structure, UCAs or inadequate control situations, scenarios, traceability |
+| Operational guidance | Primary users (non-specialists) and domain experts; plain language throughout, no unexplained notation | What might go wrong, why it matters, what to improve, what to validate next |
+| Technical background document | Secondary users (safety engineers, auditors, program leads) and archival purposes; formal STPA language allowed | Losses, hazards, constraints, control structure, UCAs or inadequate control situations, scenarios, traceability |
 
 ## 13. Delivery roadmap
 

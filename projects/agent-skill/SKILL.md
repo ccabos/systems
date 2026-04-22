@@ -10,7 +10,7 @@ full system-prompt text to be written once `../../knowledge/` has stabilised.
 | Field | Value |
 |---|---|
 | Name | `se-non-technical` |
-| Trigger | User describes an institution, organisation, or social system they want to understand, or a specific problem inside one |
+| Trigger | User describes an institution, organisation, social system, or development/delivery setup they want to understand, or a specific problem inside one |
 | Output location | `../problems/<problem-name>/` |
 | Knowledge root | `../../knowledge/` |
 
@@ -86,6 +86,16 @@ outcomes. This includes:
 | Security | Military organisations, police forces, intelligence services |
 | Community | Families, voluntary associations (Vereine), neighbourhood councils |
 | Mixed | Public-private partnerships, treaty organisations, multi-stakeholder platforms |
+| Development and delivery | How an organisation structures its software, product, or service development — whether it follows Scrum, SAFe, Waterfall, Kanban, V-Model, PRINCE2, DevOps, Design Thinking, or a hybrid of these |
+
+The development-and-delivery row covers the structural choices an
+organisation makes about *how* it develops and delivers — not the
+technical content of what it builds. A team that "does Scrum" has
+made authority, feedback, and governance choices that can be analysed
+with the same tools as any other institution. The catalogued
+frameworks (see section 7) are the known family members; an
+organisation's actual development setup is typically a hybrid or
+locally adapted variant of one or more of them.
 
 The skill does not apply to purely technical systems without human
 authority relationships.
@@ -133,15 +143,31 @@ out to be wrong at a later step, record the revision here.
 
 **Look up the catalogue before decomposing from scratch.**
 Check `knowledge/system-catalogues/` for a known family member that
-matches or closely resembles the user's system. If a match exists:
+matches or closely resembles the user's system. Two sub-catalogues
+are available; choose based on the nature of the system:
+
+- **Social, governance, economic, or community system** →
+  `knowledge/system-catalogues/social-systems/`. Known members:
+  corporation, democracy, family, kingdom, military, one-party-state,
+  religion, theocracy, university, Verein.
+- **Development or delivery setup** →
+  `knowledge/system-catalogues/dev-frameworks/`. Known members:
+  Waterfall, V-Model, PRINCE2, Scrum, Kanban, Design Thinking,
+  DevOps, SAFe.
+
+If the system spans both catalogues (e.g. a government ministry
+that is also trying to adopt agile delivery), look up both and
+treat the development setup as a sub-system of the institutional one.
+
+If a match exists:
 
 - Use the known decomposition as a starting scaffold.
 - Record which elements are inherited from the platform and which are
   specific to this instance.
 - Note the variation-point bindings that differ from the canonical case.
 
-If no match exists, build the decomposition from first principles
-using the five-level hierarchy
+If no match exists in either catalogue, build the decomposition from
+first principles using the five-level hierarchy
 (`knowledge/se-techniques/goals-requirements-hierarchy/`), then flag
 that a new family member may be worth cataloguing.
 
@@ -171,9 +197,26 @@ Confirm or refine the catalogue match from step 2:
   specific to this instance?
 - Does the system belong to a known family, or is it a hybrid?
 
-If the system is a hybrid, cite
-`knowledge/system-catalogues/*/cross-*/` for the applicable
-cross-system analysis.
+**For social / governance systems:** cite
+`knowledge/system-catalogues/social-systems/cross-system/` for
+platform, variation points, and remedies.
+
+**For development and delivery setups:** cite
+`knowledge/system-catalogues/dev-frameworks/cross-framework/` for
+the shared platform of ten universal functional slots, the four
+variation points (temporal structure, requirements stability
+assumption, authority and decision structure, quality assurance
+timing), hybrid architectures, and merging principles. Most real
+organisations run a hybrid — the cross-framework material identifies
+which combinations are coherent and which produce known failure modes
+(e.g. sequential phases with volatile requirements, continuous flow
+without automated quality gates).
+
+**For mixed systems** (an institution that also has a development
+setup): position the institutional layer against the social-systems
+catalogue first, then position the development layer against the
+dev-frameworks catalogue, then check whether the authority and
+feedback structures of the two layers are consistent with each other.
 
 ### Step 4 — Control-structure sketch
 
@@ -269,10 +312,12 @@ The system prompt must instruct the model to:
    definition from a textbook. It must use an example drawn from
    the user's own system wherever possible.
 
-5. **Use social and economic examples** when illustrating technique
-   steps — not aerospace, nuclear, or automotive examples, which
-   are the default in the STPA literature and will alienate
-   non-technical users.
+5. **Use social, economic, or development-process examples** when
+   illustrating technique steps — not aerospace, nuclear, or
+   automotive examples, which are the default in the STPA literature
+   and will alienate non-technical users. For users whose system is a
+   development or delivery setup, prefer examples drawn from software
+   teams, product organisations, and delivery frameworks.
 
 6. **Enforce all hard rules** from section 8:
    - Never invent decompositions as canonical
@@ -290,17 +335,40 @@ The system prompt must instruct the model to:
 
 ## 7. Knowledge files the skill must read (not cite from memory)
 
-| Step | File to read before proceeding |
+The skill must read each relevant file during the session before using
+its content. Reading the social-systems branch, the dev-frameworks
+branch, or both depends on the nature of the user's system (see
+step 2 routing).
+
+**Always read (all system types)**
+
+| Step | File |
 |---|---|
-| 2 — Decomposition | `../../knowledge/se-techniques/goals-requirements-hierarchy/five-level-hierarchy.md` |
-| 2 — Catalogue lookup | `../../knowledge/system-catalogues/social-systems/<best-match>/se-decomposition.md` |
-| 3 — Platform positioning | `../../knowledge/system-catalogues/social-systems/cross-system/platform.md` |
-| 3 — Variation points | `../../knowledge/system-catalogues/social-systems/cross-system/variation-points.md` |
-| 4 — Control structure | `../../knowledge/se-techniques/control-structures/diagnostic-questions.md` |
+| 2 — Decomposition technique | `../../knowledge/se-techniques/goals-requirements-hierarchy/five-level-hierarchy.md` |
+| 4 — Control-structure questions | `../../knowledge/se-techniques/control-structures/diagnostic-questions.md` |
 | 4 — Dangerous patterns | `../../knowledge/se-techniques/control-structures/dangerous-patterns.md` |
 | 5 — STPA procedure | `../../knowledge/se-techniques/stpa/four-steps.md` |
 | 5 — UCA types | `../../knowledge/se-techniques/stpa/unsafe-control-actions.md` |
+
+**Social, governance, economic, or community systems**
+
+| Step | File |
+|---|---|
+| 2 — Catalogue lookup | `../../knowledge/system-catalogues/social-systems/<best-match>/se-decomposition.md` |
+| 3 — Platform positioning | `../../knowledge/system-catalogues/social-systems/cross-system/platform.md` |
+| 3 — Variation points | `../../knowledge/system-catalogues/social-systems/cross-system/variation-points.md` |
 | 6 — Remedies | `../../knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md` |
+
+**Development and delivery setups**
+
+| Step | File |
+|---|---|
+| 2 — Catalogue lookup | `../../knowledge/system-catalogues/dev-frameworks/<best-match>/se-decomposition.md` — known members: `waterfall/`, `v-model/`, `prince2/`, `scrum/`, `kanban/`, `design-thinking/`, `devops/`, `safe/` |
+| 3 — Shared platform | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/platform.md` |
+| 3 — Variation points | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/variation-points.md` |
+| 3 — Hybrid architectures | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/hybrids.md` |
+| 3 — Coherence constraints | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/merging-principles.md` |
+| 6 — Reuse and remedies | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/reuse-analysis.md` |
 
 ---
 
@@ -393,7 +461,8 @@ reusable across cases.
   validation checklists for steps 2 and 5.
 - `reference/` — any other static reference data the skill needs.
 - `examples/` — worked examples covering at least one social system,
-  one economic system, and one governance system.
+  one economic system, one governance system, and one development or
+  delivery setup (e.g. an organisation's adoption of Scrum or SAFe).
 - `scripts/` — any Python or shell helpers the skill invokes.
 
 ---

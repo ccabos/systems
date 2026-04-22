@@ -13,17 +13,35 @@ scripts will be written after the knowledge base has stabilised.
 
 ## Target users of the tool
 
-The eventual tool targets **non-technical users**: policy analysts,
-institutional leaders, NGO directors, civil servants, journalists,
-board members, governance consultants, and others who observe or
-manage social and economic systems without a background in systems
-engineering, product-line engineering, or STPA. Technical
-practitioners (systems engineers, safety analysts) are also served,
-but are the secondary audience.
+### Primary — educated non-specialists
 
-This requirement drives the tool's interaction design (see Hard
-rules). It does not affect the technical level of this concept
-document, which is written for the developer.
+Ordinary, reasonably educated people who have a vague or intuitive
+sense that an institution is not working as it should, but no
+training in systems engineering, safety analysis, product-line
+methods, or STPA. They do not know what a UCA is. They do not know
+what a variation point is. They may not have a precise vocabulary
+for what they are observing. The tool must work for them without
+any prior study.
+
+Examples: a civil servant who suspects a ministry is structurally
+unable to implement its own policy; a journalist investigating why
+a regulator consistently fails to act; a board member who cannot
+articulate why their organisation keeps producing outcomes nobody
+wants; a community organiser trying to understand why a public
+institution systematically harms the people it serves.
+
+### Secondary — technical practitioners
+
+Safety engineers, systems engineers, architects, domain experts,
+operators, and product teams who already understand the underlying
+methods and want to apply them to non-technical or social domains
+rather than engineered artefacts. For these users the tool provides
+structured procedure and catalogue access, not technique education.
+
+This distinction drives the tool's interaction design (see
+User-interaction rules under Hard rules). It does not affect the
+technical level of this concept document, which is written for the
+developer.
 
 ## System scope
 

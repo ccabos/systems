@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - run: pip install mkdocs mkdocs-material pymdown-extensions
+      - run: pip install "mkdocs>=1.5,<2.0" mkdocs-material pymdown-extensions mkdocs-with-pdf
 
       - name: Build MkDocs site
         working-directory: projects/systems-introduction-book

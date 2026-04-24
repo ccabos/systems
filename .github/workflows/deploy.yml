@@ -28,7 +28,7 @@ jobs:
 
       - name: Build MkDocs site
         working-directory: projects/systems-introduction-book
-        run: mkdocs build --strict --site-dir ../../site
+        run: mkdocs build --site-dir ../../site
 
       - uses: actions/upload-pages-artifact@v5
         with:

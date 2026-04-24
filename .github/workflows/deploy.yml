@@ -26,8 +26,13 @@ jobs:
 
       - run: pip install "mkdocs>=1.5,<2.0" mkdocs-material pymdown-extensions mkdocs-with-pdf
 
+      - name: Install WeasyPrint system dependencies
+        run: sudo apt-get install -y libpangocairo-1.0-0 libpangoft2-1.0-0 libgdk-pixbuf2.0-0
+
       - name: Build MkDocs site
         working-directory: projects/systems-introduction-book
+        env:
+          ENABLE_PDF_EXPORT: 1
         run: mkdocs build --site-dir ../../site
 
       - uses: actions/upload-pages-artifact@v5

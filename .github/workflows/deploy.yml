@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -34,6 +34,16 @@ jobs:
         env:
           ENABLE_PDF_EXPORT: 1
         run: mkdocs build --site-dir ../../site
+
+      - name: Commit generated PDF to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p dist
+          cp site/Systems_Thinking_Book_MkDocs.pdf dist/
+          git add dist/Systems_Thinking_Book_MkDocs.pdf
+          git diff --staged --quiet || git commit -m "chore: update generated PDF [skip ci]"
+          git push
 
       - uses: actions/upload-pages-artifact@v5
         with:

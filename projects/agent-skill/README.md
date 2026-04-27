@@ -5,7 +5,9 @@ of a social, economic, governance, or other non-technical institutional
 system using the SE / product-line / STPA techniques from
 `../../knowledge/`.
 
-**Full specification:** [`SKILL.md`](SKILL.md)
+**Skill bundle entry point:** [`SKILL.md`](SKILL.md) — the system prompt loaded by Claude.ai when this folder is uploaded as a skill.
+
+**Design specification:** [`SKILL-spec.md`](SKILL-spec.md) — the third-person specification of audience, procedure, and knowledge-file map that the prompt was derived from. Kept in the repo for reference; not loaded at runtime.
 
 ## Quick summary
 
@@ -30,11 +32,20 @@ background. The skill is designed to work for them without prior study.
 
 ```
 agent-skill/
-├── SKILL.md                        # Complete specification (start here)
-├── reference/
+├── SKILL.md                        # System prompt (loaded by Claude.ai)
+├── SKILL-spec.md                   # Original design specification
+├── reference/                      # Bundled knowledge files (self-contained)
+│   ├── se-techniques/              # 7 always-read technique files
+│   ├── system-catalogues/
+│   │   ├── social-systems/         # 4 cross-system + 10 per-system + 1 worked example
+│   │   └── dev-frameworks/         # 5 cross-framework + 8 per-framework
 │   ├── memo-template.md            # Decision memo template
-│   ├── report-template.md          # Full analysis report template
-│   └── validation-checklist.md     # Step 2 and step 5 checklists
+│   └── report-template.md          # Full analysis report template
 ├── examples/                       # Worked examples (social, economic, governance)
 └── scripts/                        # Python / shell helpers
 ```
+
+**Upload-ready.** The `reference/` subfolder mirrors the relevant
+subset of the project's `knowledge/` tree, so `SKILL.md` can read
+everything it needs from inside the skill bundle. No filesystem
+access outside `agent-skill/` is required.

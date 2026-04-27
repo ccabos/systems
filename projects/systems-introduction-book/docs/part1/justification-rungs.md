@@ -64,6 +64,156 @@ Each later rung adds a *check* that earlier rungs lack:
 The full rung definitions and examples are in
 `knowledge/se-techniques/justification-rungs/rungs.md`.
 
+## The seven rungs in detail
+
+Each rung admits four questions: what is the standard, where do you
+meet it, what does the rung *add* over the previous one, and what
+does it still *lack* — and one extra question that matters for
+STPA: how does the rung *show up* in a control structure when
+something goes wrong.
+
+### Rung 0 — Power / coercion
+
+The standard is "do it or else." Compliance is enforced by threat
+of sanction, violence, or exclusion; there is no shared criterion
+for what is true, valid, or fair. Two parties at rung 0 cannot
+disagree productively — they can only enforce or submit. Examples
+range from coups and occupation regimes to organised crime and
+parental "because I said so."
+
+What rung 0 *lacks*: any common standard at all. In an STPA
+control structure this shows up as control actions that land
+without persuasion and feedback that either flatters the controller
+or is suppressed. Loss scenarios concentrate around the absence of
+corrective feedback — the controller cannot be wrong because the
+controller cannot be questioned.
+
+### Rung 1 — Authority / rhetoric / identity
+
+A claim is decisive because of *who* makes it, *what tradition* it
+comes from, or *what group* the listener identifies with. The
+listener moves voluntarily, but without an obligation to check
+truth or consistency. Examples: campaign slogans, scripture,
+"as a parent…", brand loyalty, expert testimony where the listener
+cannot evaluate the substance, charismatic leadership.
+
+What rung 1 *adds* over rung 0: voluntary acceptance — the listener
+moves without a sanction being threatened. What rung 1 *lacks*: any
+internal check. Two contradictory rung-1 authorities cannot
+adjudicate the contradiction without escalating to rung 0 (force)
+or rung 2+ (some standard outside personal authority). In STPA
+terms, rung-1 controllers treat *who said it* as the deciding
+factor; feedback that comes from the wrong source is dismissed
+regardless of content. The self-sealing process models catalogued
+in the next chapter are most often rung-1 process models.
+
+### Rung 2 — Formal consistency
+
+A conclusion follows validly from premises both parties already
+accept. The argument can be checked step by step; contradictions
+lose. Examples: mathematical proofs, court syllogisms, formal
+logic, rule-based bureaucratic decisions, legal reasoning within an
+established code.
+
+What rung 2 *adds* over rung 1: an *internal* check. Even an
+authority cannot make an inconsistent argument win — a rung-2
+challenge can defeat a rung-1 claim by exhibiting contradiction
+within the claim's own premises. What rung 2 *lacks*: an *external*
+check. Premises themselves are not tested against the world. Loops
+that operate at rung 2 produce internally coherent decisions that
+may diverge from external reality — the characteristic failure is
+the system that "follows the rules" straight into harm.
+
+### Rung 3 — Empirical testability
+
+A hypothesis is decisive only if it survives tests against rivals
+— controlled experiments, falsification, prediction against unseen
+data. Examples: randomised trials, falsification in physical
+sciences, A/B tests, engineering acceptance tests, audited
+financial statements.
+
+What rung 3 *adds*: an *external* check. Data can sink a neat
+theory; premises themselves become accountable to observation. What
+rung 3 *lacks*: protection against one-off flukes, publication
+bias, p-hacking, and the small-N problem. A single positive trial
+does not yet make a robust claim. Rung-3 feedback channels are
+powerful but fragile — a single biased sample can defeat them — so
+loops that operate at rung 3 require active maintenance of the
+channel's integrity (independence of the auditor, pre-registration
+of trials, replication budgets).
+
+### Rung 4 — Cumulative evidence and consilience
+
+A claim is decisive when results survive replication and line up
+across multiple methods, populations, and disciplines.
+Meta-analyses, systematic reviews, and cross-method triangulation
+beat single studies. Examples: evidence-based medicine, IPCC
+assessment reports, well-replicated psychology effects,
+cross-discipline syntheses, regulatory science.
+
+What rung 4 *adds*: robustness against flukes, biases, and method
+artefacts. A finding that holds up across independent methods is
+harder to explain away. What rung 4 *lacks*: a way to handle
+situations in which the methods themselves are in dispute, or where
+no single method applies, or where the question is partly
+normative. Rung-4 feedback is slow but durable; systems that depend
+on it (climate policy, drug regulation) have characteristic failure
+modes around delay — the rung-4 signal arrives only after
+irreversible action.
+
+### Rung 5 — Meta-rational integration
+
+A claim is decisive when the speaker can show *why* a method works,
+*when it breaks*, and *how to combine multiple methods* under
+uncertainty. The speaker steps outside any single formalism to
+choose the right one for the question. Examples: risk engineering,
+AI-safety research, complex-systems policy labs, integrated
+assessment in climate policy, intelligence analysis at its best.
+
+What rung 5 *adds*: an acknowledgement that no single method covers
+all messy domains, and a discipline for choosing among methods
+rather than defaulting to one. Rung 5 is where one becomes able to
+talk sensibly about model failure, unknown unknowns, and the limits
+of one's own evidence. What rung 5 *lacks*: any answer to *what
+should be done* once the empirics are settled. Rung 5 sharpens
+facts; it does not deliver oughts. Rung-5 controllers can hold
+multiple feedback channels in superposition — a rung-3 RCT, a
+rung-1 stakeholder intuition, a rung-2 legal constraint — and
+weight them appropriately. This is rare, fragile, and cognitively
+costly.
+
+### Rung 6 — Normative legitimacy / deliberative ethics
+
+A claim is decisive when it survives open, inclusive discourse and
+meets normative criteria — fairness, reversibility,
+universalisability, respect for the autonomy of the affected. Even
+perfect facts and models do not tell us *oughts*; society still has
+to justify rules to all affected by them. Examples: constitutional
+courts, citizens' assemblies, Habermasian deliberative democracy,
+well-functioning parliamentary deliberation, bioethics committees.
+
+What rung 6 *adds*: a way to settle questions about what should be
+done that cannot be reduced to fact — distribution, risk
+acceptance, value tradeoffs, intergenerational duties. Rung 6 is
+the only rung that handles *value pluralism* without smuggling one
+party's values in as facts. What rung 6 *lacks*: speed and reach.
+Rung-6 deliberation is slow, expensive, and does not scale to many
+decisions per unit time, so most operational control stays at lower
+rungs. The characteristic failure mode is *displacement*: when the
+rung-6 channel is suppressed, the unresolved normative question
+accumulates pressure that eventually escapes through rung 0
+(revolution).
+
+### What every controller carries on every loop
+
+Drawing these rungs onto an STPA control structure means every
+arrow gets a tag, and every controller acquires two extra
+attributes: the rung at which it accepts *commands* from above and
+the rung at which it accepts *feedback* from below. The two are
+often different on the same controller, and that asymmetry is
+where most rung-related failures live. The next section catalogues
+the three patterns of mismatch.
+
 ## Why the ladder matters for STPA
 
 STPA Step 2 produces a control structure: controllers issuing

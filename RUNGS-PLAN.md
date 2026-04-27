@@ -148,12 +148,36 @@ Acceptance: the two existing per-system files acknowledge the rung dimension; no
 - [x] Edit `projects/agent-skill/README.md` — insert rung tagging as new step 5 (between control-structure sketch and STPA pass), renumber subsequent steps. Update step 4's question/pattern counts to five/four. Add the rung-elevation framing to step 7.
 - [x] Edit `projects/agent-skill/SKILL.md` — record that the procedure is now eight steps and that the future implementation must cite `knowledge/se-techniques/justification-rungs/`. Note that step 5 is N/A for engineered systems where all loops operate at rung 3–4.
 
-### Phase 9 — Build & verify
+### Phase 9 — Build & verify ✅ DONE
 
-- [ ] `cd projects/systems-introduction-book && mkdocs build --strict` — catch broken links.
-- [ ] `python generate_pdf.py` — regenerate the book PDF.
-- [ ] Manual check: cross-system profiles, remedies, religion KB & book all link to `justification-rungs/`.
-- [ ] `git status` clean except for tracked changes; commit per phase.
+- [x] `cd projects/systems-introduction-book && mkdocs build --strict` — catch broken links. **Result: clean.**
+- [x] `python generate_pdf.py` — regenerate the book PDF. **Result: 120 pages, 2.8 MB (was 115/2.8 MB before Phase 6).**
+- [x] Manual check: cross-system profiles, remedies, religion KB & book all link to `justification-rungs/`. **Result: 22 file references across docs/ and knowledge/, 29 link references inside knowledge/.**
+- [x] `git status` clean except for tracked changes; commit per phase.
+
+---
+
+## Wrap-up
+
+**All nine phases complete.** The justificatory-rung dimension is
+integrated into:
+
+- The technique catalogue (`knowledge/se-techniques/justification-rungs/`)
+- The STPA pages (rung tagging in Step 2; UCA-R1/R2/R3 in Step 3)
+- The control-structure pages (5th diagnostic question; 4th
+  dangerous pattern Rung Asymmetry)
+- The cross-system catalogue (claimed/operating rung on every
+  system; new comparison file; rung-elevation framing on every
+  remedy)
+- The religion deep dive (`applied-se-analysis.md` — also
+  satisfies the long-standing forward reference)
+- The kingdom and military per-system files
+- The book Part I (new chapter) and Part IV (religion-stpa,
+  control-structures, remedies all extended)
+- The agent-skill scaffold (eight-step procedure with rung tagging
+  as step 5)
+
+This file may now be deleted.
 
 ---
 

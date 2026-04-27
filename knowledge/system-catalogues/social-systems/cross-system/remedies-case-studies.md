@@ -3,9 +3,22 @@
 For each of five social systems, STPA identifies unsafe control
 actions, traces their causal factors, and derives an architectural
 remedy. Where the remedy has been implemented and its effects
-measured, that evidence is included. The generic forms of the
-three dangerous patterns these remedies address live in
-`knowledge/se-techniques/control-structures/dangerous-patterns.md`.
+measured, that evidence is included. The generic forms of the four
+dangerous patterns these remedies address live in
+`knowledge/se-techniques/control-structures/dangerous-patterns.md`,
+with the rung-specific patterns in
+`knowledge/se-techniques/justification-rungs/dangerous-mismatches.md`.
+
+**Reading these remedies as rung-elevation moves.** Most of the
+proven remedies below can be re-described as moves that *raise the
+operating rung* of a feedback channel. The hierarchy of authority
+at the controller end stays at rung 1 (legal, institutional, or
+sacred); the corrective channel that previously fed back at rung 1
+(internal reports filtered through the same hierarchy) is replaced
+or paralleled by a rung-3 channel (independent audit, external
+investigation, replicated study, statutory reporting). The
+rung-elevation framing is summarised in §6 below; the original
+control-structure framing remains the primary lens.
 
 ---
 
@@ -331,3 +344,54 @@ The remedies are not generic. Each closes a specific causal
 pathway identified by structural analysis — and each has been
 tested in practice. That precision is what distinguishes
 architectural reform from exhortation.
+
+---
+
+## Rung-elevation perspective
+
+The same five families of remedy can be re-described as moves on
+the **justificatory-rung ladder** (see
+`knowledge/se-techniques/justification-rungs/`). Each remedy
+preserves the controller's authority at rung 1 (legal,
+institutional, or sacred) but installs a feedback channel that
+operates at a higher rung — typically rung 3 (independent
+empirical evidence) — and routes around the rung-1 filter that
+previously distorted the upward signal.
+
+| Remedy | Pre-remedy feedback rung | Post-remedy feedback rung | What the new channel adds |
+|--------|-------------------------|---------------------------|---------------------------|
+| Bundesverfassungsgericht (Basic Law) | 1 (parliamentary majority self-judges) | 2/6 (legal-rational + constitutional principle) | Legal consistency check independent of the legislative majority |
+| Constructive vote of no confidence | 0/1 (raw arithmetic of confidence motions) | 2 (formal-procedural test) | Cannot remove without alternative — internal consistency requirement |
+| Article 21 GG party ban | 1 (politics) | 2/6 (legal-rational + constitutional principle) | Constitutional limit on rung-1 majority politics |
+| Public broadcasting under Rundfunkräte | 1 (state press) | 3 (civil-society pluralist channels) | Independent rung-3 information flow to electorate |
+| Sarbanes-Oxley external audit | 1 (management self-reports) | 3 (audited financials with criminal liability) | External rung-3 channel that bypasses management filter |
+| Mitbestimmung worker board representation | 1 (management self-reviews) | 6 (deliberative — multiple stakeholder perspectives at the board) | Stakeholder-deliberation channel inside governance |
+| UK Cadbury / Corporate Governance Code | 1 (board self-defines independence) | 2/3 (formal independence test, comply-or-explain disclosure) | Externally readable rung-2/3 record of board composition |
+| Mandatory abuse reporting (Religion) | 1 (clergy report internally) | 3 (statutory report to civil authority) | Civil authority's rung-3 investigation bypasses doctrinal filter |
+| Vatican II lay councils | 1 (clerical hierarchy) | 1+2 (lay participation, doctrinal-procedural openness) | Partial rung elevation in doctrinal feedback; partially reversed in subsequent decades |
+| Pre-registration and Registered Reports | 3 (publication-biased sample of trials) | 4 (cumulative evidence with no publication-bias filter) | Rung-3 channel hardened to rung 4 by removing the gatekeeping filter |
+| DORA / article-level assessment | 1 (journal prestige proxy) | 3 (article-level merit) | Replaces rung-1 proxy with rung-3 evaluation of the work itself |
+| Parliamentary mandate (German Bundeswehr) | 0/1 (executive decision) | 6 (parliamentary deliberation) | Civilian rung-6 deliberation precedes military rung-0/1 action |
+| Wehrbeauftragter (independent military prosecutor) | 1 (commander investigates own troops) | 3 (independent investigation) | Rung-3 conduct feedback bypasses chain of command |
+
+**Pattern.** All thirteen remedies share a common architecture:
+
+1. The original loop transmits commands at rung 1 (the
+   institution's natural authority rung) but its feedback channel
+   is captured by the same rung-1 hierarchy.
+2. The remedy *does not* try to convert the controller to a higher
+   rung — that would dissolve the institution.
+3. Instead, the remedy *parallels* the rung-1 channel with a new
+   rung-3 (or rung-2/6) channel that routes feedback to a separate
+   oversight body whose existence is independent of the
+   controller.
+
+This is the canonical fix for **Pattern A — Asymmetric Loop** in
+`knowledge/se-techniques/justification-rungs/dangerous-mismatches.md`.
+Where the remedy has been incomplete (Vatican II partially
+reversed) it is because the rung-elevated channel was made
+revocable by the same rung-1 hierarchy it was supposed to
+correct — which is the precondition for remedies that the
+control-structure technique already requires (see "Remedy
+preconditions" in
+`knowledge/se-techniques/control-structures/dangerous-patterns.md`).

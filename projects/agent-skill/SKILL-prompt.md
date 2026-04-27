@@ -100,3 +100,54 @@ Confirm or refine the catalogue match from step 2:
 **For development and delivery setups:** cite `../../knowledge/system-catalogues/dev-frameworks/cross-framework/` for the shared platform of universal functional slots, the variation points (temporal structure, requirements stability assumption, authority and decision structure, quality assurance timing), hybrid architectures, and merging principles. Most real organisations run a hybrid — the cross-framework material identifies which combinations are coherent and which produce known failure modes (e.g. sequential phases with volatile requirements, continuous flow without automated quality gates).
 
 **For mixed systems** (an institution that also has a development setup): position the institutional layer against the social-systems catalogue first, then position the development layer against the dev-frameworks catalogue, then check whether the authority and feedback structures of the two layers are consistent with each other.
+
+### Step 4 — Control-structure sketch
+
+Apply the **five diagnostic questions** from `../../knowledge/se-techniques/control-structures/diagnostic-questions.md` (feedback richness, self-sealing tendency, accountability voids, circuit breakers, rung match) and search for the **four dangerous patterns** from `../../knowledge/se-techniques/control-structures/dangerous-patterns.md`: accountability void, self-sealing process model, proxy metric replacing goal, rung asymmetry. The fifth question and fourth pattern apply only to social systems and are detailed in step 5.
+
+Record: which controllers exist, what they control, what feedback channels exist, and which (if any) dangerous patterns are present.
+
+### Step 5 — Justificatory-rung tagging (social systems only)
+
+For each control action and each feedback channel in the sketch, identify the **justificatory rung** at which it operates — rung 0 (coercion), rung 1 (authority/rhetoric/identity), rung 2 (formal consistency), rung 3 (empirical testability), rung 4 (cumulative evidence), rung 5 (meta-rational integration), rung 6 (deliberative legitimacy). Tag each controller with both its **claimed rung** (the standard its public legitimacy appeals to) and its **operating rung** (the standard its loops actually run on).
+
+Then check for the three rung-mismatch patterns from `../../knowledge/se-techniques/justification-rungs/dangerous-mismatches.md`:
+
+- **Pattern A — Asymmetric Loop.** Rung-1 control downward with rung-3 feedback expected upward; the controller's process model rejects rung-3 input as rung-1 hostility.
+- **Pattern B — Claimed-Rung Inflation.** The system claims a high rung (rung 6) but operates at rung 1; the gap erodes legitimacy.
+- **Pattern C — Cross-Loop Rung Imposition.** A controller legitimate at one rung extends its authority into a domain whose loop requires a different rung.
+
+For engineered systems where every loop operates at rung 3–4 throughout, document this step as N/A rather than execute it — the rung dimension adds no information for them. Use this step where the system is social, institutional, or policy-shaped. The technique reference is `../../knowledge/se-techniques/justification-rungs/`.
+
+### Step 6 — STPA pass (if warranted)
+
+A full STPA pass is **warranted when all three of the following hold:**
+
+1. The user's concern involves potential for harmful outcomes (not merely inefficiency or performance shortfall).
+2. The system has identifiable authority relationships — some actors can issue control actions that others are structurally expected to obey.
+3. Feedback channels exist (or are conspicuously absent) between controlled processes and controllers.
+
+When STPA is warranted, follow the four steps in `../../knowledge/se-techniques/stpa/four-steps.md`: losses → hazards → unsafe control actions → causal scenarios. Use the four standard UCA types plus the three rung-mismatch UCA modes (UCA-R1 over-rung command, UCA-R2 under-rung command, UCA-R3 asymmetric loop) from `../../knowledge/se-techniques/stpa/unsafe-control-actions.md`.
+
+**Validation pass after UCAs.** Before moving to step 7, verify that each UCA traces back to a specific causal factor in the control structure, not just to human error or bad intentions.
+
+### Step 7 — Remedy proposals
+
+Draw remedies from `../../knowledge/system-catalogues/*/cross-*/remedies-case-studies.md`.
+
+**For systems that match a known catalogue entry:** use the specific remedies documented for that system family, adapted to the instance.
+
+**For novel systems or unmatched UCAs:** fall back to the four dangerous patterns (accountability void, self-sealing process model, proxy metric, rung asymmetry). Each UCA identified in step 6 must map to at least one pattern. Derive the remedy by closing the specific structural pathway the pattern describes — do not improvise generic "improve communication" or "add oversight" proposals.
+
+**For social systems with rung-mismatch UCAs (UCA-R1/R2/R3):** most catalogued architectural remedies are *rung-elevation* moves — they preserve the rung-1 controller and insert a parallel rung-3 channel routed around the rung-1 hierarchy (independent audit, statutory reporting, ombudsperson, external investigation). See the rung-elevation perspective section in `../../knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`.
+
+If the system is genuinely novel and its remedies cannot be derived from pattern-matching, say so explicitly. Do not invent remedies. Flag the gap for the `knowledge/` maintainer.
+
+### Step 8 — Deliverable
+
+Produce one of two artefact types, chosen with the user:
+
+- **Decision memo** — 1–2 pages, executive audience, no unexplained technical notation, structured as: *System | Key finding | Structural cause | Recommended remedy | Evidence base | Next step.* Template at `reference/memo-template.md` once available.
+- **Analysis report** — full technical record of all eight steps: five-level decomposition, control-structure map, rung tagging, UCA table, remedy table with evidence citations, traceability matrix. Technical notation is used throughout but every term is accompanied by a plain-language equivalent. Template at `reference/report-template.md` once available.
+
+Every claim that draws on a technique or catalogue entry must cite the `../../knowledge/` file it came from.

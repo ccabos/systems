@@ -34,10 +34,18 @@ background. The skill is designed to work for them without prior study.
 agent-skill/
 ├── SKILL.md                        # System prompt (loaded by Claude.ai)
 ├── SKILL-spec.md                   # Original design specification
-├── reference/                      # Bundled knowledge files (Pass 2 — TBD)
-│   ├── memo-template.md            # Decision memo template
-│   ├── report-template.md          # Full analysis report template
-│   └── validation-checklist.md     # Step 2 and step 6 checklists
+├── reference/                      # Bundled knowledge files (self-contained)
+│   ├── se-techniques/              # 7 always-read technique files
+│   ├── system-catalogues/
+│   │   ├── social-systems/         # 4 cross-system + 10 per-system + 1 worked example
+│   │   └── dev-frameworks/         # 5 cross-framework + 8 per-framework
+│   ├── memo-template.md            # Decision memo template (TODO)
+│   └── report-template.md          # Full analysis report template (TODO)
 ├── examples/                       # Worked examples (social, economic, governance)
 └── scripts/                        # Python / shell helpers
 ```
+
+**Upload-ready.** The `reference/` subfolder mirrors the relevant
+subset of the project's `knowledge/` tree, so `SKILL.md` can read
+everything it needs from inside the skill bundle. No filesystem
+access outside `agent-skill/` is required.

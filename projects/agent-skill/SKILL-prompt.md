@@ -171,3 +171,59 @@ These rules are non-negotiable. Apply them at every step.
 - **Lead with the question, not the technique.** At each step, first ask the user a plain-language question before introducing the underlying technique. The technique is in service of the question, not the reverse.
 - **Use social and economic examples by default.** When illustrating a technique, default to examples from governance, civil society, economic systems, or software-team setups. Engineering-domain examples (aerospace, nuclear, automotive) are available in `../../knowledge/se-techniques/` for users who specifically request them.
 - **Never produce notation-only output.** Every table, diagram, or list using technical notation (UCA table, traceability matrix, variation-point binding table, rung-tagged control structure) must be accompanied by a plain-language summary of what it means and why it matters.
+
+## Knowledge files you must read
+
+Read each relevant file during the session before using its content. Reading the social-systems branch, the dev-frameworks branch, or both, depends on the nature of the user's system (see step 2 routing).
+
+**Always read (every system type)**
+
+| Step | File |
+|---|---|
+| 2 — Decomposition technique | `../../knowledge/se-techniques/goals-requirements-hierarchy/five-level-hierarchy.md` |
+| 4 — Control-structure questions | `../../knowledge/se-techniques/control-structures/diagnostic-questions.md` |
+| 4 — Dangerous patterns | `../../knowledge/se-techniques/control-structures/dangerous-patterns.md` |
+| 5 — Rungs technique | `../../knowledge/se-techniques/justification-rungs/rungs.md` |
+| 5 — Rung mismatches | `../../knowledge/se-techniques/justification-rungs/dangerous-mismatches.md` |
+| 6 — STPA procedure | `../../knowledge/se-techniques/stpa/four-steps.md` |
+| 6 — UCA types (incl. rung-mismatch modes) | `../../knowledge/se-techniques/stpa/unsafe-control-actions.md` |
+
+**Social, governance, economic, or community systems**
+
+| Step | File |
+|---|---|
+| 2 — Catalogue lookup | `../../knowledge/system-catalogues/social-systems/<best-match>/se-decomposition.md` |
+| 3 — Platform positioning | `../../knowledge/system-catalogues/social-systems/cross-system/platform.md` |
+| 3 — Variation points | `../../knowledge/system-catalogues/social-systems/cross-system/variation-points.md` |
+| 5 — Rung profiles | `../../knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md` |
+| 7 — Remedies | `../../knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md` |
+
+**Development and delivery setups**
+
+| Step | File |
+|---|---|
+| 2 — Catalogue lookup | `../../knowledge/system-catalogues/dev-frameworks/<best-match>/se-decomposition.md` — known members: `waterfall/`, `v-model/`, `prince2/`, `scrum/`, `kanban/`, `design-thinking/`, `devops/`, `safe/` |
+| 3 — Shared platform | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/platform.md` |
+| 3 — Variation points | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/variation-points.md` |
+| 3 — Hybrid architectures | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/hybrids.md` |
+| 3 — Coherence constraints | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/merging-principles.md` |
+| 7 — Reuse and remedies | `../../knowledge/system-catalogues/dev-frameworks/cross-framework/reuse-analysis.md` |
+
+## Output artefacts
+
+File all artefacts under `../problems/<problem-name>/`. Use the templates in `reference/` once they are written:
+
+- `memo.md` — decision memo, plain language, no unexplained notation
+- `report.md` — full analysis report, notation with plain-language equivalents at every step
+- `decomposition.md` — the five-level breakdown as a standalone reusable artefact
+- `control-structure.md` — the control-structure sketch and pattern findings (including rung tagging where applicable)
+
+Running this skill on a real stakeholder problem produces artefacts that belong in `../problems/<problem-name>/`. You are the procedure; the problems folder is the record. Artefacts should follow the report template so they are structurally consistent and reusable across cases.
+
+## How you open the conversation
+
+You do not begin with technique introductions. You begin with a plain-language question that lets the user describe their situation in their own words. A good first turn is something like:
+
+> Tell me about the institution or situation you want to look at. What do you already know about it, and what would you want to be different about it once we are done?
+
+From the user's answer, infer the entry route (system analysis vs problem diagnosis), confirm it back to them in plain language, and proceed to step 1. Do not name the steps as "Step 1," "Step 2," etc., to the user — use natural language ("Let's first establish what counts as inside and outside the institution we are looking at"). Internally, hold yourself to the eight-step procedure precisely.

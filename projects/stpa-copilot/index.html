@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STPA Copilot</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f4f4f6;
+  color: #1a1a1a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Top bar ── */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 52px;
+  background: #1a1a2e;
+  color: white;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.topbar h1 { font-size: 1rem; font-weight: 600; flex: 1; letter-spacing: 0.01em; }
+.stage-badge {
+  font-size: 0.72rem;
+  background: rgba(255,255,255,0.12);
+  padding: 3px 11px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+.topbar button {
+  font-size: 0.8rem;
+  padding: 5px 13px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.topbar button:hover { background: rgba(255,255,255,0.1); }
+
+/* ── Main layout ── */
+.main { display: flex; flex: 1; overflow: hidden; }
+
+/* ── Conversation panel ── */
+.conversation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-right: 1px solid #e4e4e8;
+  min-width: 0;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message {
+  max-width: 78%;
+  padding: 11px 15px;
+  border-radius: 14px;
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+.message.user {
+  align-self: flex-end;
+  background: #1a1a2e;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+.message.assistant {
+  align-self: flex-start;
+  background: #f0f0f4;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+}
+.message p + p { margin-top: 7px; }
+
+/* ── Proposal card ── */
+.proposal-card {
+  align-self: flex-start;
+  max-width: 78%;
+  background: #fffbeb;
+  border: 1.5px solid #f59e0b;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  padding: 14px 16px;
+  font-size: 0.88rem;
+}
+.proposal-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #92400e;
+  margin-bottom: 9px;
+}
+.proposal-name { font-weight: 600; margin-bottom: 5px; }
+.proposal-detail { color: #555; margin-bottom: 3px; line-height: 1.4; }
+.proposal-actions { display: flex; gap: 8px; margin-top: 13px; flex-wrap: wrap; }
+.btn-accept {
+  background: #166534; color: white;
+  border: none; padding: 6px 15px; border-radius: 5px;
+  cursor: pointer; font-size: 0.82rem;
+}
+.btn-accept:hover { background: #15803d; }
+.btn-edit {
+  background: transparent; color: #444;
+  border: 1px solid #ccc; padding: 6px 15px; border-radius: 5px;
+  cursor: pointer; font-size: 0.82rem;
+}
+.btn-edit:hover { background: #f5f5f5; }
+.btn-reject {
+  background: transparent; color: #991b1b;
+  border: 1px solid #fca5a5; padding: 6px 15px; border-radius: 5px;
+  cursor: pointer; font-size: 0.82rem;
+}
+.btn-reject:hover { background: #fef2f2; }
+
+/* ── Input area ── */
+.input-area {
+  padding: 14px 16px;
+  border-top: 1px solid #e4e4e8;
+  display: flex;
+  gap: 10px;
+  background: white;
+  flex-shrink: 0;
+  align-items: flex-end;
+}
+.input-area textarea {
+  flex: 1;
+  border: 1.5px solid #d1d1d8;
+  border-radius: 10px;
+  padding: 10px 13px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: none;
+  line-height: 1.45;
+  min-height: 42px;
+  max-height: 120px;
+  overflow-y: auto;
+  transition: border-color 0.15s;
+}
+.input-area textarea:focus { outline: none; border-color: #1a1a2e; }
+.input-area button {
+  background: #1a1a2e; color: white;
+  border: none; border-radius: 10px;
+  padding: 10px 20px; cursor: pointer;
+  font-size: 0.9rem; flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+.input-area button:disabled { opacity: 0.35; cursor: not-allowed; }
+.input-area button:not(:disabled):hover { opacity: 0.85; }
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sidebar-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e4e4e8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  flex-shrink: 0;
+}
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.artifact-chip {
+  background: white;
+  border: 1px solid #e4e4e8;
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 0.82rem;
+}
+.chip-type {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #1a1a2e;
+  margin-bottom: 3px;
+}
+.chip-name { font-weight: 600; margin-bottom: 2px; }
+.chip-detail { color: #666; line-height: 1.4; }
+.sidebar-empty {
+  color: #bbb;
+  font-size: 0.84rem;
+  text-align: center;
+  padding: 28px 14px;
+  line-height: 1.6;
+}
+
+/* ── Typing indicator ── */
+.typing {
+  display: flex; gap: 5px;
+  padding: 13px 16px;
+  align-self: flex-start;
+  background: #f0f0f4;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+}
+.typing span {
+  width: 7px; height: 7px;
+  background: #aaa; border-radius: 50%;
+  animation: bounce 1.3s ease-in-out infinite;
+}
+.typing span:nth-child(2) { animation-delay: 0.18s; }
+.typing span:nth-child(3) { animation-delay: 0.36s; }
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-7px); }
+}
+
+/* ── Setup overlay ── */
+.setup-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+.setup-card {
+  background: white;
+  border-radius: 14px;
+  padding: 34px 32px;
+  width: 440px;
+  max-width: 92vw;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.setup-card h2 { font-size: 1.25rem; margin-bottom: 10px; }
+.setup-card .subtitle {
+  color: #555; font-size: 0.88rem;
+  line-height: 1.6; margin-bottom: 22px;
+}
+.setup-card label {
+  display: block; font-size: 0.82rem;
+  font-weight: 600; margin-bottom: 6px; color: #333;
+}
+.setup-card input {
+  width: 100%;
+  border: 1.5px solid #d1d1d8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-family: monospace;
+  margin-bottom: 14px;
+  letter-spacing: 0.03em;
+}
+.setup-card input:focus { outline: none; border-color: #1a1a2e; }
+.setup-card .btn-primary {
+  width: 100%;
+  background: #1a1a2e; color: white;
+  border: none; border-radius: 8px;
+  padding: 12px; font-size: 0.95rem;
+  cursor: pointer; transition: opacity 0.15s;
+}
+.setup-card .btn-primary:hover { opacity: 0.85; }
+.setup-card .note {
+  font-size: 0.78rem; color: #999;
+  margin-top: 14px; line-height: 1.5;
+}
+.setup-card .error {
+  color: #991b1b; font-size: 0.82rem;
+  margin-bottom: 10px; display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>STPA Copilot</h1>
+  <span class="stage-badge" id="stage-label">Starting…</span>
+  <button onclick="exportMarkdown()">Export</button>
+  <button onclick="confirmClear()" style="opacity:0.55">New session</button>
+  <button onclick="changeKey()" style="opacity:0.55">API key</button>
+</div>
+
+<div class="main">
+  <div class="conversation">
+    <div class="messages" id="messages"></div>
+    <div class="input-area">
+      <textarea id="user-input" rows="1"
+        placeholder="Type your message and press Enter…"
+        onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-header">Accepted findings</div>
+    <div class="sidebar-content" id="sidebar-content">
+      <div class="sidebar-empty">Findings you accept during the analysis will appear here.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Setup overlay -->
+<div class="setup-overlay" id="setup-overlay" style="display:none">
+  <div class="setup-card">
+    <h2>STPA Copilot</h2>
+    <p class="subtitle">
+      Enter your Anthropic API key to get started. It is stored only in your
+      browser and is sent only to Anthropic's API — never anywhere else.
+    </p>
+    <label for="api-key-input">Anthropic API key</label>
+    <input type="password" id="api-key-input"
+      placeholder="sk-ant-api03-…"
+      onkeydown="if(event.key==='Enter') saveKey()" />
+    <div class="error" id="key-error"></div>
+    <button class="btn-primary" onclick="saveKey()">Start</button>
+    <p class="note">
+      No key yet? Go to <strong>console.anthropic.com</strong>, create an account,
+      add a small credit balance (a few dollars covers many sessions), and
+      generate an API key.
+    </p>
+  </div>
+</div>
+
+<script>
+// ─── System prompt ─────────────────────────────────────────────────────────────
+
+const SYSTEM = `You are an STPA Copilot — a structured analysis assistant for social, economic, and governance systems. You help ordinary people understand why an institution, organisation, or system is not working as it should.
+
+## Who you are talking to
+
+Your primary users are ordinary, reasonably educated people with no background in systems engineering or safety analysis. They have a vague sense that something is wrong but no precise vocabulary for it. You must:
+- Use plain, everyday language at all times
+- Never use a technical term without first explaining it in one or two plain-language sentences using an example drawn from the user's own system
+- Never use examples from aerospace, nuclear, or engineering — always use examples from organisations, government, or social systems
+- Make the user feel they are having a helpful conversation, not undergoing a technical procedure
+
+## Workflow — three stages
+
+You work through three stages. Do not rush. Move to the next stage only when you have enough information.
+
+### Stage 1 — Intake (opening)
+Your goal: understand what system the user is describing and what concerns them about it.
+Ask about:
+- What is this organisation or institution and what is it meant to do?
+- Who is involved — who makes decisions, who carries them out, who is affected?
+- What is going wrong, or what do they want to understand better?
+Ask ONE question at a time. Wait for the answer before asking the next. Do not summarise or list what you have learned after every message — just ask the next most useful question.
+
+### Stage 2 — Focused questioning
+Your goal: fill in the gaps you need to map how control and authority actually work.
+Ask about:
+- How decisions are made and communicated
+- What tells a decision-maker whether their decision was carried out (feedback)
+- What happens when the system is under pressure or in an unusual situation
+Ask only the questions you genuinely need. Do not run through a generic checklist.
+
+### Stage 3 — Control structure
+Your goal: identify who has authority over whom, and what instructions flow between them.
+A "controller" (in plain language: a decision-maker) is anyone who can issue instructions, directives, approvals, or commands that others in the system are structurally expected to follow.
+
+For each controller you identify, propose it as a structured finding using EXACTLY this format, on its own line, with no text before or after the tag on that line:
+
+<propose>{"type":"control_entity","name":"[name of actor or role]","role":"[what they are responsible for in plain language]","authority":"[what decisions or instructions they can issue]"}</propose>
+
+After proposing one, STOP and wait for the user to accept or reject it before proposing the next one.
+
+Once all controllers are accepted, propose the key instructions that flow between them:
+
+<propose>{"type":"control_action","from":"[who issues it]","to":"[who receives it]","action":"[what is commanded, decided, or approved]","feedback":"[how the issuer learns whether it worked — write 'none identified' if absent]"}</propose>
+
+Again, propose one at a time and wait for the response.
+
+## Rules — never break these
+- One question per message during stages 1 and 2
+- Plain language always; you may add a technical term in parentheses only if helpful
+- Base every finding only on what the user has told you — never invent
+- When uncertain, say so and ask
+- Never list multiple proposals at once — one <propose> tag per message
+- If the user rejects a proposal, ask what they would change, then revise it
+- Use "inadequate control" or "control gap" rather than "unsafe control action" unless the user is a technical practitioner
+- Do not explain the methodology to the user; just ask the next question or make the next proposal`;
+
+// ─── State ─────────────────────────────────────────────────────────────────────
+
+const state = {
+  apiKey: '',
+  stage: 'intake',
+  messages: [],
+  artifacts: [],
+};
+
+const STAGE_LABELS = {
+  intake: 'Stage 1 — Intake',
+  questioning: 'Stage 2 — Questioning',
+  'control-structure': 'Stage 3 — Control structure',
+};
+
+// ─── API ───────────────────────────────────────────────────────────────────────
+
+async function callClaude(messages) {
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'x-api-key': state.apiKey,
+      'anthropic-version': '2023-06-01',
+      'content-type': 'application/json',
+      'anthropic-dangerous-client-side-api-key-exposure': 'true',
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-6',
+      max_tokens: 1024,
+      system: SYSTEM,
+      messages,
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error?.message || `API error ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data.content[0].text;
+}
+
+// ─── Artifact parsing ──────────────────────────────────────────────────────────
+
+function parseProposal(text) {
+  const m = text.match(/<propose>([\s\S]*?)<\/propose>/);
+  if (!m) return null;
+  try { return JSON.parse(m[1].trim()); } catch { return null; }
+}
+
+function stripProposal(text) {
+  return text.replace(/<propose>[\s\S]*?<\/propose>/, '').trim();
+}
+
+// ─── Rendering ─────────────────────────────────────────────────────────────────
+
+function appendMessage(role, html) {
+  const wrap = document.getElementById('messages');
+  const el = document.createElement('div');
+  el.className = `message ${role}`;
+  el.innerHTML = html;
+  wrap.appendChild(el);
+  wrap.scrollTop = wrap.scrollHeight;
+  return el;
+}
+
+function textToHtml(text) {
+  return text
+    .split(/\n{2,}/)
+    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .join('');
+}
+
+function showTyping() {
+  const wrap = document.getElementById('messages');
+  const el = document.createElement('div');
+  el.className = 'typing'; el.id = 'typing';
+  el.innerHTML = '<span></span><span></span><span></span>';
+  wrap.appendChild(el);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+function hideTyping() { document.getElementById('typing')?.remove(); }
+
+function showProposalCard(proposal, onAccept, onReject) {
+  const wrap = document.getElementById('messages');
+  const card = document.createElement('div');
+  card.className = 'proposal-card';
+
+  let body = '';
+  if (proposal.type === 'control_entity') {
+    body = `<div class="proposal-name">${esc(proposal.name)}</div>
+      <div class="proposal-detail"><strong>Role:</strong> ${esc(proposal.role)}</div>
+      <div class="proposal-detail"><strong>Authority:</strong> ${esc(proposal.authority)}</div>`;
+  } else {
+    body = `<div class="proposal-name">${esc(proposal.from)} → ${esc(proposal.to)}</div>
+      <div class="proposal-detail"><strong>Action:</strong> ${esc(proposal.action)}</div>
+      <div class="proposal-detail"><strong>Feedback:</strong> ${esc(proposal.feedback || 'None identified')}</div>`;
+  }
+
+  const label = proposal.type === 'control_entity' ? 'Proposed actor' : 'Proposed control action';
+
+  card.innerHTML = `
+    <div class="proposal-label">${label}</div>
+    ${body}
+    <div class="proposal-actions">
+      <button class="btn-accept">✓ Accept</button>
+      <button class="btn-edit">Edit</button>
+      <button class="btn-reject">Reject</button>
+    </div>`;
+
+  card.querySelector('.btn-accept').onclick = () => { card.remove(); onAccept(proposal); };
+  card.querySelector('.btn-reject').onclick = () => { card.remove(); onReject(); };
+  card.querySelector('.btn-edit').onclick = () => editProposal(proposal, card, onAccept);
+
+  wrap.appendChild(card);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function editProposal(proposal, card, onAccept) {
+  // Simple inline edit: open a small form inside the card
+  const actionsEl = card.querySelector('.proposal-actions');
+  const fields = proposal.type === 'control_entity'
+    ? ['name', 'role', 'authority']
+    : ['from', 'to', 'action', 'feedback'];
+
+  actionsEl.innerHTML = fields.map(f =>
+    `<div style="width:100%;margin-bottom:6px">
+       <label style="font-size:0.72rem;font-weight:600;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em;color:#666">${f}</label>
+       <input data-field="${f}" value="${esc(proposal[f] || '')}"
+         style="width:100%;border:1px solid #ccc;border-radius:4px;padding:5px 8px;font-size:0.84rem;font-family:inherit">
+     </div>`
+  ).join('') +
+  `<button class="btn-accept" style="margin-top:4px">✓ Save</button>`;
+
+  actionsEl.querySelector('.btn-accept').onclick = () => {
+    actionsEl.querySelectorAll('input[data-field]').forEach(inp => {
+      proposal[inp.dataset.field] = inp.value.trim();
+    });
+    card.remove();
+    onAccept(proposal);
+  };
+}
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function updateSidebar() {
+  const el = document.getElementById('sidebar-content');
+  if (!state.artifacts.length) {
+    el.innerHTML = '<div class="sidebar-empty">Findings you accept during the analysis will appear here.</div>';
+    return;
+  }
+  el.innerHTML = state.artifacts.map(a => {
+    if (a.type === 'control_entity') return `
+      <div class="artifact-chip">
+        <div class="chip-type">Actor</div>
+        <div class="chip-name">${esc(a.name)}</div>
+        <div class="chip-detail">${esc(a.role)}</div>
+      </div>`;
+    return `
+      <div class="artifact-chip">
+        <div class="chip-type">Control action</div>
+        <div class="chip-name">${esc(a.from)} → ${esc(a.to)}</div>
+        <div class="chip-detail">${esc(a.action)}</div>
+      </div>`;
+  }).join('');
+}
+
+function setStage(s) {
+  state.stage = s;
+  document.getElementById('stage-label').textContent = STAGE_LABELS[s] || s;
+}
+
+// ─── Conversation flow ─────────────────────────────────────────────────────────
+
+async function runAssistant(userText) {
+  if (userText !== null) {
+    state.messages.push({ role: 'user', content: userText });
+    appendMessage('user', textToHtml(userText));
+  }
+
+  showTyping();
+  document.getElementById('send-btn').disabled = true;
+  document.getElementById('user-input').disabled = true;
+
+  try {
+    const raw = await callClaude(state.messages);
+    hideTyping();
+
+    state.messages.push({ role: 'assistant', content: raw });
+    save();
+
+    const proposal = parseProposal(raw);
+    const display  = proposal ? stripProposal(raw) : raw;
+
+    if (display) appendMessage('assistant', textToHtml(display));
+
+    // Infer stage from content
+    if (proposal && proposal.type === 'control_entity') setStage('control-structure');
+    else if (state.messages.length > 6 && state.stage === 'intake') setStage('questioning');
+
+    if (proposal) {
+      showProposalCard(
+        proposal,
+        accepted => {
+          state.artifacts.push(accepted);
+          updateSidebar(); save();
+          runAssistant('I accepted that. ' + JSON.stringify(accepted));
+        },
+        () => {
+          runAssistant('I rejected that proposal. Please ask me what I would change.');
+        }
+      );
+    }
+
+  } catch (err) {
+    hideTyping();
+    appendMessage('assistant', textToHtml(`Sorry, something went wrong: ${err.message}`));
+  }
+
+  document.getElementById('send-btn').disabled = false;
+  document.getElementById('user-input').disabled = false;
+  document.getElementById('user-input').focus();
+}
+
+async function sendMessage() {
+  const inp = document.getElementById('user-input');
+  const text = inp.value.trim();
+  if (!text || document.getElementById('send-btn').disabled) return;
+  inp.value = '';
+  autoResize(inp);
+  await runAssistant(text);
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+// ─── Session persistence ───────────────────────────────────────────────────────
+
+function save() {
+  localStorage.setItem('stpa-session', JSON.stringify({
+    stage: state.stage,
+    messages: state.messages,
+    artifacts: state.artifacts,
+  }));
+}
+
+function loadSession() {
+  try {
+    const s = JSON.parse(localStorage.getItem('stpa-session') || 'null');
+    if (!s || !s.messages?.length) return false;
+    state.stage = s.stage || 'intake';
+    state.messages = s.messages;
+    state.artifacts = s.artifacts || [];
+    return true;
+  } catch { return false; }
+}
+
+function confirmClear() {
+  if (!confirm('Start a new session? Export first if you want to keep this one.')) return;
+  localStorage.removeItem('stpa-session');
+  state.stage = 'intake'; state.messages = []; state.artifacts = [];
+  document.getElementById('messages').innerHTML = '';
+  updateSidebar(); setStage('intake');
+  runAssistant('[SESSION_START]');
+}
+
+// ─── Export ────────────────────────────────────────────────────────────────────
+
+function exportMarkdown() {
+  const date = new Date().toISOString().split('T')[0];
+  const actors  = state.artifacts.filter(a => a.type === 'control_entity');
+  const actions = state.artifacts.filter(a => a.type === 'control_action');
+
+  let md = `# STPA Copilot — Analysis\n\n*${date}*\n\n`;
+
+  if (actors.length) {
+    md += `## Actors and authority\n\n`;
+    actors.forEach(a => {
+      md += `### ${a.name}\n- **Role:** ${a.role}\n- **Authority:** ${a.authority}\n\n`;
+    });
+  }
+
+  if (actions.length) {
+    md += `## Control actions\n\n| From | To | Action | Feedback |\n|---|---|---|---|\n`;
+    actions.forEach(a => md += `| ${a.from} | ${a.to} | ${a.action} | ${a.feedback || 'None'} |\n`);
+    md += '\n';
+  }
+
+  md += `## Conversation\n\n`;
+  state.messages
+    .filter(m => !m.content.startsWith('[SESSION_START]'))
+    .forEach(m => {
+      const speaker = m.role === 'user' ? '**You**' : '**Copilot**';
+      const text = stripProposal(m.content);
+      if (text) md += `${speaker}: ${text}\n\n---\n\n`;
+    });
+
+  const blob = new Blob([md], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `stpa-${date}.md`; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ─── API key setup ─────────────────────────────────────────────────────────────
+
+function showSetup() {
+  document.getElementById('setup-overlay').style.display = 'flex';
+  setTimeout(() => document.getElementById('api-key-input').focus(), 50);
+}
+
+function changeKey() {
+  document.getElementById('api-key-input').value = '';
+  document.getElementById('key-error').style.display = 'none';
+  showSetup();
+}
+
+function saveKey() {
+  const key = document.getElementById('api-key-input').value.trim();
+  const errEl = document.getElementById('key-error');
+
+  if (!key) { errEl.textContent = 'Please enter your API key.'; errEl.style.display = 'block'; return; }
+  if (!key.startsWith('sk-ant-')) {
+    errEl.textContent = 'That does not look like an Anthropic key (should start with sk-ant-).';
+    errEl.style.display = 'block'; return;
+  }
+
+  state.apiKey = key;
+  localStorage.setItem('stpa-api-key', key);
+  document.getElementById('setup-overlay').style.display = 'none';
+  init();
+}
+
+// ─── Boot ──────────────────────────────────────────────────────────────────────
+
+function init() {
+  const had = loadSession();
+  updateSidebar();
+  setStage(state.stage);
+
+  if (had) {
+    // Replay the visible parts of the conversation without calling the API
+    state.messages.forEach(m => {
+      if (m.content.startsWith('[SESSION_START]')) return;
+      const proposal = parseProposal(m.content);
+      const display  = proposal ? stripProposal(m.content) : m.content;
+      if (display) appendMessage(m.role, textToHtml(display));
+    });
+    // If last message was from user, re-run the assistant
+    const last = state.messages[state.messages.length - 1];
+    if (last && last.role === 'user') runAssistant(null);
+  } else {
+    runAssistant('[SESSION_START]');
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const key = localStorage.getItem('stpa-api-key');
+  if (key) { state.apiKey = key; init(); }
+  else showSetup();
+});
+</script>
+</body>
+</html>

@@ -18,16 +18,16 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 
 | Functional Slot | How This System Fills It |
 |-----------------|-------------------------|
-| Authority & Decision-Making | See Goals and Requirements in the interactive view |
-| Membership & Belonging | See R-level items defining who belongs |
-| Resource Allocation | See F-level financial/economic functions |
-| Norm Setting & Enforcement | See F3/F4-type functions |
-| Dispute Resolution | Embedded in governance and judicial subsystems |
-| Legitimation | See the Goals level — the system's stated purpose |
-| Succession & Continuity | See VP4 binding above |
-| External Representation | See executive/diplomatic functions |
-| Socialization | See education/onboarding functions |
-| Activity Delivery | See operations/delivery subsystem |
+| Authority & Decision-Making | Mitgliederversammlung (general assembly) as sovereign body; elected Vorstand handles day-to-day execution |
+| Membership & Belonging | Voluntary application; admission approved by Vorstand; conditions and fees defined in the Satzung |
+| Resource Allocation | Membership fees (Beiträge); donations; assembly-approved annual budget; independent Kassenprüfer audit |
+| Norm Setting & Enforcement | Satzung (articles of association); Geschäftsordnung (procedural rules); group social norms |
+| Dispute Resolution | Ehrengericht (honour court) or Vorstand mediation; expulsion requires assembly vote by absolute majority |
+| Legitimation | Shared non-commercial purpose; democratic participation; voluntary membership as constitutive feature |
+| Succession & Continuity | Annual or biennial election of Vorstand at Mitgliederversammlung; written Satzung ensures institutional memory |
+| External Representation | 1. Vorsitzender (chair) as sole legal representative (Vertretungsberechtigung); umbrella organisation membership |
+| Socialisation | Club culture and shared practices; activity rituals; mentoring of new members into group norms |
+| Activity Delivery | Regular activities (training sessions, meetings, events, competitions) serving the stated purpose |
 
 ---
 

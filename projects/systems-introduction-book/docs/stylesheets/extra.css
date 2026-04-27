@@ -1,0 +1,33 @@
+/* ── Compact tables ─────────────────────────────────────────────────────── */
+
+/* Size each column to its content — prevents leftover space being handed
+   to the wrong column in 4+ column tables.  The table itself stays inside
+   the content area; if it would overflow the browser scrolls it.          */
+.md-typeset table:not([class]) {
+  width: auto;
+  max-width: 100%;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.3em 0.65em;
+  vertical-align: top;
+  line-height: 1.35;
+}
+
+/* ── Compact lists ───────────────────────────────────────────────────────── */
+
+.md-typeset ol,
+.md-typeset ul {
+  margin-block: 0.45em;
+}
+
+.md-typeset li {
+  margin-block: 0.1em;
+  line-height: 1.5;
+}
+
+/* Shrink the marker (number / bullet) so it doesn't dominate the text   */
+.md-typeset li::marker {
+  font-size: 0.8em;
+}

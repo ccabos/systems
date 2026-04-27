@@ -39,8 +39,8 @@ agent-skill/
 │   ├── system-catalogues/
 │   │   ├── social-systems/         # 4 cross-system + 10 per-system + 1 worked example
 │   │   └── dev-frameworks/         # 5 cross-framework + 8 per-framework
-│   ├── memo-template.md            # Decision memo template (TODO)
-│   └── report-template.md          # Full analysis report template (TODO)
+│   ├── memo-template.md            # Decision memo template
+│   └── report-template.md          # Full analysis report template
 ├── examples/                       # Worked examples (social, economic, governance)
 └── scripts/                        # Python / shell helpers
 ```

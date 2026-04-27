@@ -5,6 +5,10 @@ system. Extracted from the original decomposition in
 `projects/systems-introduction-book/docs/part2/religion.md`, which was
 the founding worked example of the project.
 
+For the STPA analysis built on this decomposition (Steps 1–4,
+unsafe control actions, loss scenarios, and rung-tagged control
+structure) see `applied-se-analysis.md` in this folder.
+
 ## Goals (G)
 
 - **G1** — Provide existential meaning and purpose to human life

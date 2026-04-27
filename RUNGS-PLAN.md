@@ -73,47 +73,47 @@ operate at rung 3-4 throughout and do not need it.
 
 Each phase has explicit file edits. Tick boxes as you go.
 
-### Phase 1 — Knowledge base: technique page (foundational)
+### Phase 1 — Knowledge base: technique page (foundational) ✅ DONE (commit 6d15917)
 
 Create new technique under `knowledge/se-techniques/justification-rungs/`:
 
-- [ ] `README.md` — index, link to siblings (stpa, stamp, control-structures)
-- [ ] `overview.md` — what the technique is, why it exists, when to use
-- [ ] `rungs.md` — the seven rungs in detail with definitions, examples, what each rung adds
-- [ ] `application-to-stpa.md` — the seven hooks above
-- [ ] `dangerous-mismatches.md` — the three rung-mismatch patterns + circuit breakers
-- [ ] `references.md` — Popper, Kuhn, Habermas, Leveson, "meta-rationality" sources
+- [x] `README.md` — index, link to siblings (stpa, stamp, control-structures)
+- [x] `overview.md` — what the technique is, why it exists, when to use
+- [x] `rungs.md` — the seven rungs in detail with definitions, examples, what each rung adds
+- [x] `application-to-stpa.md` — the seven hooks above
+- [x] `dangerous-mismatches.md` — the three rung-mismatch patterns + circuit breakers
+- [x] `references.md` — Popper, Kuhn, Habermas, Leveson, "meta-rationality" sources
 
 Update `knowledge/se-techniques/README.md` (if it exists) to list the new folder.
 
 Acceptance: a reader of the new folder can fully understand the
 technique and apply it without other prior context.
 
-### Phase 2 — Knowledge base: extend STPA & control-structure pages
+### Phase 2 — Knowledge base: extend STPA & control-structure pages ✅ DONE (commit f721fd3)
 
-- [ ] `knowledge/se-techniques/stpa/four-steps.md` — append a Step 2.5 paragraph: "Tag each arrow with a rung. See `../justification-rungs/application-to-stpa.md`."
-- [ ] `knowledge/se-techniques/stpa/unsafe-control-actions.md` — add a "Rung-mismatch UCA modes" section with UCA-R1/R2/R3.
-- [ ] `knowledge/se-techniques/stpa/from-se-to-stpa.md` — note rung as a per-arrow attribute that does not come from the SE decomposition; STPA must elicit it separately.
-- [ ] `knowledge/se-techniques/control-structures/diagnostic-questions.md` — add 5th question (rung).
-- [ ] `knowledge/se-techniques/control-structures/dangerous-patterns.md` — add "Rung Asymmetry" as the fourth pattern.
-- [ ] `knowledge/se-techniques/control-structures/overview.md` — bump "four diagnostic questions" / "three dangerous patterns" counts.
+- [x] `knowledge/se-techniques/stpa/four-steps.md` — append a Step 2.5 paragraph: "Tag each arrow with a rung. See `../justification-rungs/application-to-stpa.md`."
+- [x] `knowledge/se-techniques/stpa/unsafe-control-actions.md` — add a "Rung-mismatch UCA modes" section with UCA-R1/R2/R3.
+- [x] `knowledge/se-techniques/stpa/from-se-to-stpa.md` — note rung as a per-arrow attribute that does not come from the SE decomposition; STPA must elicit it separately.
+- [x] `knowledge/se-techniques/control-structures/diagnostic-questions.md` — add 5th question (rung).
+- [x] `knowledge/se-techniques/control-structures/dangerous-patterns.md` — add "Rung Asymmetry" as the fourth pattern.
+- [x] `knowledge/se-techniques/control-structures/overview.md` — bump "four diagnostic questions" / "three dangerous patterns" counts.
 
 Acceptance: the existing STPA pages reference rungs explicitly;
 no broken cross-references.
 
-### Phase 3 — Knowledge base: cross-system catalogue
+### Phase 3 — Knowledge base: cross-system catalogue ✅ DONE (commit 24dc05f)
 
-- [ ] `knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md` — add two rows to each system's profile: **Claimed rung** and **Operating rung**, with a one-sentence note on the gap.
-- [ ] `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md` — re-read each remedy as a rung-elevation move; add a "Rung delta" line to each.
-- [ ] New file: `knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md` — comparison table across the ten systems with claimed/operating/gap.
+- [x] `knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md` — add two rows to each system's profile: **Claimed rung** and **Operating rung**, with a one-sentence note on the gap.
+- [x] `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md` — re-read each remedy as a rung-elevation move; add a "Rung delta" line to each.
+- [x] New file: `knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md` — comparison table across the ten systems with claimed/operating/gap.
 
 Acceptance: each catalogue file shows the rung dimension; the new
 comparison file enumerates all ten.
 
-### Phase 4 — Religion deep dive (also clears earlier debt)
+### Phase 4 — Religion deep dive (also clears earlier debt) ✅ DONE (commits 70d878c, 78a0976, 6d79be9, 427450c, 22ba7fd)
 
-- [ ] Create `knowledge/system-catalogues/social-systems/religion/applied-se-analysis.md` (the file `se-decomposition.md:59` already forward-references). Build the rung dimension into it from the start: Step 1–4 STPA artefacts, with each control action and feedback channel rung-tagged, and a final section "Rung mismatch as the structural driver."
-- [ ] Update `knowledge/system-catalogues/social-systems/religion/se-decomposition.md` — keep the forward reference, now satisfied.
+- [x] Create `knowledge/system-catalogues/social-systems/religion/applied-se-analysis.md` (the file `se-decomposition.md:59` already forward-references). Build the rung dimension into it from the start: Step 1–4 STPA artefacts, with each control action and feedback channel rung-tagged, and a final section "Rung mismatch as the structural driver."
+- [x] Update `knowledge/system-catalogues/social-systems/religion/se-decomposition.md` — keep the forward reference, now satisfied; add a top-of-file pointer to `applied-se-analysis.md`.
 
 Acceptance: the religion folder is complete to the social-systems
 template (sans `is-it-a-system.md`, `historical-se-interventions.md`,

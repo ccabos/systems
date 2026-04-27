@@ -5,7 +5,9 @@ of a social, economic, governance, or other non-technical institutional
 system using the SE / product-line / STPA techniques from
 `../../knowledge/`.
 
-**Full specification:** [`SKILL.md`](SKILL.md)
+**Skill bundle entry point:** [`SKILL.md`](SKILL.md) — the system prompt loaded by Claude.ai when this folder is uploaded as a skill.
+
+**Design specification:** [`SKILL-spec.md`](SKILL-spec.md) — the third-person specification of audience, procedure, and knowledge-file map that the prompt was derived from. Kept in the repo for reference; not loaded at runtime.
 
 ## Quick summary
 
@@ -30,11 +32,12 @@ background. The skill is designed to work for them without prior study.
 
 ```
 agent-skill/
-├── SKILL.md                        # Complete specification (start here)
-├── reference/
+├── SKILL.md                        # System prompt (loaded by Claude.ai)
+├── SKILL-spec.md                   # Original design specification
+├── reference/                      # Bundled knowledge files (Pass 2 — TBD)
 │   ├── memo-template.md            # Decision memo template
 │   ├── report-template.md          # Full analysis report template
-│   └── validation-checklist.md     # Step 2 and step 5 checklists
+│   └── validation-checklist.md     # Step 2 and step 6 checklists
 ├── examples/                       # Worked examples (social, economic, governance)
 └── scripts/                        # Python / shell helpers
 ```

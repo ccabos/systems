@@ -319,3 +319,120 @@ linking giving to spiritual outcomes.
 *Architectural fix:* explicit doctrinal recognition of conscience
 as a valid moral source; structured dissent mechanisms; periodic
 doctrinal review engaging laity and external scholars.
+
+---
+
+## 5. Cross-cutting structural findings
+
+### 5.1 Feedback poverty at the top
+
+The Central Authority receives feedback primarily through its own
+appointees, who are incentivised to report compliance rather than
+problems. External feedback (scientific findings, secular criticism,
+abuse reports) is structurally classified as hostile input, not
+corrective signal. This is the canonical **Self-Sealing Process
+Model** pattern (Pattern 2 in
+`../../../se-techniques/control-structures/dangerous-patterns.md`).
+
+### 5.2 Asymmetric power at every level
+
+Each controller has significantly more power over the controlled
+process than the controlled process has to send corrective feedback
+upward. By design (R4), but it means control errors propagate
+downward unchecked.
+
+### 5.3 Self-confirming process models
+
+At every level, the controller's mental model of the controlled
+process contains built-in resistance to disconfirmation:
+
+| Self-sealing pattern | How it works |
+|---------------------|--------------|
+| "Doubt is sin" | Eliminates the primary corrective signal (questioning) |
+| "Suffering is divine test" | Reframes harm as benefit |
+| "External criticism is persecution" | Classifies corrective feedback from outside as hostile |
+| "Apostates were never true believers" | Discounts testimony from those with most relevant experience |
+| "God's ways are beyond human understanding" | Makes the model unfalsifiable by definition |
+
+### 5.4 Conflicting goals
+
+| Goal pair | Tension |
+|-----------|---------|
+| G2 (moral orientation) vs. R4 (authority) | Authority enables morality but can override conscience |
+| G3 (social cohesion) vs. R6 (in-group/out-group) | Cohesion requires boundaries; boundaries enable exclusion |
+| G4 (comfort) vs. R3 (norms) | Comfort requires unconditional acceptance; norms require conditional compliance |
+| G1 (meaning) vs. R1 (cosmological narrative) | Meaning requires honest engagement with reality; a fixed narrative may conflict with reality |
+
+These tensions are inherent in any system that simultaneously
+serves individual and collective needs. The design flaw is the
+absence of a mechanism for managing them — no transparent process
+for deciding which goal takes priority when goals conflict.
+
+---
+
+## 6. Why rung mismatch is the dominant structural driver
+
+Of the four cross-cutting findings above, **rung mismatch
+subsumes them all** in this system:
+
+- "Feedback poverty at the top" is the rung-1 controller refusing
+  rung-3 input — **Pattern A**.
+- "Self-confirming process models" are the controller's
+  acceptance-rung filter operationalised — every entry in the table
+  in §5.3 is a rule for re-classifying rung-3+ feedback as rung-1
+  noise.
+- "Conflicting goals" are tractable when the system can deliberate
+  at rung 6 about how to balance them; in a rung-1 system,
+  whichever side has more authority simply wins.
+- The most catastrophic loss scenarios (LS-1, LS-2, LS-6) all
+  pivot on the same structural fact: rung-3 evidence exists but
+  cannot enter the apex's process model.
+
+Religion's harmful outcomes are therefore not random
+malfunctions but **the predictable consequence of operating a
+sacralised rung-1 control architecture** while claiming the
+authority of rung 6. The remedies in §7 are all attempts to insert
+rung-3 channels that route *around* the rung-1 filter without
+forcing the controller to abandon its rung-1 self-understanding.
+
+This is the central thesis of the rung extension applied to
+religion: see also
+`../cross-system/justification-rungs-by-system.md` (§ "Why
+religion's Pattern A is the dominant failure mode") and
+`../../../se-techniques/justification-rungs/dangerous-mismatches.md`
+(Pattern A — Asymmetric Loop).
+
+---
+
+## 7. Architectural improvements (pointers)
+
+The full catalogue of religion-specific remedies is in
+`../cross-system/remedies-case-studies.md` §3. The rung-elevation
+re-reading of those remedies is in §6 of the same file. Both are
+structurally consistent with the rung dimension developed here.
+
+Five generic moves apply to this system:
+
+1. **Close the feedback loop.** Independent ombudsman, periodic
+   wellbeing surveys, formal exit interviews — all rung-3 channels
+   that bypass the rung-1 hierarchy. Address H2, HX, LS-1, LS-2.
+2. **Make process models updatable.** Doctrinal version control,
+   standing engagement with external knowledge, preserved
+   dissenting opinions. Rung-2/3 inputs into a rung-1 process.
+   Address H1, HX, LS-1, LS-6.
+3. **Separate control functions.** Spiritual authority from
+   administrative authority; pastoral care from norm enforcement;
+   independent safeguarding. Address H2, H5, H7, LS-2, LS-5.
+4. **Install circuit breakers.** Universal-dignity commitment that
+   overrides R6; proportionality review for shunning/excommunication;
+   informed consent for intensive practices. Address H3, H4, H8,
+   LS-3, LS-4.
+5. **Protect vulnerable populations.** Secular safeguarding
+   standards in religious education; prohibit fear-based instruction
+   for children; mandatory external reporting of abuse. Address H4,
+   H5, H8, LS-2, LS-4.
+
+The fixes are architectural, not theological. They do not require
+abandoning faith. They require redesigning the system that carries
+it — by inserting rung-3 channels at the points where the rung-1
+hierarchy has historically filtered corrective signal.

@@ -45,3 +45,32 @@ cross-system reference.
 - **KP4** — Royal treasury, tax farmers, customs houses
 - **KP5** — Royal courts of justice, appointed magistrates
 - **KP6** — Provincial governors, feudal lords, bailiffs
+
+## Justification rungs
+
+For the technique see `../../../se-techniques/justification-rungs/`;
+for the cross-system comparison see
+`../cross-system/justification-rungs-by-system.md`.
+
+| Attribute | Value |
+|-----------|-------|
+| Claimed rung | **1** — divine right, hereditary legitimacy, sacral tradition (KR6, KG4) |
+| Operating rung | **0/1** — force backed by tradition. Coercion (KR3, KF3) is always available; deliberation is exceptional |
+| Loop symmetry | Symmetric at the operating rung. Down: rung-1 royal decree (KF1) and rung-0 military command (KF3); up: rung-1 court reports filtered by KL1 and KL5 |
+| Dominant rung pattern | None directly — claim and operation match closely. Failures here come from the *absence* of feedback at any rung (Patterns 1–2 — Accountability Void plus Self-Sealing Process Model) rather than rung asymmetry |
+
+The kingdom is the cleanest case of *honest rung-1 operation*: the
+system claims tradition and divine right, and it operates on
+tradition and divine right. There is no claimed-vs-operating gap to
+collapse. The structural failures are therefore the classical ones
+catalogued in `../../../se-techniques/control-structures/dangerous-patterns.md`:
+the monarch judges their own claims, and the court is the only
+upward channel to the throne. Both operate inside rung 1.
+
+This makes the kingdom the natural baseline for the rung dimension:
+when later systems (theocracy, one-party state) take rung-1
+operation but wrap it in rung-6 legitimacy claims, the result is
+worse than the bare kingdom — because the gap itself becomes the
+dominant hazard (HX in
+`../religion/applied-se-analysis.md` §1.2 illustrates the
+generalisation).

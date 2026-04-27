@@ -119,13 +119,13 @@ Acceptance: the religion folder is complete to the social-systems
 template (sans `is-it-a-system.md`, `historical-se-interventions.md`,
 `sources.md` which remain optional per project pattern).
 
-### Phase 5 — Per-system rung notes (touch only what is structural)
+### Phase 5 — Per-system rung notes (touch only what is structural) ✅ DONE (commits 0cb30c8 + 5b)
 
 For each system below, add a "Justification rungs" subsection to its `se-decomposition.md`:
 
-- [ ] `kingdom/se-decomposition.md` — operates rung 0/1
-- [ ] `military/se-decomposition.md` — operates rung 0/1, claims higher in modern professional armies
-- [ ] (`theocracy/`, `one-party-state/`, `democracy/`, `corporation/`, `university/`, `family/`, `verein/` currently have no per-system files; their rung notes live only in cross-system files for now. Skip until/unless a per-system file is created.)
+- [x] `kingdom/se-decomposition.md` — operates rung 0/1; honest baseline
+- [x] `military/se-decomposition.md` — operates rung 0/1, claims higher in modern professional armies; civil-military rung mismatch is the distinguishing feature
+- [x] (`theocracy/`, `one-party-state/`, `democracy/`, `corporation/`, `university/`, `family/`, `verein/` currently have no per-system files; their rung notes live only in cross-system files for now. Skip until/unless a per-system file is created.)
 
 Acceptance: the two existing per-system files acknowledge the rung dimension; no new files are created here.
 

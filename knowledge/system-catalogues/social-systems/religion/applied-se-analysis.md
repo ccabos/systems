@@ -84,3 +84,66 @@ Each hazard implies a constraint the system must maintain to prevent it.
 | SC7 | Financial management must be transparent, audited, and separated from spiritual authority | H7 |
 | SC8 | Ritual participation must be voluntary, with no material or social penalty for non-participation | H8 |
 | **SCX** | **Rung match.** Either lower the public claim to match operation (rung-1 clerical authority, honestly stated) or insert independent rung-3 feedback channels that route around the rung-1 hierarchy (audit, mandatory reporting, lay safeguarding) | HX |
+
+---
+
+## 2. Step 2 — Model the control structure
+
+### 2.1 The four loops
+
+Religion's control structure follows the universal four-level
+social-system pattern (see
+`../../../se-techniques/control-structures/overview.md`). The four
+loops are forced by the SE decomposition's R4 authority requirement
+and the candidate-loop justification is in
+`projects/systems-introduction-book/docs/part4/religion-stpa.md` §3.2.
+
+| Loop | Controller (SE ID) | Controlled Process | Authority source | Primary control actions |
+|------|-------------------|-------------------|------------------|-------------------------|
+| 1 | Central Authority (P5, P6) | Clergy (P3) | R4 + claimed divine mandate | Doctrine (F1, F4), canon law (F3), appointment/removal |
+| 2 | Clergy (P3) | Congregation (P4) | R4 delegated | Preaching (F1), sacraments (F5), pastoral rules (F2), discipline |
+| 3 | Congregation (P4) | Individual | R5, R6 | Social norms, inclusion/exclusion, reputation |
+| 4 | Individual (self) | Own behaviour | Internalised R1–R3 | Self-regulation, conscience, confession, prayer |
+
+### 2.2 Per-arrow rung tags
+
+Per the rung extension to STPA Step 2 (see
+`../../../se-techniques/justification-rungs/application-to-stpa.md`),
+every control action and every feedback channel is tagged with the
+rung at which it actually operates.
+
+| Loop | Control action rung | Feedback rung | Loop symmetry |
+|------|--------------------|---------------|---------------|
+| 1 (Authority → Clergy) | Rung 1 (sacred + institutional authority) | Rung 1 (filial reports from appointees) | Symmetric at rung 1 |
+| 2 (Clergy → Congregation) | Rung 1 (pastoral authority, sacrament gatekeeping) | Rung 1 (confession, attendance, donation) | Symmetric at rung 1 |
+| 3 (Congregation → Individual) | Rung 1 (social norms, peer pressure) | Rung 1 (gossip, reputation, observed compliance) | Symmetric at rung 1 |
+| 4 (Individual self-regulation) | Internalised rung 1 (conscience formed by R1–R3) | Rung 1 (self-examination filtered through doctrine) | Symmetric at rung 1 |
+
+### 2.3 The structural mismatch
+
+The four loops are *internally* rung-symmetric, which is why the
+system functions stably for centuries. The catastrophic failure
+mode is **external**: rung-3 reality (abuse evidence, scientific
+findings, demographic data on harm) is *generated* outside the
+hierarchy and tries to enter Loop 1's feedback channel. The
+controller's process model has no slot for rung-3 input — it
+classifies rung-3 evidence as rung-1 hostility (heresy,
+persecution, betrayal) and filters it out.
+
+This is **Pattern A — Asymmetric Loop** from
+`../../../se-techniques/justification-rungs/dangerous-mismatches.md`,
+combined with **Pattern B — Claimed-Rung Inflation** (the system
+claims rung 6 sacralised ultimate legitimacy while operating at
+rung 1).
+
+### 2.4 Process models — claimed vs operating rungs
+
+| Controller | Claimed rung | Operating rung | Acceptable feedback rungs |
+|------------|--------------|---------------|--------------------------|
+| Central Authority | 6 (sacralised ultimate legitimacy) | 1 (clerical authority) | 1 only — rung-3+ feedback rejected as hostile |
+| Clergy | 1 (delegated sacred authority) | 1 | 1 (confession, complaints from rung-1 sources only) |
+| Congregation | 1 (shared faith, tradition) | 1 | 1 (peer signals; rung-3 outside critique dismissed) |
+| Individual | 1 (internalised) | 1 | 1 (doubt classified as temptation) |
+
+The acceptable-feedback-rung column is the structural cause of
+most loss scenarios in §4.

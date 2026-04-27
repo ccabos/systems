@@ -143,10 +143,10 @@ Acceptance: the two existing per-system files acknowledge the rung dimension; no
 - [x] Edit `docs/part4/control-structures.md` — five questions, four dangerous patterns. (commit 9764f2a)
 - [x] Edit `docs/part4/remedies.md` — re-read each architectural remedy as a rung-elevation move with the thirteen-remedy table.
 
-### Phase 8 — Skill integration
+### Phase 8 — Skill integration ✅ DONE
 
-- [ ] Edit `projects/agent-skill/README.md` — add justification-rung tagging as step 4.5 (between "Control-structure sketch" and "STPA pass").
-- [ ] Edit `projects/agent-skill/SKILL.md` — when this is written, ensure the seven-step procedure cites `knowledge/se-techniques/justification-rungs/`. (Currently a placeholder; only update if scaffold becomes real during this work.)
+- [x] Edit `projects/agent-skill/README.md` — insert rung tagging as new step 5 (between control-structure sketch and STPA pass), renumber subsequent steps. Update step 4's question/pattern counts to five/four. Add the rung-elevation framing to step 7.
+- [x] Edit `projects/agent-skill/SKILL.md` — record that the procedure is now eight steps and that the future implementation must cite `knowledge/se-techniques/justification-rungs/`. Note that step 5 is N/A for engineered systems where all loops operate at rung 3–4.
 
 ### Phase 9 — Build & verify
 

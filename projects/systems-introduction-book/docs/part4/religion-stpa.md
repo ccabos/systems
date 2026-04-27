@@ -406,6 +406,20 @@ The SE decomposition reveals that several system goals are in structural tension
 
 These tensions are not design flaws — they are inherent in any system that simultaneously serves individual and collective needs. The design flaw is when the system has **no mechanism for managing the tension**: no process for deciding which goal takes priority when they conflict, and no authority empowered to make that trade-off transparently.
 
+### 6.4 The rung mismatch behind the four findings
+
+The previous chapter [Justificatory Rungs](../part1/justification-rungs.md) introduced a seven-rung ladder of standards under which control actions and feedback signals are accepted. Reading §§6.1–6.3 through that lens, **rung mismatch subsumes them all** for this system:
+
+- **"Feedback poverty at the top"** is the rung-1 controller refusing rung-3 input — Pattern A (asymmetric loop). The rung-1 hierarchy classifies abuse data, scientific evidence, and demographic harm as rung-1 hostility and filters them out.
+- **"Self-confirming process models"** is the controller's *acceptance-rung filter* operationalised. Each entry in the table in §6.2 ("doubt is sin," "suffering is divine test," "external criticism is persecution," "apostates were never true believers," "God's ways are beyond human understanding") is a specific rule for re-classifying rung-3+ feedback as rung-1 noise.
+- **"Conflicting goals"** are tractable when the system can deliberate at rung 6 about how to balance them; in a rung-1 system, whichever side has more authority simply wins.
+
+The system simultaneously runs **Pattern B — Claimed-Rung Inflation**: it claims rung 6 (sacralised ultimate legitimacy) while operating at rung 1 (clerical authority). The gap is enforced doctrinally rather than closed, which is why the failures are predictable and recurrent.
+
+The architectural fixes in §7 are all attempts to insert **rung-3 channels that route around the rung-1 filter** without forcing the controller to abandon its rung-1 self-understanding. Mandatory civil reporting, independent ombudspersons, lay safeguarding boards, doctrinal version control with external scholarship, and pre-registered scientific-consultation processes are all implementations of the same architectural pattern.
+
+This is the single most important structural finding of the analysis: religion's harmful outcomes are not random malfunctions but the **predictable consequence of operating a sacralised rung-1 control architecture while claiming the authority of rung 6**. The canonical reference, including the rung-tagged control structure and the rung-acceptance filter as a recurring causal factor in every loss scenario, is in `knowledge/system-catalogues/social-systems/religion/applied-se-analysis.md`.
+
 ---
 
 ## 7. Recommendations: Architectural Improvements

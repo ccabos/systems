@@ -220,17 +220,49 @@ feedback structures of the two layers are consistent with each other.
 
 ### Step 4 — Control-structure sketch
 
-Apply the four diagnostic questions
+Apply the five diagnostic questions
 (`knowledge/se-techniques/control-structures/diagnostic-questions.md`)
-and search for the three dangerous patterns
+and search for the four dangerous patterns
 (`knowledge/se-techniques/control-structures/dangerous-patterns.md`):
 accountability void, self-sealing process model, proxy metric
-replacing goal.
+replacing goal, rung asymmetry. The fifth question and fourth
+pattern apply only to social systems and are detailed in step 5.
 
 Record: which controllers exist, what they control, what feedback
 channels exist, and which (if any) dangerous patterns are present.
 
-### Step 5 — STPA pass (if warranted)
+### Step 5 — Justificatory-rung tagging (social systems only)
+
+For each control action and each feedback channel in the sketch,
+identify the **justificatory rung** at which it operates — rung 0
+(coercion), rung 1 (authority/rhetoric/identity), rung 2 (formal
+consistency), rung 3 (empirical testability), rung 4 (cumulative
+evidence), rung 5 (meta-rational integration), rung 6 (deliberative
+legitimacy). Tag each controller with both its **claimed rung**
+(the standard its public legitimacy appeals to) and its **operating
+rung** (the standard its loops actually run on).
+
+Then check for the three rung-mismatch patterns
+(`knowledge/se-techniques/justification-rungs/dangerous-mismatches.md`):
+
+- **Pattern A — Asymmetric Loop.** Rung-1 control downward with
+  rung-3 feedback expected upward; the controller's process model
+  rejects rung-3 input as rung-1 hostility.
+- **Pattern B — Claimed-Rung Inflation.** The system claims a high
+  rung (rung 6) but operates at rung 1; the gap erodes legitimacy.
+- **Pattern C — Cross-Loop Rung Imposition.** A controller
+  legitimate at one rung extends its authority into a domain whose
+  loop requires a different rung.
+
+For engineered systems where every loop operates at rung 3-4
+throughout, this step is documented as N/A rather than executed
+— the rung dimension adds no information for them. Use this step
+where the system is social, institutional, or policy-shaped.
+
+The technique reference is at
+`knowledge/se-techniques/justification-rungs/`.
+
+### Step 6 — STPA pass (if warranted)
 
 **Warranted when all three of the following hold:**
 
@@ -250,7 +282,7 @@ unsafe control actions → causal scenarios.
 each UCA traces back to a specific causal factor in the control
 structure, not just to human error or bad intentions.
 
-### Step 6 — Remedy proposals
+### Step 7 — Remedy proposals
 
 Draw remedies from
 `knowledge/system-catalogues/*/cross-*/remedies-case-studies.md`.
@@ -258,17 +290,27 @@ Draw remedies from
 **For systems that match a known catalogue entry:** use the specific
 remedies documented for that system family, adapted to the instance.
 
-**For novel systems or unmatched UCAs:** fall back to the three
-dangerous patterns. Each UCA identified in step 5 must map to at
-least one pattern. Derive the remedy by closing the specific
-structural pathway the pattern describes — do not improvise generic
-"improve communication" or "add oversight" proposals.
+**For novel systems or unmatched UCAs:** fall back to the four
+dangerous patterns (accountability void, self-sealing process model,
+proxy metric, rung asymmetry). Each UCA identified in step 6 must
+map to at least one pattern. Derive the remedy by closing the
+specific structural pathway the pattern describes — do not
+improvise generic "improve communication" or "add oversight"
+proposals.
+
+**For social systems with rung-mismatch UCAs (UCA-R1/R2/R3):** most
+catalogued architectural remedies are *rung-elevation* moves — they
+preserve the rung-1 controller and insert a parallel rung-3 channel
+routed around the rung-1 hierarchy (independent audit, statutory
+reporting, ombudsperson, external investigation). See the
+"rung-elevation perspective" section in
+`knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`.
 
 If the system is genuinely novel and its remedies cannot be derived
 from pattern-matching, say so explicitly. Do not invent remedies.
 Flag the gap for the `knowledge/` maintainer.
 
-### Step 7 — Deliverable
+### Step 8 — Deliverable
 
 Produce one of two artefact types, chosen with the user:
 

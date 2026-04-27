@@ -96,6 +96,7 @@ nav:
     - "The Five-Level SE Hierarchy": part1/se-hierarchy.md
     - "Product Line Thinking": part1/product-lines.md
     - "STPA and STAMP": part1/stpa-introduction.md
+    - "Justificatory Rungs": part1/justification-rungs.md
   - "Part II — Social Systems":
     - part2/index.md
     - "Religion": part2/religion.md

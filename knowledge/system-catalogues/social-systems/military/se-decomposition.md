@@ -48,3 +48,36 @@ by the other nine systems in the catalogue.
 - **MP4** — Intelligence agencies (BND, MI6, CIA military section), SIGINT stations
 - **MP5** — Supply depots, field hospitals, transport aircraft, logistics battalions
 - **MP6** — Military courts, provost marshal, detention facilities
+
+## Justification rungs
+
+For the technique see `../../../se-techniques/justification-rungs/`;
+for the cross-system comparison see
+`../cross-system/justification-rungs-by-system.md`.
+
+| Attribute | Value |
+|-----------|-------|
+| Claimed rung (traditional) | **1** — oath, chain of command, professional honour |
+| Claimed rung (modern democratic) | **1 + 2 + 6** — chain of command (1) constrained by laws of armed conflict (2) and parliamentary mandate (6) |
+| Operating rung | **0/1** — coercion plus authority. Higher-rung claims hold during peacetime governance and in operations subject to civilian oversight; they degrade rapidly under operational stress |
+| Loop symmetry (internal) | Symmetric at rung 0/1: orders down, compliance reports up. The same chain that issues orders is the channel for reports of their execution (MR1) |
+| Loop symmetry (civil-military interface) | Asymmetric. Civilian oversight expects rung-3 information (audited, independent investigation); military self-reporting operates at rung 1 (chain of command) |
+| Dominant rung pattern | **Pattern A — Asymmetric Loop** at the civil-military interface. The internal rung-0/1 operation is fit for combat; the failure mode is when rung-3 oversight needed by civilian authority is structurally captured by the rung-1 chain it is supposed to oversee |
+
+**The civil-military rung mismatch is the distinguishing feature of
+the modern professional military.** A soldier's loop with their
+commander operates legitimately at rung 0/1 — combat does not admit
+deliberation. But the *civilian* loop with the military operates at
+rung 6 (parliamentary mandate, democratic legitimacy), and that
+rung-6 loop needs rung-3 feedback (independent investigation, audit,
+inspector-general reports) to function. When the rung-3 channel is
+filtered through the rung-1 chain of command, the rung-6 loop opens.
+
+The Bundeswehr model (mandatory Bundestag vote, independent
+Wehrbeauftragter, civilian-led ministry of defence) is the most
+structurally complete remedy for this rung mismatch (see
+`../cross-system/remedies-case-studies.md` §5 and
+`../cross-system/remedies-case-studies.md` §6 for its rung delta).
+The remedy preserves the rung-0/1 internal operation while
+inserting independent rung-3 channels that route around the chain
+of command and reach the rung-6 civilian apex directly.

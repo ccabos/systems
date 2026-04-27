@@ -6,3 +6,4 @@ This part introduces the foundational definition of a system and the three analy
 - [**The Five-Level SE Hierarchy**](se-hierarchy.md) — the decomposition instrument
 - [**Product Line Thinking**](product-lines.md) — the comparative methodology
 - [**STPA and STAMP**](stpa-introduction.md) — the safety and control analysis
+- [**Justificatory Rungs**](justification-rungs.md) — the epistemic-standard extension to STPA for social systems

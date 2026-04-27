@@ -40,6 +40,29 @@ The SE hierarchy feeds directly into STPA:
 
 This integration is applied in detail in [Part IV](../part4/index.md).
 
+### Rung tagging — the social-systems extension
+
+For social systems, Step 2 acquires one more move: tag every
+control action and every feedback channel with the **justificatory
+rung** at which it operates (rung 0 coercion through rung 6
+deliberative legitimacy), and tag each controller with both its
+*claimed* and *operating* rung.
+
+Rung information is not derivable from the SE decomposition — it is
+its own elicitation activity, performed during Step 2 — and it is
+required by Step 3 to identify rung-mismatch UCAs (over-rung
+command, under-rung command, asymmetric loop). The previous chapter
+[Justificatory Rungs](justification-rungs.md) introduces the ladder
+and the three dangerous mismatch patterns; the canonical
+integration with STPA Steps 1–4 is at
+`knowledge/se-techniques/justification-rungs/application-to-stpa.md`.
+
+For engineering systems where every loop operates at rung 3–4
+throughout, rung tagging adds nothing and is omitted. Use this
+extension where the system is social, institutional, or
+policy-shaped — where the question being asked is *whether the
+loop's rung fits its function*.
+
 ### References
 
 - Leveson, N.G. (2012). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press.

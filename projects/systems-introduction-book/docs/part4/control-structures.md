@@ -2,12 +2,13 @@
 
 ## The Universal Control Pattern
 
-Every social system has a hierarchical control structure with the same basic shape. Authority flows downward; feedback — ideally — flows upward. STPA analyses this structure by asking four questions of every system:
+Every social system has a hierarchical control structure with the same basic shape. Authority flows downward; feedback — ideally — flows upward. STPA analyses this structure by asking five questions of every system:
 
 1. **Feedback richness** — how many independent channels carry information from the base to the top, and how accurately do they represent reality?
 2. **Self-sealing tendency** — can the process model at the top be corrected by information from below, or does it filter out contradictory signals?
 3. **Accountability voids** — where is the controller also the interested party, structurally preventing independent oversight?
 4. **Circuit breakers** — what mechanisms exist to interrupt a harmful escalating loop before it causes irreversible damage?
+5. **Rung match** *(social-systems extension; see [Justificatory Rungs](../part1/justification-rungs.md))* — at what justificatory rungs do the loop's control action and feedback operate, and is the loop symmetric? Does the system's claimed rung match its operating rung?
 
 The four levels of the universal pattern are:
 
@@ -21,7 +22,7 @@ The four levels of the universal pattern are:
 What varies across systems is: who occupies each level, what mechanisms connect them, and how honest the upward flow is.
 
 !!! info "Canonical reference"
-    The technique definitions — the four diagnostic questions and the three dangerous patterns — live in `knowledge/se-techniques/control-structures/`. The per-system profiles for all ten social systems live in `knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md`.
+    The technique definitions — the five diagnostic questions and the four dangerous patterns — live in `knowledge/se-techniques/control-structures/` and (for the rung extension) `knowledge/se-techniques/justification-rungs/`. The per-system profiles for all ten social systems, with claimed-rung and operating-rung tags, live in `knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md`. The cross-system rung comparison is in `knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md`.
 
 ---
 
@@ -35,9 +36,9 @@ The key observation the profiles support is that the same control-structure weak
 
 ---
 
-## The Three Most Dangerous Structural Patterns
+## The Four Most Dangerous Structural Patterns
 
-Across all systems, three patterns recur wherever the most serious harm occurs:
+Across all systems, four patterns recur wherever the most serious harm occurs. The first three are domain-general; the fourth is the social-systems extension introduced in [Justificatory Rungs](../part1/justification-rungs.md).
 
 **Pattern 1: The Accountability Void.**
 The controller and the interested party are the same entity. No external actor has authority to review the decision. The remedy in every case is the same: structurally separate the controller from the interested party, and give the separating body genuine authority.
@@ -48,4 +49,7 @@ The top of the control structure populates its own process model — its interna
 **Pattern 3: The Proxy Metric.**
 The system measures something that is correlated with its actual goal, attaches resources and careers to that measure, and then watches as the system reorients toward producing the measure rather than the goal. Exam scores replace education. Quarterly earnings replace sustainable value creation. Publication counts replace scientific knowledge. Compliance reports replace operational readiness. The remedy: continuously examine what is being measured and whether the feedback loop connects to the goal or to a proxy, and restructure the measurement accordingly.
 
-These three patterns are the recurring targets of the architectural remedies in the next chapter. The technique-level statement of all three — with the failure mode each corresponds to in a generic control loop, and the remedy preconditions — is in `knowledge/se-techniques/control-structures/dangerous-patterns.md`.
+**Pattern 4: Rung Asymmetry.**
+The downward control action and the upward feedback on the same loop operate at different justificatory rungs. The controller transmits commands at rung 1 (authority, tradition) but the corrective signals it would need to register arrive — or are expected to arrive — at rung 3 or higher (empirical, audited, replicated). The controller's process model classifies the higher-rung feedback as out-of-band and filters it out. *Instances:* doctrinal authorities receiving abuse reports as rung-1 hostility rather than rung-3 evidence; autocracies receiving independent press reports as treason rather than information; family systems treating children's developmental signals as defiance rather than health data. The remedy: insert an independent feedback channel that operates at rung 3 (or higher), routes around the rung-1 filter, and reaches the controller's process model directly. Most of the canonical architectural remedies in the next chapter are rung-elevation moves of this kind.
+
+These four patterns are the recurring targets of the architectural remedies in the next chapter. The technique-level statements — with the failure mode each corresponds to in a generic control loop, and the remedy preconditions — are in `knowledge/se-techniques/control-structures/dangerous-patterns.md` (Patterns 1–4) and `knowledge/se-techniques/justification-rungs/dangerous-mismatches.md` (Pattern 4 in detail, plus two further rung-specific patterns: Claimed-Rung Inflation and Cross-Loop Rung Imposition).

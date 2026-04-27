@@ -16,10 +16,12 @@ The skill accepts two entry points:
 - A user who has a specific failure or problem inside an institution
   (problem diagnosis, bottom-up).
 
-It walks them through a seven-step procedure (boundary → decomposition
-→ product-line positioning → control structure → STPA → remedies →
-deliverable) and produces either a plain-language decision memo or a
-full analysis report filed under `../problems/<problem-name>/`.
+It walks them through an eight-step procedure (boundary →
+decomposition → product-line positioning → control structure →
+justificatory-rung tagging *(social systems only)* → STPA →
+remedies → deliverable) and produces either a plain-language
+decision memo or a full analysis report filed under
+`../problems/<problem-name>/`.
 
 Primary users are ordinary non-specialists with no SE or STPA
 background. The skill is designed to work for them without prior study.

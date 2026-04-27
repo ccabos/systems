@@ -147,3 +147,71 @@ rung 1).
 
 The acceptable-feedback-rung column is the structural cause of
 most loss scenarios in §4.
+
+---
+
+## 3. Step 3 — Identify unsafe control actions
+
+Standard four-type UCA enumeration plus the three rung-mismatch
+modes from `../../../se-techniques/justification-rungs/application-to-stpa.md`.
+
+### 3.1 Loop 1 — Central Authority → Clergy
+
+| ID | Type | UCA | Hazard |
+|----|------|-----|--------|
+| UCA-1 | Not provided | Authority does NOT update doctrine when scientific evidence invalidates cosmological claims | H1, HX |
+| UCA-2 | Not provided | Authority does NOT remove or discipline clergy credibly accused of abuse | H2, H5 |
+| UCA-3 | Provided | Authority ISSUES doctrine that dehumanises outsiders (infidels, heretics, apostates) | H3 |
+| UCA-4 | Provided | Authority EXCOMMUNICATES or PUNISHES members who raise legitimate doctrinal questions | H1, H4 |
+| UCA-5 | Provided | Authority APPOINTS clergy on doctrinal loyalty rather than pastoral competence or moral character | H2, H5 |
+| UCA-6 | Too late | Authority CORRECTS a doctrinal error only after centuries of harm (Galileo, 1633→1992) | H1, H6 |
+| UCA-7 | Too long | Authority MAINTAINS absolutist moral prohibition long after ethical understanding has evolved | H4 |
+| UCA-8 | Not provided | Authority does NOT establish transparent financial auditing | H7 |
+
+### 3.2 Loop 2 — Clergy → Congregation
+
+| ID | Type | UCA | Hazard |
+|----|------|-----|--------|
+| UCA-9 | Provided | Clergy USES pastoral relationship to sexually, emotionally, or financially exploit | H5 |
+| UCA-10 | Provided | Clergy PREACHES hatred or contempt toward out-groups | H3 |
+| UCA-11 | Provided | Clergy WITHHOLDS sacraments or pastoral care as punishment for questioning doctrine | H1, H4, H8 |
+| UCA-12 | Not provided | Clergy does NOT provide pastoral support during genuine crisis (grief, mental illness, abuse) because the doctrinal frame has no model for the problem | H4 |
+| UCA-13 | Provided | Clergy DEMANDS financial contributions through spiritual coercion (prosperity gospel, indulgences, obligatory tithing) | H7 |
+| UCA-14 | Too long | Clergy MAINTAINS shunning long after the person has suffered disproportionate social death | H4, L3 |
+| UCA-15 | Not provided | Clergy does NOT report abuse to civil authorities, instead handling it "internally" | H2, H5 |
+
+### 3.3 Loop 3 — Congregation → Individual
+
+| ID | Type | UCA | Hazard |
+|----|------|-----|--------|
+| UCA-16 | Provided | Congregation SHUNS member who expresses doubt, questions doctrine, or leaves the faith | H1, H4, H8 |
+| UCA-17 | Provided | Congregation ENFORCES social conformity on matters of personal conscience (dress, diet, relationships, career) | H4, H8 |
+| UCA-18 | Not provided | Congregation does NOT intervene when they observe clergy abusing a member | H2, H5 |
+| UCA-19 | Provided | Congregation PRESSURES children into public faith commitments before meaningful consent | H8 |
+| UCA-20 | Too early | Congregation LABELS children as sinful, damned, or spiritually deficient at developmentally inappropriate age | H4 |
+
+### 3.4 Loop 4 — Individual self-regulation
+
+| ID | Type | UCA | Hazard |
+|----|------|-----|--------|
+| UCA-21 | Provided | Individual SUPPRESSES doubt, curiosity, or moral intuition because "doubt = sin" is internalised | H1, H6 |
+| UCA-22 | Provided | Individual REMAINS in an abusive religious environment because they believe leaving = damnation | H4, H5 |
+| UCA-23 | Not provided | Individual does NOT seek professional mental health support; the framework teaches faith should suffice | H4 |
+| UCA-24 | Provided | Individual REJECTS medical treatment for self or dependents based on doctrinal prohibition | H4, L1 |
+| UCA-25 | Too long | Individual CONTINUES religious practices that cause measurable psychological harm beyond any devotional purpose | H4 |
+
+### 3.5 Rung-mismatch UCAs (cross-loop)
+
+These cut across Loops 1–4 and are not captured by the four
+standard UCA types. See
+`../../../se-techniques/justification-rungs/application-to-stpa.md`.
+
+| ID | Mode | UCA | Hazard |
+|----|------|-----|--------|
+| UCA-R1 | Over-rung command | Authority issues doctrinal commands at rung 1 (sacred authority) to a population now operating at rung 3 (empirical, evidence-based reasoning) — commands fail silently as believers privately disregard them while remaining nominally observant | HX, H1 |
+| UCA-R2 | Under-rung command | Authority issues a rung-1 statement on a question the audience expects to be answered at rung 3 (medical, scientific, factual) — provokes active rejection and erodes legitimacy | HX, L5 |
+| UCA-R3 | Asymmetric loop | Authority issues commands at rung 1 and *expects* feedback at rung 1 (clerical reports), but the corrective signal that exists (rung-3 abuse data, scientific evidence, demographic harm) cannot enter the controller's process model — the loop is open by design | HX, H1, H2, H5 |
+
+UCA-R3 is the **dominant** UCA in this system. It generates most
+of the loss scenarios in §4 not by being a single failure but by
+being structurally embedded in every Loop-1 cycle.

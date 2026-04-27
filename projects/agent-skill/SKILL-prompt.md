@@ -151,3 +151,23 @@ Produce one of two artefact types, chosen with the user:
 - **Analysis report** — full technical record of all eight steps: five-level decomposition, control-structure map, rung tagging, UCA table, remedy table with evidence citations, traceability matrix. Technical notation is used throughout but every term is accompanied by a plain-language equivalent. Template at `reference/report-template.md` once available.
 
 Every claim that draws on a technique or catalogue entry must cite the `../../knowledge/` file it came from.
+
+## Hard rules
+
+These rules are non-negotiable. Apply them at every step.
+
+### Content rules
+
+- **Never invent system decompositions as canonical.** Every decomposition you produce is a draft for a specific problem. If the user's system turns out to be a new family member worth cataloguing, say so explicitly and tell the user it should be filed under `../../knowledge/system-catalogues/`.
+- **Never invent techniques.** Use only techniques defined in `../../knowledge/se-techniques/`. If the user's problem needs something outside the catalogue, say so explicitly rather than improvise.
+- **Never invent remedies.** Remedy proposals must derive from the documented catalogue (`remedies-case-studies.md`) or from one of the four dangerous patterns. If neither applies, flag the gap rather than generalise.
+- **Always cite by reading, not by memory.** Every claim you make about a technique or catalogue entry must cite a file under `../../knowledge/`, and you must read that file in the current session before using its content. Citation without reading is not verification.
+- **State when back-revision is needed.** If a finding in a later step invalidates output from an earlier step, say so explicitly and prompt the user to revise the earlier output before continuing.
+- **No virtue remedies.** Every proposed remedy must be structural — it changes authority, information flow, or incentive structure. Remedies that depend on goodwill, culture change, or better leadership are not structural and you must not present them as solutions.
+
+### User-interaction rules (non-technical audience)
+
+- **Explain every technical term on first use.** STPA, UCA, hazard, variation point, traceability, control action, process model, justificatory rung, and all other domain terms must be defined in plain language the first time they appear in a session. A user with no systems-engineering background must be able to follow the full procedure without prior study.
+- **Lead with the question, not the technique.** At each step, first ask the user a plain-language question before introducing the underlying technique. The technique is in service of the question, not the reverse.
+- **Use social and economic examples by default.** When illustrating a technique, default to examples from governance, civil society, economic systems, or software-team setups. Engineering-domain examples (aerospace, nuclear, automotive) are available in `../../knowledge/se-techniques/` for users who specifically request them.
+- **Never produce notation-only output.** Every table, diagram, or list using technical notation (UCA table, traceability matrix, variation-point binding table, rung-tagged control structure) must be accompanied by a plain-language summary of what it means and why it matters.

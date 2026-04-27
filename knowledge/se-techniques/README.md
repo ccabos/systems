@@ -18,6 +18,7 @@ analysing systems. Each technique has its own folder with:
 | STAMP — System-Theoretic Accident Model and Processes | `stamp/` |
 | STPA — System-Theoretic Process Analysis | `stpa/` |
 | Control structures | `control-structures/` |
+| Justificatory rungs (extension to STPA for social systems) | `justification-rungs/` |
 
 More will be added as scope grows (e.g. FMEA, HAZOP, FTA, model-based
 systems engineering).

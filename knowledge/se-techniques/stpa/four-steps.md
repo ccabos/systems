@@ -49,6 +49,14 @@ The control structure should be at the level of the logical
 architecture from the SE decomposition — not the level of
 individual physical actors.
 
+For social systems, also tag every control action and every
+feedback channel with the **justificatory rung** at which it
+operates (rung 0 coercion through rung 6 deliberative legitimacy)
+and tag each controller with both its *claimed* and *operating*
+rung. The procedure and a worked rationale are in
+`../justification-rungs/application-to-stpa.md`. The rung
+information is needed by Step 3 to identify rung-mismatch UCAs.
+
 ## Step 3 — Identify Unsafe Control Actions
 
 For every control action in the structure, ask the four UCA

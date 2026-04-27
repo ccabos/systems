@@ -66,6 +66,14 @@ you *what could go wrong*. Three things are new:
    system does*; the UCA questions say *what it could fail to do,
    or do wrongly* — in four systematic categories.
 
+For social systems, a fourth thing is new and is **not** delivered
+by the SE decomposition: the **justificatory rung** of each control
+action and feedback channel. The SE level lists the function
+(*what is done*) and the L/P levels say *who does it*, but neither
+says *on what standard the receiver will accept it*. Rung tagging
+is its own elicitation activity, performed during STPA Step 2. See
+`../justification-rungs/application-to-stpa.md`.
+
 ## The project's workflow
 
 In this project, the workflow is:

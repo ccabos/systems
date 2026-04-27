@@ -1,11 +1,13 @@
-# The Three Most Dangerous Structural Patterns
+# The Most Dangerous Structural Patterns
 
-Across all ten social systems in the project's catalogue, three
+Across all ten social systems in the project's catalogue, four
 control-structure patterns recur wherever the most serious harm
 occurs. Each pattern has a corresponding remedy at the
 control-structure level — not a remedy that relies on actors
 behaving better, but one that restructures the control loop so
-that the harmful state is no longer reachable.
+that the harmful state is no longer reachable. Patterns 1–3 are
+domain-general; Pattern 4 (Rung Asymmetry) applies specifically
+to social systems and is detailed in `../justification-rungs/`.
 
 ## Pattern 1 — The Accountability Void
 
@@ -72,20 +74,57 @@ even when it is more expensive to do so; (2) decouple the
 reward structure from the specific measure so that gaming the
 measure does not produce the reward.
 
-## Why these three
+## Pattern 4 — Rung Asymmetry (social-systems extension)
 
-The three patterns are not a random list. They correspond one
-to one with the three ways a control loop can fail at the
-structural level:
+**Symptom.** The downward control action and the upward feedback
+on the same loop operate at different **justificatory rungs**. The
+controller transmits commands at rung 1 (authority, tradition) but
+the corrective signals it would need to register arrive — or are
+expected to arrive — at rung 3 or higher (empirical, audited,
+replicated). The controller's process model classifies the
+higher-rung feedback as out-of-band and filters it out.
+
+**Instances observed.** Doctrinal authorities receiving abuse
+reports as rung-1 hostility rather than rung-3 evidence;
+autocracies receiving independent press reports as rung-1 treason
+rather than rung-3 ground truth; family systems receiving
+children's developmental signals as rung-1 defiance rather than
+rung-3 health data; single-party leaderships receiving cadre
+dissent as rung-1 disloyalty.
+
+**Generic remedy.** Insert an independent feedback channel that
+operates at rung 3 (or higher) and routes around the rung-1
+filter. The new channel must (a) reach the controller's process
+model directly, (b) operate independently of the rung-1 hierarchy
+that filters out higher rungs, and (c) have authority to act on
+its findings. Concrete instances: mandatory external audit;
+independent ombudspersons with statutory access; pre-registered
+studies; constitutional courts that can hear rung-3 evidence
+against rung-1 sovereign claims. Most of the canonical remedies in
+`knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`
+can be re-read as rung-elevation moves of this kind.
+
+The pattern catalogue is complete only when this fourth pattern is
+included; without it, social-systems STPA misses the dominant
+failure mode of hierarchical institutions. Two further rung
+mismatches (Claimed-Rung Inflation, Cross-Loop Rung Imposition)
+are catalogued in `../justification-rungs/dangerous-mismatches.md`.
+
+## Why these four
+
+The four patterns are not a random list. They correspond one
+to one with the four ways a social-system control loop can fail
+at the structural level:
 
 | Pattern | Which part of the loop fails |
 |---------|------------------------------|
 | Accountability Void | The oversight role is merged with the acting role |
 | Self-Sealing Process Model | The feedback channel is captured by the actor it is supposed to report on |
 | Proxy Metric | The reference signal no longer tracks the true goal |
+| Rung Asymmetry | Control and feedback operate on different epistemic standards |
 
 Any complete control-structure review should explicitly check
-for all three. The patterns are what a full STPA analysis tends
+for all four. The patterns are what a full STPA analysis tends
 to find repeatedly; listing them up front short-circuits the
 discovery phase for cases that are already obvious.
 

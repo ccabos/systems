@@ -50,6 +50,31 @@ actions, coordination failures between controllers) are still
 found by applying the four types to each individual action and
 then looking at the interactions in Step 4.
 
+## Rung-mismatch UCA modes (social-systems extension)
+
+In social systems a control action may be issued at the right
+time, in the right form, and against a real hazard, yet still
+fail because the **justificatory rung** of the action does not
+match the rung at which the receiver operates. Three rung-mismatch
+UCA modes cut across the four types above:
+
+- **UCA-R1 — Over-rung command.** Control action issued at a rung
+  the receiver cannot decode (rung 4 evidence delivered to a
+  rung-1 audience). Fails *silently*; the controller may believe
+  it was obeyed.
+- **UCA-R2 — Under-rung command.** Control action issued at a rung
+  the receiver rejects as illegitimate (rung 1 authority delivered
+  to a rung-4 audience). Fails *noisily* and erodes the
+  controller's standing.
+- **UCA-R3 — Asymmetric loop.** Control action and feedback on the
+  same loop operate at different rungs, so the controller cannot
+  register the corrective signal even when it arrives.
+
+Full treatment in
+`../justification-rungs/application-to-stpa.md`. UCA-R3 is the most
+common rung-mismatch UCA in hierarchical social systems and the
+hardest to remedy.
+
 ## Reading the UCA table as a design checklist
 
 The UCA table is not just a hazard list; it is a design

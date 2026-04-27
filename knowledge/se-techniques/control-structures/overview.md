@@ -24,11 +24,12 @@ What varies across systems is *who* occupies each level, *what
 mechanisms* connect them, and *how honest* the upward flow is.
 The pattern itself is invariant.
 
-## The four diagnostic questions
+## The five diagnostic questions
 
-Every control structure can be interrogated with the same four
+Every control structure can be interrogated with the same five
 questions. They are listed here and expanded in
-`diagnostic-questions.md`.
+`diagnostic-questions.md`. Question 5 applies only to social
+systems.
 
 1. **Feedback richness** — how many independent channels carry
    information upward, and how accurately do they represent the
@@ -41,24 +42,29 @@ questions. They are listed here and expanded in
    structurally prevented?
 4. **Circuit breakers** — what mechanisms can interrupt an
    escalating harmful loop before it causes irreversible damage?
+5. **Rung match** *(social systems)* — at what justificatory
+   rungs do the loop's control action and feedback operate, and
+   is the loop symmetric? See `../justification-rungs/`.
 
 ## What this technique adds
 
 The SE hierarchy says *what the system is*. STPA says *what
 specific control actions could be unsafe*. The control-structure
 technique sits between them: it turns the logical architecture
-into a control diagram and applies a fixed checklist (the four
-questions above, the three dangerous patterns in
+into a control diagram and applies a fixed checklist (the five
+questions above, the four dangerous patterns in
 `dangerous-patterns.md`) that catches the most common failure
 modes without a full STPA pass.
 
-It is the quick-diagnosis layer: if one of the four questions
-returns a bad answer, or one of the three patterns is present, a
+It is the quick-diagnosis layer: if one of the five questions
+returns a bad answer, or one of the four patterns is present, a
 full STPA analysis is warranted.
 
 ## Where it is applied in this project
 
 - Technique definitions and generic remedies live in this folder.
+- The justificatory-rung extension for social systems lives in
+  `../justification-rungs/`.
 - Per-system control-structure profiles for the ten social
   systems live in
   `knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md`.

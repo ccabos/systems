@@ -50,3 +50,25 @@ For military justice, the US National Defense Authorization Act 2022 transferred
 Across all five systems, the same three structural failures recur: an accountability void, a self-sealing process model, and a proxy metric that has replaced the goal. The full cross-system table — failure type by system, with each proven remedy mapped to the corresponding control-loop fix — is in `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`.
 
 The remedies are not generic. Each closes a specific causal pathway identified by the structural analysis — and each has been tested in practice. That precision is what distinguishes architectural reform from exhortation.
+
+## Reading the Remedies as Rung-Elevation Moves
+
+The previous chapter introduced the seven [Justificatory Rungs](../part1/justification-rungs.md) and the dangerous **Pattern A — Asymmetric Loop**: rung-1 control downward with rung-3 evidence trying, and failing, to feed back upward. Re-read through that lens, **all thirteen catalogued architectural remedies share a common move**: the controller's authority remains at rung 1 (legal, institutional, or sacred); a *parallel* feedback channel is installed that operates at rung 3 (independent audit, statutory investigation, replicated study, criminal-liability disclosure); and the new channel routes around the rung-1 hierarchy that previously filtered upward signal.
+
+| Remedy | Pre-remedy feedback rung | Post-remedy feedback rung |
+|--------|-------------------------|---------------------------|
+| Bundesverfassungsgericht (Basic Law) | 1 (parliamentary self-judgment) | 2/6 (legal-rational + constitutional principle) |
+| Sarbanes-Oxley external audit | 1 (management self-reports) | 3 (audited financials with criminal liability) |
+| Mitbestimmung worker board representation | 1 (management self-reviews) | 6 (deliberative — multiple stakeholder perspectives) |
+| Mandatory abuse reporting (Religion) | 1 (clergy report internally) | 3 (statutory report to civil authority) |
+| Vatican II lay councils | 1 (clerical hierarchy) | 1+2 (lay participation; partially reversed) |
+| Pre-registration / Registered Reports | 3 (publication-biased trial sample) | 4 (cumulative evidence without publication-bias filter) |
+| DORA / article-level assessment | 1 (journal prestige proxy) | 3 (article-level merit) |
+| Parliamentary mandate (Bundeswehr) | 0/1 (executive decision) | 6 (parliamentary deliberation) |
+| Wehrbeauftragter (independent military prosecutor) | 1 (commander investigates own troops) | 3 (independent investigation) |
+
+The full thirteen-remedy table with detailed deltas is in `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md` §6.
+
+**The remedies do not try to convert rung-1 controllers to higher rungs** — that would dissolve the institution they protect. They *parallel* the rung-1 channel with a rung-3 (or rung-2/6) channel routed to a separate oversight body whose existence does not depend on the controller. Where remedies have been incomplete (Vatican II's partial post-Council reversal) it is because the rung-elevated channel was made revocable by the same rung-1 hierarchy it was supposed to correct — which is the precondition this book's structural fixes already require.
+
+This is the canonical architectural pattern for repairing **Pattern A — Asymmetric Loop** in the social-systems catalogue. It is the unifying idea behind the apparently disparate reforms above.

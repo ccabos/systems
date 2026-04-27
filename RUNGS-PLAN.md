@@ -136,12 +136,12 @@ Acceptance: the two existing per-system files acknowledge the rung dimension; no
 - [x] Update `projects/systems-introduction-book/mkdocs.yml` — add nav entry under Part I.
 - [x] Update `projects/systems-introduction-book/generate_pdf.py` — add NAV tuple for the new chapter.
 
-### Phase 7 — Book: integrate rungs into STPA & Part IV
+### Phase 7 — Book: integrate rungs into STPA & Part IV ✅ DONE
 
-- [ ] Edit `docs/part1/stpa-introduction.md` — add a "Rung tagging" subsection in the Step 2 / control structure discussion.
-- [ ] Edit `docs/part4/religion-stpa.md` — new section "Why these rungs and the loops they break" (after current §6, before §7 or as a new §6.4), referencing the KB analysis.
-- [ ] Edit `docs/part4/control-structures.md` — extend the dangerous patterns section to include Rung Asymmetry.
-- [ ] Edit `docs/part4/remedies.md` — re-read each architectural remedy as a rung-elevation move.
+- [x] Edit `docs/part1/stpa-introduction.md` — add a "Rung tagging" subsection in the Step 2 / control structure discussion. (commit 2f84d0e)
+- [x] Edit `docs/part4/religion-stpa.md` — new §6.4 reading §§6.1–6.3 as manifestations of the same rung-1 vs rung-3 asymmetry. (commit d55f692)
+- [x] Edit `docs/part4/control-structures.md` — five questions, four dangerous patterns. (commit 9764f2a)
+- [x] Edit `docs/part4/remedies.md` — re-read each architectural remedy as a rung-elevation move with the thirteen-remedy table.
 
 ### Phase 8 — Skill integration
 

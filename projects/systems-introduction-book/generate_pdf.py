@@ -48,6 +48,7 @@ NAV = [
     ("The Five-Level SE Hierarchy", "part1/se-hierarchy.md", 1),
     ("Product Line Thinking", "part1/product-lines.md", 1),
     ("STPA and STAMP", "part1/stpa-introduction.md", 1),
+    ("Justificatory Rungs", "part1/justification-rungs.md", 1),
     ("Part II -- Social Systems", "part2/index.md", 0),
     ("Religion", "part2/religion.md", 1),
     ("Kingdom & Republic", "part2/kingdom-republic.md", 1),

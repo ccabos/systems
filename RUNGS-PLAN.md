@@ -129,12 +129,12 @@ For each system below, add a "Justification rungs" subsection to its `se-decompo
 
 Acceptance: the two existing per-system files acknowledge the rung dimension; no new files are created here.
 
-### Phase 6 — Book Part I: foundational chapter
+### Phase 6 — Book Part I: foundational chapter ✅ DONE
 
-- [ ] Create `projects/systems-introduction-book/docs/part1/justification-rungs.md` — narrative chapter introducing the ladder with examples, ending with a forward reference to STPA chapter and Part IV.
-- [ ] Update `projects/systems-introduction-book/docs/part1/index.md` — list the new chapter.
-- [ ] Update `projects/systems-introduction-book/mkdocs.yml` — add nav entry under Part I.
-- [ ] Update `projects/systems-introduction-book/generate_pdf.py` — add NAV tuple for the new chapter.
+- [x] Create `projects/systems-introduction-book/docs/part1/justification-rungs.md` — narrative chapter introducing the ladder with examples, ending with a forward reference to STPA chapter and Part IV.
+- [x] Update `projects/systems-introduction-book/docs/part1/index.md` — list the new chapter.
+- [x] Update `projects/systems-introduction-book/mkdocs.yml` — add nav entry under Part I.
+- [x] Update `projects/systems-introduction-book/generate_pdf.py` — add NAV tuple for the new chapter.
 
 ### Phase 7 — Book: integrate rungs into STPA & Part IV
 

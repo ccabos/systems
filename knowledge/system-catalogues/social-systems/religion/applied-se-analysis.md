@@ -215,3 +215,107 @@ standard UCA types. See
 UCA-R3 is the **dominant** UCA in this system. It generates most
 of the loss scenarios in §4 not by being a single failure but by
 being structurally embedded in every Loop-1 cycle.
+
+---
+
+## 4. Step 4 — Identify loss scenarios
+
+Each loss scenario traces causal factors organised around the
+control loop. Standard STPA categorises causes as: flawed process
+model, missing/corrupted feedback, faulty actuator, unexpected
+controlled-process state, external disturbance. The rung extension
+adds the **acceptance-rung filter** as a recurring process-model
+cause (see
+`../../../se-techniques/justification-rungs/application-to-stpa.md`
+Hook 5).
+
+### LS-1 — Doctrine fails to self-correct
+
+*UCAs:* UCA-1, UCA-6 → H1, HX → L1, L6, LX
+
+| Causal factor | Mechanism |
+|---------------|-----------|
+| Flawed process model | Doctrine is divinely revealed; correction is logically impossible within the model |
+| Acceptance-rung filter | Rung-3 evidence (scientific findings) classified as rung-1 hostility; cannot enter the apex process model |
+| Conflicting goals | SC1 (self-correction) conflicts with R4 (authority) — admitting error threatens legitimacy |
+| Survivorship feedback | Believers who experience dissonance leave silently; the authority hears only from those who stay |
+| Temporal lock-in | Centuries of institutional commitment make reversal increasingly costly |
+
+*Architectural fix:* doctrinal version control with explicit
+revision processes; standing rung-3 input from external scholarship
+(Vatican II partial implementation).
+
+### LS-2 — Abuse cover-up
+
+*UCAs:* UCA-2, UCA-15, UCA-18 → H2, H5, HX → L2, L4, L5
+
+| Causal factor | Mechanism |
+|---------------|-----------|
+| Flawed process model | Clergy presumed inherently trustworthy; institutional reputation classified as essential to mission |
+| Acceptance-rung filter | Victim's rung-3 testimony enters via the rung-1 hierarchy that has an interest in suppressing it |
+| Accountability void | Bishop disciplines own clergy; judge and interested party are the same entity |
+| Conflicting goals | Protecting institution (G3) vs. protecting individual (G2, G4); structure systematically prioritises institution |
+
+*Architectural fix:* mandatory civil reporting; independent
+ombudsman; separation of pastoral from disciplinary authority. This
+is a textbook **rung-3 channel routed around the rung-1 filter**
+(see remedies-case-studies.md §3 and §6).
+
+### LS-3 — Radicalisation through in-group/out-group escalation
+
+*UCAs:* UCA-3, UCA-10 → H3 → L3
+
+| Causal factor | Mechanism |
+|---------------|-----------|
+| Flawed process model | R6 mechanism has no built-in limit; "different" and "dangerous" are not distinguished |
+| Positive feedback loop | Anti-out-group preaching increases in-group cohesion (measurable as attendance, donations) — rewards escalation |
+| External trigger | Economic stress or political marginalisation activates and amplifies the mechanism |
+| Missing circuit breaker | No structural de-escalation role; rung-1 dynamics provide no internal check |
+
+*Architectural fix:* explicit doctrinal commitment to universal
+human dignity that overrides R6; standing interfaith engagement;
+internal de-escalation role with authority.
+
+### LS-4 — Spiritual coercion and psychological damage
+
+*UCAs:* UCA-11, UCA-16, UCA-17, UCA-20 → H4, H8 → L1, L4
+
+| Causal factor | Mechanism |
+|---------------|-----------|
+| Flawed process model | Fear-as-motivator, shame-as-corrective, and exclusion-as-protection are embedded in R3 and the enforcement functions |
+| Missing feedback | Children and dependent adults cannot provide effective corrective signal — they lack power, vocabulary, and standing |
+| Acceptance-rung filter | Adult survivors' rung-3 accounts of harm classified as "apostate hostility" |
+| Normalisation | When entire community shares the practice, harm is invisible as harm |
+
+*Architectural fix:* age-appropriate religious education without
+fear/shame; voluntary participation norms; mental-health literacy
+in pastoral training; secular child-safeguarding standards applied
+to religious education.
+
+### LS-5 — Financial exploitation
+
+*UCAs:* UCA-8, UCA-13 → H7 → L2, L5
+
+| Causal factor | Mechanism |
+|---------------|-----------|
+| No structural separation | Person who tells you what God wants is also the person who tells you how much to give |
+| Missing oversight | Many religious organisations exempt from financial reporting; no external audit function |
+| Doctrinal self-sealing | Prosperity-gospel-type doctrines are self-sealing: if you give and prosper, the doctrine is confirmed; if not, your faith was insufficient |
+
+*Architectural fix:* mandatory financial transparency; separation
+of spiritual from financial authority; doctrinal prohibition on
+linking giving to spiritual outcomes.
+
+### LS-6 — Suppression of individual conscience
+
+*UCAs:* UCA-4, UCA-7, UCA-21 → H1, H4 → L1, L6
+
+| Causal factor | Mechanism |
+|---------------|-----------|
+| Architectural conflict | R4 (authority) and G2 (moral orientation) in structural tension; R4 can override G2 |
+| Process-model deficiency | Authority's model does not contain the possibility that individual conscience could be more morally correct than doctrine |
+| Acceptance-rung filter | Conscience operates at internalised rung 1 (or rung 6 in mature deliberation); rung-1 hierarchy treats higher-rung conscience as defection |
+
+*Architectural fix:* explicit doctrinal recognition of conscience
+as a valid moral source; structured dissent mechanisms; periodic
+doctrinal review engaging laity and external scholars.

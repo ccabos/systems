@@ -55,46 +55,84 @@ navigation through the Strait of Hormuz?
 
 ## Observed symptoms
 
-*Note: the analyst's knowledge base runs to August 2025; events between
-that date and the time of writing (April 2026) may modify the specific
-symptom picture but are unlikely to alter the structural analysis.*
+### Pre-war situation (to August 2025)
 
-- **Nuclear escalation ladder.** Iran has enriched uranium to near-weapons
-  grade (≥ 60 % U-235, with breakout time estimated at weeks). IAEA
-  inspector access has been progressively restricted. Israel has signalled
-  that a verified Iranian nuclear weapon is a red-line trigger for a
-  preventive strike.
+- **Nuclear escalation ladder.** Iran enriched uranium to near-weapons
+  grade (≥ 60 % U-235, breakout time estimated at weeks). IAEA inspector
+  access progressively restricted.
 - **Direct Iran–Israel exchanges.** Iran launched mass drone-and-missile
-  salvos against Israel in April and October 2024; Israel conducted
-  retaliatory strikes inside Iranian territory. Each exchange raised the
-  floor of acceptable escalation without establishing a stable deterrent
-  equilibrium.
-- **Proxy-network activation.** The October 2023 Hamas assault on Israel
-  and the subsequent Gaza war triggered simultaneous activation of
-  Hezbollah on the northern front, Houthi attacks on Red Sea and Gulf of
-  Aden shipping, and Iraqi militia strikes on US forward bases. As of mid
-  2025, Hezbollah's senior military and political leadership had been
-  significantly degraded by Israeli strikes but the organisation remained
+  salvos against Israel in April and October 2024; Israel retaliated
+  inside Iranian territory. Each exchange raised the floor of acceptable
+  escalation without establishing a stable deterrent equilibrium.
+- **Proxy-network activation.** The October 2023 Hamas assault triggered
+  Hezbollah on the northern front, Houthi attacks on Red Sea shipping,
+  and Iraqi militia strikes on US bases. Hezbollah leadership significantly
+  degraded by Israeli strikes by mid-2025 but organisation remained
   operational.
-- **Hormuz threat posture.** The IRGC Navy conducts regular exercises
-  simulating Hormuz closure, has pre-positioned anti-ship missiles (Noor,
-  Qader, Khalij Fars) on both Hormuz shores, maintains a mine inventory,
-  and operates fast-attack-craft swarms. Iran has explicitly linked any
-  US or Israeli military strike on Iranian territory to a Hormuz
-  interdiction response.
-- **Economic pressure / sanctions.** The US maximum-pressure sanctions
-  regime (reinstated 2018, maintained through 2025) has severely degraded
-  the Iranian economy but has not produced a negotiated nuclear agreement
-  or behavioural change on proxies. China and Russia provide partial
-  sanctions insulation — China purchases Iranian oil at a discount; Russia
-  supplies drone and missile components.
-- **UNSC paralysis.** Russia and China have consistently vetoed or
-  threatened to veto UNSC resolutions that would tighten pressure on Iran,
-  blocking the formal multilateral track.
-- **Failed diplomatic attempts.** Multiple rounds of JCPOA revival talks
-  (Vienna 2021–2022, Qatar 2022) collapsed. A China-brokered Saudi–Iran
-  normalisation was concluded in March 2023 and constitutes the most
-  recent structural positive.
+- **Hormuz threat posture.** IRGC Navy pre-positioned anti-ship missiles,
+  mines, and fast-attack craft. Iran linked any US/Israeli strike to a
+  Hormuz interdiction response.
+- **Economic pressure / sanctions.** US maximum-pressure sanctions degraded
+  the Iranian economy without changing nuclear behaviour. China and Russia
+  provided partial insulation.
+- **UNSC paralysis.** Russia and China blocked multilateral enforcement.
+- **Failed diplomatic attempts.** JCPOA revival talks (Vienna 2021–2022,
+  Qatar 2022) collapsed. China-brokered Saudi–Iran normalisation (2023)
+  was the most recent structural positive.
+
+### Active war update (28 February – 29 April 2026)
+
+*Updated from open-source reporting; this section supersedes the
+pre-war symptom picture above.*
+
+- **War began 28 February 2026.** The United States and Israel launched
+  coordinated airstrikes on Iran targeting military infrastructure,
+  government sites, and senior officials.
+- **Khamenei assassinated.** Supreme Leader Ali Khamenei was killed in
+  the initial Israeli strikes; his death was confirmed by the Iranian
+  government on 1 March 2026. An interim council (Arafi, Mohseni-Eje'i,
+  Ghalibaf, Pezeshkian) assumed authority under Article 111 of the Iranian
+  constitution. Under sustained IRGC pressure, the Assembly of Experts
+  convened online on 3 March and appointed Mojtaba Khamenei (son of Ali)
+  as the new Supreme Leader on 8–9 March 2026.
+- **Hormuz is effectively closed.** Iran closed the Strait of Hormuz as
+  retaliation for the strikes. Shipping traffic fell to approximately 5 %
+  of pre-war levels — 154 vessels in March 2026 compared to roughly 3,000
+  per month before the war. The IEA has described this as "the largest
+  supply disruption in the history of the global oil market," removing
+  approximately 12 % of global oil supply. Oil prices: Brent crude
+  ~$116/barrel, WTI ~$104/barrel (both up ~70 % from pre-war levels).
+- **US naval blockade of Iranian ports** added from 13 April 2026
+  (following the failure of the Islamabad Talks), creating a dual-blockade
+  situation: Iran interdicting Hormuz outbound traffic, the US Navy
+  blockading Iranian port access.
+- **Ceasefire brokered by Pakistan** on 7–8 April 2026, extended to late
+  May. A fragile halt to direct hostilities is in place; neither side has
+  formally agreed to end the war.
+- **Islamabad Talks 11–12 April 2026** — 21 hours of US–Iran negotiations
+  mediated by Pakistan. No agreement reached. Main sticking points:
+  Iran's nuclear programme and permanent Hormuz reopening. Iran proposed
+  ending the war first and addressing nuclear issues separately; the US
+  insists on a nuclear settlement and unconditional Hormuz reopening before
+  sanctions are lifted.
+- **Trump canceled the US negotiating team's trip to Pakistan (25 April)**,
+  threatening Iran to "get smart soon." Talks are at a standstill.
+- **Lebanon war.** Conflict with Hezbollah escalated into a separate
+  Lebanon war, killing over 2,000 civilians and militants.
+- **UAE exited OPEC** on 28 April 2026, citing the Hormuz crisis as
+  threatening the foundation of its oil-export economy.
+- **Economic contagion.** Stock markets fell globally; bond market
+  sell-off; inflation and stagflation risks comparable to the 1970s energy
+  crisis. Tourism in UAE and Qatar collapsed.
+- **China officially neutral, effectively supportive.** China did not
+  apply its economic lever against Iran. US sanctioned the Hengli
+  Petrochemical refinery in China (April 2026) for processing Iranian
+  crude. Russia increasing oil exports to China to replace disrupted
+  Iranian supply, benefiting from the war economically.
+- **War cost.** Pentagon estimates $25 billion so far; three US aircraft
+  carriers now in the Middle East.
+- **Iran's army "still in war situation."** Despite the ceasefire,
+  Iran has not stood down its military posture.
 
 ## Goals in tension
 
@@ -141,9 +179,14 @@ symptom picture but are unlikely to alter the structural analysis.*
 
 ## Constraints
 
-- **Iran's supreme leadership structure** — the Supreme Leader holds
-  override authority over all negotiations; no deal survives without his
-  approval; he cannot be replaced from outside.
+- **Iran's supreme leadership structure — changed.** Ali Khamenei was
+  killed on 28 February 2026. His son Mojtaba Khamenei was installed as
+  Supreme Leader under IRGC pressure on 8–9 March 2026. Mojtaba lacks
+  his father's religious credentials (he is not a Grand Ayatollah) and
+  depends heavily on IRGC loyalty for his authority. This makes the
+  IRGC an even more dominant controller than before the war. Any deal
+  must satisfy IRGC institutional interests, not merely a supreme leader's
+  personal judgment.
 - **Israeli domestic politics** — a governing coalition that includes
   parties committed to maximalist positions makes Israeli concessions on
   Gaza and the West Bank politically costly, constraining Israeli
@@ -176,6 +219,11 @@ symptom picture but are unlikely to alter the structural analysis.*
 | US/UK maritime escort operations in Red Sea (2023–2025) | Partial — commercial shipping costs rose 300 %, many operators re-routed via Cape of Good Hope | Treated the Houthi attacks as a logistics problem not a political one; no resolution of the Yemen political settlement |
 | China-brokered Saudi–Iran normalisation (2023) | Partial positive — direct Iranian attacks on Saudi Arabia ceased | Left nuclear issue and proxy network intact; demonstrated China's leverage but not its willingness to deploy it on the nuclear question |
 | Israeli strikes on Hezbollah leadership (2024) | Degraded Hezbollah's command capacity significantly | Did not eliminate the organisation or change Iran's decision to maintain it; risk of reconstitution within 2–5 years |
+| US/Israel airstrikes on Iran (28 Feb 2026) | War began; Khamenei killed; Iranian military infrastructure struck | Eliminated the supreme leader but triggered Hormuz closure, Lebanon war, and IRGC power consolidation under Mojtaba Khamenei; no resolution of nuclear programme |
+| Iran closes Strait of Hormuz (from 28 Feb 2026) | Largest oil supply disruption in history; Brent crude ~$116/barrel; UAE exits OPEC | Confirmed UCA-12: Iran applied rung-1 reactive logic even at cost of Chinese economic lifeline; China did not issue the predicted red line |
+| US naval blockade of Iranian ports (from 13 Apr 2026) | Dual-blockade situation; Iranian economy under severe additional pressure | Escalates coercion at rung 0 against a rung-1 leadership; risks triggering the very losses (L1, L5) the analysis identified |
+| Pakistan-brokered ceasefire (7–8 Apr 2026) | Active hostilities paused; ceasefire extended to late May | Islamabad Talks (11–12 Apr) failed to produce a deal; talks stalled after Trump canceled envoy trip (25 Apr) |
+| Islamabad Talks (11–12 Apr 2026) | 21 hours of negotiations; no agreement | Core sequencing deadlock: Iran wants war to end before nuclear talks; US insists nuclear settlement precedes sanctions relief — mirror-image positions |
 
 ## Analytical approach
 
@@ -207,4 +255,4 @@ in the analysis document (`analysis.md`):
 
 ## Status
 
-_in analysis_
+_active war — analysis updated 29 April 2026_

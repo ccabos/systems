@@ -29,6 +29,6 @@ problem actually needs them.
 
 ## Index
 
-_No problems have been filed yet. When the first one is added, list
-it in a table here with stakeholder, status, and a one-line
-description._
+| Folder | Stakeholder | Status | Description |
+|--------|-------------|--------|-------------|
+| [`iran-hormuz-conflict`](iran-hormuz-conflict/problem.md) | Independent analyst | in analysis | STAMP/STPA analysis of the Iran regional conflict; structural interventions for peace and Hormuz access |

@@ -4,9 +4,67 @@ _Companion to `problem.md`. Applies the four-step STPA procedure with
 justification-rung tagging to identify structural interventions for
 peace and Hormuz access._
 
-_Knowledge base: August 2025. Structural conclusions are expected to
-hold beyond that date; specific actor names and positions should be
-verified against current reporting._
+_Original knowledge base: August 2025. Updated 29 April 2026 with
+open-source reporting on the 2026 Iran war. Sections marked
+**[UPDATED]** reflect post-August 2025 events._
+
+---
+
+## Situation Update — 29 April 2026 **[UPDATED]**
+
+This section records which Step 1 losses and Step 3 UCAs have been
+realised as of the update date, and what structural changes have
+occurred that modify the analysis.
+
+### Losses realised
+
+| Loss | Status | Notes |
+|------|--------|-------|
+| L1 — Full-scale regional war | **Partially realised** | Direct US–Israel military campaign against Iran since 28 Feb 2026; Lebanon war killing 2,000+; ceasefire in place but fragile |
+| L2 — Iranian nuclear weapons acquisition | Not yet realised | Nuclear programme status unclear during wartime; nuclear talks have not begun |
+| L3 — Sustained Hormuz closure / global energy crisis | **Realised** | Traffic at 5 % of pre-war levels; IEA calls it largest oil supply disruption in history; Brent ~$116/barrel; 1970s-style stagflation risk |
+| L4 — Regional nuclear proliferation cascade | Not yet realised | Remains a future risk |
+| L5 — Iranian regime collapse / nuclear material insecurity | **Partially realised** | Khamenei killed; IRGC-installed successor (Mojtaba Khamenei) lacks religious legitimacy; governance under severe stress |
+| L6 — Permanent proxy warfare entrenchment | **Partially realised** | Lebanon war active; Houthis still operational; Iraqi militia status unclear |
+| L7 — Loss of Red Sea / Arabian Sea freedom of navigation | **Partially realised** | Dual blockade; most commercial operators have stopped transiting |
+
+### UCAs triggered
+
+| UCA | Triggered? | Notes |
+|-----|-----------|-------|
+| UCA-6 — US strikes Iranian territory | **Yes** | US/Israel airstrikes 28 Feb 2026 |
+| UCA-12 — Iran closes Hormuz despite Chinese interests | **Yes** | Confirmed: rung-1 reactive logic prevailed over rung-0 economic self-interest |
+| UCA-14 — Iran enriches while no diplomatic channel open | Status unclear | War has superseded the incremental enrichment scenario |
+| UCA-19 — Israel strikes before diplomatic ultimatum | **Yes** | February 2026 strikes preceded a final diplomatic round |
+| UCA-22 — Russia supplies advanced systems during crisis | **Partially** | Russia providing intelligence; prior drone/missile supply documented |
+| UCA-23 — China does not apply economic pressure | **Yes** | China remained neutral; did not issue Hormuz red line |
+| UCA-24 — Russia vetoes UNSC ceasefire resolution | Likely | UNSC ceasefire blocked; Pakistan ceasefire is extra-UNSC |
+
+### Key structural changes since original analysis
+
+1. **Supreme Leader changed.** Mojtaba Khamenei (no Grand Ayatollah
+   status) installed under IRGC pressure. IRGC is now the dominant
+   principal in the Iranian control structure. Any settlement must
+   satisfy IRGC institutional interests.
+2. **China did not fire its economic lever.** The "minimum viable
+   intervention" recommended in Section 6.3 did not occur. China
+   maintained oil purchases and indirect support. The US responded by
+   sanctioning a major Chinese refinery. China–US economic tension is
+   now a factor in the system.
+3. **Pakistan is the active mediator.** Qatar and Oman are secondary;
+   Pakistan successfully brokered the April ceasefire and is hosting
+   talks. Pakistan is now a key controller in the peace process.
+4. **UAE exited OPEC.** Gulf economic architecture is shifting. UAE is
+   acting independently of Saudi Arabia and OPEC frameworks.
+5. **Dual blockade created a symmetric coercion trap.** The US naval
+   blockade of Iranian ports (from 13 April) mirrors Iran's Hormuz
+   closure. Both sides are now applying rung-0 coercion simultaneously,
+   with no face-saving exit available to either without appearing to
+   concede first.
+6. **Core negotiating deadlock is explicit.** Iran: end the war first,
+   nuclear talks later. US: nuclear settlement and unconditional Hormuz
+   reopening before sanctions lifted. These are mirror-image sequencing
+   demands; neither side can move first without appearing to capitulate.
 
 ---
 
@@ -818,3 +876,157 @@ by at least one major actor:
    ongoing Yemen war, and the Gaza conflict all demonstrate that
    military pressure without a political pathway produces
    reconstitution, not resolution.
+
+---
+
+## Section 8 — Active-War Addendum **[UPDATED 29 April 2026]**
+
+Sections 1–7 were written as a pre-war crisis analysis. This section
+updates the remedy catalogue and sequencing for the active-war
+situation as of 29 April 2026.
+
+### 8.1 What the pre-war analysis got right
+
+- The rung-1 / rung-0 mismatch between US sanctions and Iranian
+  decision-making was correctly identified; the war demonstrated
+  that Iran's leadership chose escalation over economic survival.
+- UCA-12 (Iran closes Hormuz despite Chinese interests) was correctly
+  identified as a live risk; it was triggered on 28 February 2026.
+- UCA-19 (Israel strikes before a diplomatic ultimatum) was correctly
+  identified; it occurred.
+- The UNSC paralysis scenario (S6) was correctly predicted; the
+  ceasefire was achieved outside the UNSC by Pakistan, not through
+  the Security Council.
+- L5 (regime collapse) was flagged as a hazard; it is partially
+  realised with the IRGC-dominant Mojtaba Khamenei succession.
+
+### 8.2 What the pre-war analysis missed or under-weighted
+
+- **China did not apply its economic lever.** The minimum viable
+  intervention (Section 6.3) assumed China's self-interest in
+  Hormuz would translate into a visible red line to Iran. It did
+  not. China chose strategic neutrality and indirect support over
+  active mediation. The analysis over-estimated Chinese pragmatism
+  relative to Chinese strategic interest in letting the US be
+  consumed by the conflict.
+- **Pakistan as mediator.** Pakistan was not modelled as a controller.
+  It proved to be the only party capable of brokering the April 2026
+  ceasefire, exploiting its relationships with both the US and Iran.
+  Pakistan should be incorporated into any future control structure
+  model as a Tier 2 mediator alongside Qatar and Oman.
+- **IRGC as dominant successor controller.** The analysis modelled
+  the Supreme Leader as the blocking constraint on Iranian
+  flexibility. The war has shown that the IRGC is the actual
+  constraint — and with a new, legitimacy-deficient Supreme Leader
+  dependent on IRGC support, IRGC institutional interests are now
+  the primary determinant of Iranian negotiating positions.
+- **Dual-blockade symmetry.** The US responded to Hormuz closure
+  with its own naval blockade of Iranian ports. This was not
+  modelled. It creates a symmetric coercion trap: both sides are
+  applying rung-0 coercion with no face-saving exit available
+  without appearing to concede first.
+
+### 8.3 Updated remedy priorities for the active-war phase
+
+The five options from Section 5 remain structurally valid, but
+their sequencing and content must be adapted for the active-war
+context. The pre-war phase sequence is replaced by the following.
+
+#### Immediate (within current ceasefire window, before late May 2026)
+
+**Priority 1 — Break the sequencing deadlock via a bridging formula.**
+The Islamabad Talks failed because both sides have mirror-image
+sequencing demands (Iran: war ends first; US: nuclear settlement
+first). The bridging formula that breaks this is: **simultaneous
+partial steps** — Iran agrees to IAEA access and enrichment freeze;
+the US agrees to a partial, reversible sanctions waiver; both steps
+are taken on the same day. Pakistan and Oman are the natural hosts
+for this agreement. Neither side "goes first."
+
+This is a modification of Option A that addresses the sequencing
+deadlock directly. It requires the US to abandon the "unconditional
+Hormuz reopening first" position, accepting instead that partial
+Hormuz reopening accompanies rather than precedes the nuclear step.
+
+**Priority 2 — IRGC legitimacy acknowledgment.**
+Mojtaba Khamenei's authority depends on IRGC backing. Any deal
+that humiliates the IRGC institutionally will not survive. The US
+must structure any agreement so that the IRGC can present it
+internally as a strategic achievement, not a defeat. Framing the
+nuclear freeze as "Iran's sovereign choice to demonstrate
+responsibility" rather than "compliance under military pressure"
+is a rung-1 face-saving requirement, not a substantive concession.
+
+**Priority 3 — Separate the dual blockades procedurally.**
+The symmetric blockade trap can be broken by treating the two
+blockades as separate negotiations: Iran lifts Hormuz civilian
+shipping restrictions; the US lifts the naval blockade of Iranian
+ports. These are operationally independent actions that can be
+sequenced within days of each other, giving both sides a visible
+reciprocal gesture without either "going first" on the larger issues.
+
+#### Near-term (within extended ceasefire, 1–3 months)
+
+**Priority 4 — China engagement at the right rung.**
+China chose neutrality in the pre-war phase; the war has now made
+neutrality costly (Chinese oil supply disrupted, US sanctioning
+Chinese refineries). China now has a positive incentive to engage
+that it lacked before. The approach must change: rather than asking
+China to apply its Iran lever (which China resists as precedent),
+frame China's role as **co-author of a Hormuz multilateral
+framework** (Option C) that is in China's direct interest. China
+gets a formal stake in the Hormuz arrangement rather than being asked
+to coerce a partner.
+
+**Priority 5 — Lebanon and Yemen ceasefire consolidation.**
+The Lebanon war must be frozen before any Iran-wide deal is possible.
+A Lebanon ceasefire that preserves Hezbollah's political role without
+its military autonomy (Option D2) is now more achievable than before
+the war, given Hezbollah's further degradation. Yemen (D1) follows
+the same logic: the Houthis' political demands (recognition, north
+Yemen reconstruction) remain the leverage point.
+
+#### Medium-term (post-ceasefire consolidation, 3–12 months)
+
+**Priority 6 — Full nuclear deal (Option A, modified).**
+Once the dual blockade is lifted and a Lebanon ceasefire is in place,
+the conditions for a full nuclear agreement are significantly better
+than at any previous point. The war has demonstrated that the military
+option does not eliminate Iran's nuclear capability; a verified cap
+is the only durable solution. The modified JCPOA-2 framework from
+Option A applies, with the additional requirement that the IRGC's
+institutional interests are structurally accommodated (e.g. a civilian
+nuclear programme under IRGC-affiliated entities).
+
+### 8.4 Updated minimum viable intervention
+
+The original Section 6.3 minimum viable intervention (China private
+red line on Hormuz) did not occur. Given the current state, the
+updated minimum viable intervention is:
+
+> **A procedural separation of the dual blockades: Iran suspends
+> Hormuz civilian shipping restrictions; the US suspends its naval
+> blockade of Iranian ports. Both actions taken within a 48-hour
+> window, mediated by Pakistan. No linkage to the nuclear question
+> in this step.**
+
+This:
+- Breaks the symmetric coercion trap without requiring either side
+  to address the harder nuclear sequencing question.
+- Provides immediate relief on L3 (energy crisis) and L7 (shipping).
+- Is achievable within the current ceasefire window before late May.
+- Gives Pakistan a concrete mediation success that reinforces its
+  role as the key channel.
+- Creates momentum for the nuclear and political talks without
+  prejudging their outcome.
+
+### 8.5 Updated structural diagnosis
+
+| Architectural failure | Pre-war status | Active-war status | Updated fix |
+|----------------------|---------------|------------------|-------------|
+| Rung-0 coercion (sanctions) targeting rung-1 controller | Identified | Confirmed and worsened — US added naval blockade (more rung-0) | Simultaneous partial steps formula; stop adding coercion layers |
+| No Iran–Israel deconfliction channel | Identified | War occurred without one | Ceasefire is the replacement; must be institutionalised |
+| China's lever unused | Identified as MVI | China chose neutrality; war confirmed it | Reframe China as Hormuz co-author, not coercer |
+| IRGC as actual controller | Under-weighted | Confirmed by Mojtaba succession | All deals must accommodate IRGC institutional interests |
+| UNSC paralysis | Identified | Confirmed; ceasefire via Pakistan not UNSC | Pakistan cemented as primary multilateral channel |
+| Sequencing deadlock | Identified | Now explicit and blocking talks | Simultaneous partial steps; separate blockades procedurally |

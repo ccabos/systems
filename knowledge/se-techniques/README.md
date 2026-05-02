@@ -19,6 +19,7 @@ analysing systems. Each technique has its own folder with:
 | STPA — System-Theoretic Process Analysis | `stpa/` |
 | Control structures | `control-structures/` |
 | Justificatory rungs (extension to STPA for social systems) | `justification-rungs/` |
+| Linear algebra — spectral and factorisation methods on existing matrix-shaped artefacts | `linear-algebra/` |
 
 More will be added as scope grows (e.g. FMEA, HAZOP, FTA, model-based
 systems engineering).

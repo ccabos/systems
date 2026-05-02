@@ -20,6 +20,7 @@ analysing systems. Each technique has its own folder with:
 | Control structures | `control-structures/` |
 | Justificatory rungs (extension to STPA for social systems) | `justification-rungs/` |
 | Linear algebra — spectral and factorisation methods on existing matrix-shaped artefacts | `linear-algebra/` |
+| Order theory and Formal Concept Analysis — qualitative-structural formalisation of posets, lattices, and incidence relations | `order-theory-and-fca/` |
 
 More will be added as scope grows (e.g. FMEA, HAZOP, FTA, model-based
 systems engineering).

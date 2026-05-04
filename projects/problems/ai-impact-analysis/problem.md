@@ -167,7 +167,7 @@ concentration of economic and political power?
 
 ## Analytical approach
 
-The analysis in this folder proceeds in four layers, each
+The analysis in this folder proceeds in five layers, each
 deliberately distinct:
 
 1. `chat-analysis.md` — the original chat-conversation analysis,
@@ -182,21 +182,30 @@ deliberately distinct:
    vocabulary.
 
 3. `analysis.md` — full STPA analysis with justification-rung
-   tagging. Step 1 (losses, hazards, constraints) complete; Step 2
-   (control structure) with enumerated controllers, controlled
-   processes, control actions, feedback channels, and process
-   models; Step 3 with 65 UCAs across 26 control actions; Step 4
-   with 9 loss scenarios covering all UCAs, with explicit five-class
-   cause analysis.
+   tagging. Step 1 complete; Step 2 with enumerated controllers,
+   controlled processes, control actions, feedback channels,
+   process models, and a Mermaid graphical control structure;
+   Step 3 with 65 UCAs across 26 control actions; Step 4 with 9
+   loss scenarios covering all UCAs with five-class cause analysis;
+   plus a cross-bloc symmetry section linking LS-2 and LS-7 as
+   one structural failure with bilateral remedy implication.
 
 4. `remedy-proposals.md` — 22 concrete remedy proposals (R-1
    through R-22) linked to the loss scenarios, each with cost /
-   tractability / time-horizon and sequencing notes.
+   tractability / time-horizon.
 
-Sequence: critique first, then constructive SE work. The
-sequence matters: claiming SE rigor without the artefacts is
-exactly the rung-1 / rung-3 mismatch the rungs framework warns
-against.
+5. `decision-memo.md` — a sequenced four-phase implementation
+   plan derived from the remedy dependency graph, with explicit
+   decision points, reversibility tiers, and coalition
+   dependencies.
+
+A reader-facing chapter (`book-chapter.md`) summarises the case
+for non-specialist readers.
+
+Sequence: critique first, then constructive SE work, then
+sequencing, then communication. The sequence matters: claiming SE
+rigor without the artefacts is exactly the rung-1 / rung-3
+mismatch the rungs framework warns against.
 
 ## Deliverables
 
@@ -205,17 +214,23 @@ against.
 - `methodology-critique.md` — honest assessment of what was and
   was not systems engineering.
 - `analysis.md` — STPA analysis: Step 1 losses/hazards/constraints,
-  Step 2 enumerated control structure with rung tagging, Step 3
-  with 65 UCAs, Step 4 with 9 loss scenarios.
+  Step 2 enumerated control structure with rung tagging and
+  Mermaid diagram, Step 3 with 65 UCAs, Step 4 with 9 loss
+  scenarios, plus cross-bloc symmetry analysis.
 - `remedy-proposals.md` — 22 remedies (R-1–R-22) with cost,
   tractability, time-horizon, and sequencing notes.
+- `decision-memo.md` — sequenced four-phase plan with decision
+  points, reversibility tiers, and coalition dependencies.
+- `book-chapter.md` — reader-facing chapter for non-specialists.
 
 ## Status
 
-_second pass complete — chat analysis preserved, methodology
-critique written, full STPA delivered (Step 2 enumerated, 65 UCAs
-in Step 3, 9 loss scenarios in Step 4), and 22 remedy proposals
-extracted. Remaining gaps for a third pass are listed at the end
-of `analysis.md`: complete process-model coverage for the
-remaining 4 controllers, more UCAs within sparsely-enumerated CAs,
-graphical Step 2 diagram, and a sequenced `decision-memo.md`._
+_third pass complete — chat analysis preserved, methodology
+critique written, full STPA delivered (Step 2 with full
+enumeration tables and Mermaid diagram; 65 UCAs in Step 3; 9
+loss scenarios in Step 4 with cross-bloc symmetry analysis),
+22 remedy proposals extracted, and a sequenced four-phase
+decision memo produced. Remaining gaps would belong to a
+fourth pass: stakeholder-specific costing; jurisdictional
+mapping of remedy feasibility; quantification of cycle times
+and UCA frequencies._

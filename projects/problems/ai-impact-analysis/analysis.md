@@ -149,7 +149,91 @@ nominally one rung but operates at another, both are shown
                    (back to global polity)
 ```
 
-### 2.2 Controllers
+The Mermaid diagram below renders the same hierarchy graphically,
+with rung tags on the principal channels and the five identified
+mismatches (M1–M5) marked. Solid arrows are control actions
+(downward); dashed arrows are feedback (upward).
+
+```mermaid
+flowchart TB
+    POLITY["CTRL-1<br/>Global polity / public discourse<br/>(r6 claimed / r1 operating)"]
+    USGOV["CTRL-2a–f<br/>US government<br/>(Congress, BIS, Treasury,<br/>FTC, AISI, NatSec)"]
+    PRCGOV["CTRL-3a–c<br/>PRC government<br/>(party centre, MIIT, CAC)"]
+    EUGOV["CTRL-4a–b + CTRL-5<br/>EU + other states"]
+    CAPITAL["CTRL-6a–d<br/>Capital markets<br/>(operating r3 → r1)"]
+    LABS["CTRL-7<br/>Frontier AI labs<br/>(claimed r6 / operating r1)"]
+    INFRA["CTRL-8a–d<br/>Compute infrastructure<br/>(chips, fabs, hyperscale, energy)"]
+    OPEN["CTRL-9<br/>Open-weights ecosystem<br/>(price-setter, M-positive)"]
+    APPS["CTRL-10<br/>Application layer"]
+    PLATS["CTRL-11<br/>Information platforms"]
+    LABMIN["CTRL-12<br/>Labour ministries / education"]
+    WORK["CTRL-13<br/>Workers / consumers<br/>(controlled process)"]
+    INFOREG["CTRL-14<br/>Information / platform regulators"]
+
+    POLITY -- "norms, legitimacy (r1/r6)" --> USGOV
+    POLITY -- "norms (r1/r6)" --> PRCGOV
+    POLITY -- "norms (r1/r6)" --> EUGOV
+
+    USGOV -- "export ctrls CA-2 (r2→r0)" --> INFRA
+    USGOV -- "tax / sanctions CA-3 (r2)" --> CAPITAL
+    USGOV -- "antitrust CA-4 (r2/r4)" --> INFRA
+    USGOV -- "AISI eval CA-5 (r3/r4)" --> LABS
+    PRCGOV -- "industrial policy CA-7,8 (r1/r2)" --> INFRA
+    PRCGOV -- "CAC rules CA-9 (r2/r0)" --> LABS
+    EUGOV -- "AI Act CA-10 (r2/r4)" --> LABS
+    EUGOV -- "AI Act CA-10 (r2/r4)" --> APPS
+
+    CAPITAL -- "funding CA-12 (r3→r1)<br/>**M2**" --> LABS
+    CAPITAL -- "capex CA-12 (r3)" --> INFRA
+
+    LABS -- "model release CA-13 (r3)" --> APPS
+    LABS -- "capability claims CA-14<br/>(claimed r3 / op r1) **CH4**" --> POLITY
+    LABS -- "RSPs CA-15<br/>(claimed r6 / op r1) **M1**" --> POLITY
+    LABS -- "API pricing CA-16 (r3)" --> APPS
+
+    INFRA -- "GPU/fab/hyperscale<br/>allocation CA-17–19 (r3)<br/>**M5**" --> LABS
+    INFRA -- "grid CA-20 (r2/r3)" --> APPS
+
+    OPEN -- "weight release CA-21 (r3)" --> APPS
+    OPEN -- "weight release CA-21 (r3)" --> LABS
+
+    APPS -- "deployment CA-22 (r3)" --> WORK
+    PLATS -- "amplification / moderation<br/>CA-23 (r3 → r0/r1)" --> WORK
+
+    LABMIN -- "retraining CA-24<br/>(r2/r4) **M3**" --> WORK
+    INFOREG -- "provenance CA-26 (r2/r4)" --> PLATS
+
+    WORK -. "wages, employment FB-3,12<br/>(r3/r4 slow + r0 escape) **M3**" .-> LABMIN
+    WORK -. "backlash FB-4 (r0)" .-> POLITY
+    WORK -. "collective action CA-25<br/>(r1/r3 + r0)" .-> POLITY
+
+    LABS -. "incident reports FB-7<br/>(r3 inside / r1 disclosed) **M4**" .-> USGOV
+    LABS -. "incident reports FB-7" .-> EUGOV
+    LABS -. "capability evidence FB-1" .-> CAPITAL
+    OPEN -. "open benchmarks FB-6 (r3)<br/>strongest empirical channel" .-> POLITY
+    OPEN -. "FB-6" .-> USGOV
+    OPEN -. "FB-6" .-> EUGOV
+
+    APPS -. "financial returns FB-2 (r3)" .-> CAPITAL
+    INFRA -. "FB-2" .-> CAPITAL
+
+    USGOV -. "geopolitical signalling FB-8 (r1/r3)" .-> PRCGOV
+    PRCGOV -. "FB-8" .-> USGOV
+
+    classDef apex fill:#fef3c7,stroke:#b45309,color:#1f2937;
+    classDef state fill:#dbeafe,stroke:#1d4ed8,color:#1f2937;
+    classDef capital fill:#fce7f3,stroke:#be185d,color:#1f2937;
+    classDef tech fill:#dcfce7,stroke:#15803d,color:#1f2937;
+    classDef ground fill:#f3f4f6,stroke:#6b7280,color:#1f2937;
+
+    class POLITY apex;
+    class USGOV,PRCGOV,EUGOV,LABMIN,INFOREG state;
+    class CAPITAL capital;
+    class LABS,INFRA,OPEN,APPS,PLATS tech;
+    class WORK ground;
+```
+
+
 
 A controller is any actor with a process model and the capacity to
 issue control actions affecting one or more controlled processes
@@ -313,6 +397,49 @@ on blind spots that drive the loss scenarios in Step 4.
   *Blind to:* whether peer build-out is offensive or defensive (LS-7);
   whether confidence-building channels at the AI-infrastructure
   level even exist.
+- **CTRL-2a (US Congress) and analogues.** *Tracks:* constituent
+  pressure, lobbying, committee hearings, salient incidents,
+  electoral cycle. *Blind to:* the gap between rule cycle (years)
+  and capability cycle (months), so that legislation is calibrated
+  to a capability tier already obsolete at enactment (LS-9); blind
+  to compute-foreclosure mechanisms below merger thresholds (M5).
+- **CTRL-3b (PRC MIIT).** *Tracks:* indigenous fab and chip-design
+  progress, subsidy uptake, export-control friction, key-firm
+  performance. *Blind to:* whether subsidy structure becomes a
+  sanctions trigger (UCA-22), and to overcapacity dynamics at
+  global scale (UCA-24).
+- **CTRL-3c (PRC CAC).** *Tracks:* domestic content compliance,
+  approved-model registry, deployment-context risk. *Blind to:*
+  the way state-aligned content rules embed in globally distributed
+  open-weight releases (UCA-25), turning a domestic control action
+  into an external influence vector.
+- **CTRL-5 (other states — UK, JP, KR, IN, NL, TW, Gulf).** *Track:*
+  US export-control posture, commercial AI investment opportunity,
+  domestic AI sovereignty, and (for Gulf) post-oil diversification.
+  *Blind to:* their own bargaining position when they coordinate
+  rather than defect (UCA-30, 31); blind to the cumulative
+  coalition-stability effect of small-margin commercial deviations.
+- **CTRL-8a (chip designers — NVIDIA, AMD, TPU, Ascend) and
+  CTRL-8b (foundries — TSMC, Samsung, SMIC).** *Track:* customer
+  demand, fab utilisation, technology-node yields, export-control
+  scope. *Blind to:* the second-order effect of long-duration
+  exclusive supply contracts on CP-9 entry (UCA-46, UCA-50, M5);
+  blind to geographic-concentration risk to CP-7 (UCA-48), since
+  this risk is borne by states, not by the firm.
+- **CTRL-9 (open-weights publishers — PRC labs, Meta, Mistral,
+  community fine-tuners).** *Track:* benchmark performance vs.
+  frontier, download volume, regulatory pressure, capability gap
+  to closed peers. *Blind to:* the system-level *function* they
+  perform as the price-setting mechanism on the model layer (CP-3);
+  this blind spot makes them vulnerable to suppression (UCA-55)
+  without recognition of the systemic loss it produces (LS-5).
+- **CTRL-10 (application-layer companies — vertical SaaS, agentic
+  platforms, enterprise integrators).** *Track:* customer adoption,
+  ROI of automation, churn, model-cost trajectories. *Blind to:*
+  the cumulative substitution effect across the labour market
+  when many firms make individually-rational deployment decisions
+  (UCA-56, UCA-57); blind to the cohort-specific damage their
+  deployment patterns concentrate on early-career workers (L8).
 
 ### 2.7 Rung tags on principal channels
 
@@ -906,6 +1033,65 @@ developed; UCA-10 (sanction-as-escalation) — folded into LS-6;
 UCA-26 (PRC content rules persisting) — folded into LS-7 with
 modest causal development. A third pass would strengthen these.
 
+### Cross-bloc symmetry: LS-2 and LS-7 as one structural failure
+
+LS-2 (capital structure forces US lab safety frameworks into
+nominal-only operation) and LS-7 (PRC internal rung-1 lock-in)
+were named as mirrors in the second pass. The third pass treats
+them as a single structural failure with a bilateral remedy
+implication.
+
+**Structural symmetry.** Both scenarios are Pattern A (asymmetric
+loop): control actions descend from an apex (capital + executive
+on the US side; party centre on the PRC side) at rung 1 (mission
+authority), and r3 capability evidence ascends but is filtered
+through r1 wrapping (lab self-selected benchmarks on one side;
+mission-conformant disclosure on the other). The result on both
+sides is the same: the apex's process model accumulates error,
+and the only correction available is rung-0 escape (market
+correction in the US case; political purge in the PRC case).
+
+**What is genuinely different.** The US side is open enough that
+external r3 channels (independent benchmarks, AISI evaluation,
+academic critique) can in principle reach the apex; whether they
+do depends on whether structural separation (R-5) is enforceable.
+The PRC side has no equivalent external channel; the pattern is
+closed by design.
+
+**What follows for remedies.** Because the failure is structurally
+symmetric:
+
+1. **Unilateral remedies on either side help both sides.** A
+   functioning AISI-class r3 verification regime in the US bloc
+   produces evidence that PRC analysts read. PRC capability claims
+   that survive Western r3 evaluation also survive their own
+   internal r1 wrapping; the externalised r3 channel becomes a
+   correction channel for both sides simultaneously.
+2. **Bilateral remedies (R-16, R-18) are the only remedies that
+   work directly on the PRC side.** Because the PRC side cannot
+   self-elevate the rung of its internal feedback (the r1
+   structure is constitutive, not contingent), the only path to
+   a r3 corrective channel is one that exists outside both
+   national hierarchies — which is exactly what the IAEA-class
+   regime in R-16 would provide.
+3. **The conflict-prevention argument for R-16 is stronger than
+   the verification argument.** Even if the regime never
+   technically succeeds (capability verification is hard), the
+   *existence* of a forum in which r3 evidence can be entered
+   reduces the probability that LS-6 escalates from sanctions
+   coercion into kinetic action. The forum is a confidence-
+   building substrate rather than a definitive verification
+   apparatus.
+4. **Track-1.5 (R-18) as precondition.** R-18 is the only remedy
+   that creates the shared technical vocabulary R-16 would need.
+   Skipping R-18 makes R-16 unbuildable.
+
+**Implication for sequencing.** The three highest-leverage
+geopolitical remedies (R-16, R-17, R-18) should be sequenced as
+R-18 → R-17 (ongoing) → R-16, with R-17 (geographic fab
+diversification) running in parallel because its time-horizon is
+constrained by physical factors, not political ones.
+
 ---
 
 ## What changed from the chat analysis
@@ -942,45 +1128,37 @@ The SE pass also surfaces material the chat analysis missed:
 
 ---
 
-## What this second pass leaves for a third pass
+## What the third pass closed, and what it leaves open
 
-The second pass closes most of the gaps the first pass listed:
+The third pass closes the higher-leverage gaps the second pass left:
 
-| Gap from first pass | Status after second pass |
-|---------------------|--------------------------|
-| Step 2 sketched as ASCII | Step 2 now has full enumerated tables: 14 controllers, 10 controlled processes, 26 control actions, 13 feedback channels, 10 process-model entries, 12 rung-tagged channels, 5 rung mismatches |
-| 15 UCAs (seed) | 65 UCAs (P: 30, N: 13, T: 12, D: 10), grouped by control action |
-| 8 loss scenarios with single-cause sketches | 9 loss scenarios with explicit five-class cause analysis; coverage check shows all 65 UCAs accounted for |
-| Remedies at class level only | 22 concrete remedy proposals extracted into `remedy-proposals.md` with cost / tractability / time-horizon |
+| Gap from second pass | Status after third pass |
+|----------------------|-------------------------|
+| Process models cover 10/14 controllers | All 14 covered (added CTRL-2a, CTRL-3b, CTRL-3c, CTRL-5, CTRL-8a, CTRL-8b, CTRL-9, CTRL-10) |
+| Cross-bloc symmetry not developed | New section treats LS-2 and LS-7 as one structural failure with bilateral remedy implication; sequencing R-18 → R-17 (parallel) → R-16 derived |
+| No graphical Step 2 diagram | Mermaid diagram added in §2.1 with all 14 nodes, control / feedback distinction, and M1–M5 marked |
+| No sequenced remedy plan | `decision-memo.md` produced — four phases with decision points, reversibility tiers, coalition dependencies |
 
-Remaining gaps for a third pass:
+Remaining gaps for a fourth pass (intentionally not closed in the
+third pass — diminishing returns; the fourth pass would be
+stakeholder-specific):
 
-- **Process-model articulation (§2.6) covers 10 of 14 controllers.**
-  Missing: CTRL-2a, CTRL-3b, CTRL-3c, CTRL-5, CTRL-8a, CTRL-8b,
-  CTRL-9, CTRL-10. Adding these would surface UCAs not yet
-  enumerated.
 - **UCA enumeration is non-exhaustive within each CA.** Some CAs
-  generated only 2 UCAs because the symmetric inverses were
-  uninteresting; others (CA-1, CA-12) could plausibly support more.
-- **Coverage of UCAs 7, 10, 26 in Step 4 is weak.** Folded into
-  LS-6 / LS-7 with limited causal development; merit standalone
-  scenarios.
-- **Cross-bloc symmetry analysis is incomplete.** LS-2 (US lab /
-  capital Pattern A) and LS-7 (PRC internal Pattern A) are
-  identified as mirrors but the structural symmetry is not
-  systematically developed into a single bilateral remedy framework.
-- **No quantification.** STPA does not require numerical models, but
-  a third pass could attach order-of-magnitude estimates to cycle
-  times, UCA frequencies, and remedy costs.
-- **No graphical Step 2 diagram.** The §2.1 ASCII overview is
-  sufficient for the controllers shown; a graphical diagram would
-  scale better.
-- **No worked sequencing of remedies.** `remedy-proposals.md` lists
-  proposals with tractability and time horizon but does not yet
-  produce a sequenced implementation plan (which would belong in a
-  separate `decision-memo.md` if a stakeholder commissioned it).
+  generated only 2 UCAs; CA-1 and CA-12 could plausibly support
+  more. Diminishing returns at this point.
+- **No quantification of cycle times, UCA frequencies, or remedy
+  costs.** A stakeholder-specific costing pass would attach
+  numbers; the present analysis preserves order-of-magnitude
+  qualitative tags.
+- **No jurisdictional mapping of remedy feasibility.** US, EU, and
+  PRC face different feasible subsets of these remedies; a
+  multilateral version of `remedy-proposals.md` would map each
+  remedy to the jurisdictions that can realistically adopt it.
+- **No stakeholder-specific decision memo.** `decision-memo.md`
+  identifies a structural sequence; it does not advocate for any
+  particular allocation by any particular actor.
 
-This second pass is sufficient to demonstrate that the SE method
-produces structurally different artefacts from chat-level analysis
-and points at 22 specific structural interventions, each linked by
-explicit causal chain to identified hazards and losses.
+This third pass is sufficient to deliver a complete first-cycle
+STPA of the system, a sequenced implementation plan, and a
+foundation for the reader-facing `book-chapter.md` that
+communicates the case to non-specialists.

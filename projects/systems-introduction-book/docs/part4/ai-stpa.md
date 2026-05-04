@@ -1,11 +1,12 @@
-# What Will AI Do to Us? A Systems-Engineering Reading
+# STPA Analysis of Frontier AI as a Sociotechnical System
 
-_A chapter draft companion to the analysis in this folder. It
-distils the structured artefacts (`analysis.md`, `remedy-proposals.md`,
-`decision-memo.md`) into a form a non-specialist reader can follow
-without the reference tables. If integrated into the
-`systems-introduction-book` project, this chapter belongs in Part IV
-as a worked counterpart to the religion case._
+## What Will AI Do to Us? A Systems-Engineering Reading
+
+---
+
+## Abstract
+
+The diffusion of frontier artificial intelligence is reshaping the global economy and political order, but most public analysis of this fact takes the form of strategic essays — narratives that identify forces and rank scenarios without pointing at specific levers. This chapter applies System-Theoretic Process Analysis (STPA), with justification-rung tagging from the social-systems extension developed in [Part I](../part1/justification-rungs.md), to the global political economy of frontier AI. We identify fourteen distinct controllers, twenty-six control actions, sixty-five unsafe control actions across the four standard categories, and nine loss scenarios connecting specific structural mismatches to specific harms. We then derive twenty-two concrete remedies organised into a four-phase sequence with explicit decision points. The result is a structural reformulation of the questions about AI's effects on jobs, power, and geopolitics — turning forecasting questions into action-shaped questions of which feedback channels are missing and which institutions are needed to install them. The full analytical artefacts are filed under [`projects/problems/ai-impact-analysis/`](https://github.com/ccabos/systems/tree/main/projects/problems/ai-impact-analysis); this chapter distils them into prose for a non-specialist reader.
 
 ---
 
@@ -258,6 +259,56 @@ The picture is dense, but it is not infinite. In the analysis
 companion to this chapter, every arrow is enumerated; here we
 only need the shape.
 
+The diagram below shows the principal controllers and the channels
+between them, with rung tags on the arrows and the five mismatches
+(M1–M5) marked at the boundaries where they occur. Solid arrows
+are control actions; dashed arrows are feedback.
+
+```mermaid
+flowchart TB
+    POLITY["Global polity<br/>(r6 claimed / r1 operating)"]
+    STATES["State controllers<br/>US · PRC · EU · others"]
+    CAPITAL["Capital markets<br/>(operating r3 → r1)"]
+    LABS["Frontier AI labs<br/>(claimed r6 / operating r1)"]
+    INFRA["Compute infrastructure<br/>chips · fabs · hyperscale · energy"]
+    OPEN["Open-weights ecosystem<br/>(price-setter)"]
+    APPS["Application layer"]
+    PLATS["Information platforms"]
+    LABMIN["Labour ministries / education"]
+    WORK["Workers / consumers<br/>(controlled process)"]
+
+    POLITY -- "norms (r1/r6)" --> STATES
+    STATES -- "rules / sanctions (r2 → r0)" --> INFRA
+    STATES -- "AI Act / evals (r2/r4)" --> LABS
+    CAPITAL -- "funding (r3 → r1) M2" --> LABS
+    CAPITAL -- "capex (r3)" --> INFRA
+    LABS -- "model release (r3)" --> APPS
+    LABS -- "RSPs (claimed r6 / op r1) M1" --> POLITY
+    INFRA -- "compute allocation (r3) M5" --> LABS
+    OPEN -- "weight release (r3)" --> APPS
+    APPS -- "deployment (r3)" --> WORK
+    PLATS -- "amplification (r3 → r0/r1)" --> WORK
+    LABMIN -- "retraining (r2/r4) M3" --> WORK
+
+    WORK -. "wages, employment (r3/r4 + r0)" .-> LABMIN
+    WORK -. "backlash (r0)" .-> POLITY
+    LABS -. "incidents (r3 inside / r1 disclosed) M4" .-> STATES
+    LABS -. "capability evidence (r1-wrapped)" .-> CAPITAL
+    OPEN -. "open benchmarks (r3)" .-> POLITY
+
+    classDef apex fill:#fef3c7,stroke:#b45309;
+    classDef state fill:#dbeafe,stroke:#1d4ed8;
+    classDef capital fill:#fce7f3,stroke:#be185d;
+    classDef tech fill:#dcfce7,stroke:#15803d;
+    classDef ground fill:#f3f4f6,stroke:#6b7280;
+
+    class POLITY apex;
+    class STATES,LABMIN state;
+    class CAPITAL capital;
+    class LABS,INFRA,OPEN,APPS,PLATS tech;
+    class WORK ground;
+```
+
 When we tag the arrows with their justificatory rungs, five
 specific mismatches stand out. Each of them is a particular case
 of one of the dangerous patterns we introduced in the previous
@@ -424,6 +475,17 @@ new institutions, new contractual rules — last as long as the
 political settlement that created them, which is typically much
 longer. The remedies the engineering literature catalogues are
 the structural kind.
+
+!!! abstract "Key Finding — the five rung mismatches"
+    Tagging every flow in the AI control structure with its justificatory rung surfaces five specific structural mismatches:
+
+    - **M1.** Lab safety frameworks claim rung-6 deliberative legitimacy but operate at rung-1 self-binding (Pattern B — claimed-rung inflation).
+    - **M2.** Capital flows downward at rung-3 due-diligence; capability evidence flows back at rung-1 lab-selected benchmarks (Pattern A — asymmetric loop).
+    - **M3.** Labour-policy cycle (years) is mismatched to capability-deployment cycle (months); the rung-3/4 corrective channel arrives after the cohort it would have helped is already displaced.
+    - **M4.** Incident evidence exists at rung-3 inside labs but reaches outside observers wrapped in rung-1 disclosure (Pattern A again, at a different boundary).
+    - **M5.** Antitrust operates at rung-2 with a years cycle and a merger-review threshold; concentration happens at rung-3 in long-duration contracts on a quarters cycle and below the threshold (Pattern C — cross-loop rung imposition).
+
+    These five mismatches account for most of the loss scenarios developed in §4 and motivate most of the remedies in §5.
 
 We turn now to what specifically goes wrong when these mismatches
 are not addressed.
@@ -980,6 +1042,16 @@ the eight phase-two rules been adopted? At each decision point,
 the analysis describes both what success looks like and what
 failure implies for downstream sequencing. This is what
 distinguishes a planning artefact from a wish list.
+
+!!! example "The four-phase sequence at a glance"
+    | Phase | Months | Theme | Representative remedies |
+    |-------|--------|-------|-------------------------|
+    | **1** | 1–18 | Measurement and feedback channels | Open-weights gap publication · provenance-failure measurement · task-displacement benchmark · track-1.5 dialogue |
+    | **2** | 12–48 | Rules built on phase-1 measurements | Mandatory pre-deployment evaluation · indexed automatic stabilisers · indexed EITC · mandatory provenance · reservation requirements · capability-tier rules with sunset · recalibration authority · targeted misuse-risk regime |
+    | **3** | 36–84 | Structural remedies | Merger-review reform for contract foreclosure · structural separation of safety governance · statutory PBC class · cohort-specific transitions · portable benefits · inference VAT · sovereign-wealth participation |
+    | **4** | 60–144 | Long-cycle remedies | Geographic fab diversification · independent inspection regime · productivity-indexed dividend · expedited capability-jump review |
+
+    Each phase's gating decision determines whether the next phase is structurally feasible. Phase 1 is reversible and operationally familiar; phase 4 is largely irreversible once started.
 
 ### 5.2 The non-state actor's leverage
 

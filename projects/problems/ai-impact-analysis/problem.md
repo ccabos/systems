@@ -199,8 +199,9 @@ deliberately distinct:
    decision points, reversibility tiers, and coalition
    dependencies.
 
-A reader-facing chapter (`book-chapter.md`) summarises the case
-for non-specialist readers.
+A reader-facing chapter is filed in the book project at
+[`projects/systems-introduction-book/docs/part4/ai-stpa.md`](../../systems-introduction-book/docs/part4/ai-stpa.md);
+it summarises the case for non-specialist readers.
 
 Sequence: critique first, then constructive SE work, then
 sequencing, then communication. The sequence matters: claiming SE
@@ -221,7 +222,10 @@ mismatch the rungs framework warns against.
   tractability, time-horizon, and sequencing notes.
 - `decision-memo.md` — sequenced four-phase plan with decision
   points, reversibility tiers, and coalition dependencies.
-- `book-chapter.md` — reader-facing chapter for non-specialists.
+- Reader-facing chapter for non-specialists is filed in the book
+  project at
+  [`projects/systems-introduction-book/docs/part4/ai-stpa.md`](../../systems-introduction-book/docs/part4/ai-stpa.md);
+  registered in the MkDocs nav as Part IV → "STPA on Frontier AI".
 
 ## Status
 

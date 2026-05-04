@@ -167,7 +167,7 @@ concentration of economic and political power?
 
 ## Analytical approach
 
-The analysis in this folder proceeds in three layers, each
+The analysis in this folder proceeds in four layers, each
 deliberately distinct:
 
 1. `chat-analysis.md` — the original chat-conversation analysis,
@@ -181,12 +181,17 @@ deliberately distinct:
    actually applied and which were merely gestured at with systems
    vocabulary.
 
-3. `stpa-first-pass.md` — a partial application of STPA with
-   justification-rung tagging. Step 1 (losses, hazards,
-   constraints) is delivered; Step 2 (control structure) is
-   sketched at the logical-architecture level; Steps 3–4 are
-   seeded with the most tractable UCAs and loss scenarios. This is
-   a first pass, not a complete analysis.
+3. `analysis.md` — full STPA analysis with justification-rung
+   tagging. Step 1 (losses, hazards, constraints) complete; Step 2
+   (control structure) with enumerated controllers, controlled
+   processes, control actions, feedback channels, and process
+   models; Step 3 with 65 UCAs across 26 control actions; Step 4
+   with 9 loss scenarios covering all UCAs, with explicit five-class
+   cause analysis.
+
+4. `remedy-proposals.md` — 22 concrete remedy proposals (R-1
+   through R-22) linked to the loss scenarios, each with cost /
+   tractability / time-horizon and sequencing notes.
 
 Sequence: critique first, then constructive SE work. The
 sequence matters: claiming SE rigor without the artefacts is
@@ -199,11 +204,18 @@ against.
 - `chat-analysis.md` — the original chat-level analysis verbatim.
 - `methodology-critique.md` — honest assessment of what was and
   was not systems engineering.
-- `stpa-first-pass.md` — initial STPA artefacts (Step 1 complete,
-  Step 2 sketched, Steps 3–4 seeded).
+- `analysis.md` — STPA analysis: Step 1 losses/hazards/constraints,
+  Step 2 enumerated control structure with rung tagging, Step 3
+  with 65 UCAs, Step 4 with 9 loss scenarios.
+- `remedy-proposals.md` — 22 remedies (R-1–R-22) with cost,
+  tractability, time-horizon, and sequencing notes.
 
 ## Status
 
-_first pass — chat analysis preserved, methodology critique
-written, STPA Step 1 complete and Steps 2–4 seeded. Steps 3 and 4
-are not exhaustive and would require further passes._
+_second pass complete — chat analysis preserved, methodology
+critique written, full STPA delivered (Step 2 enumerated, 65 UCAs
+in Step 3, 9 loss scenarios in Step 4), and 22 remedy proposals
+extracted. Remaining gaps for a third pass are listed at the end
+of `analysis.md`: complete process-model coverage for the
+remaining 4 controllers, more UCAs within sparsely-enumerated CAs,
+graphical Step 2 diagram, and a sequenced `decision-memo.md`._

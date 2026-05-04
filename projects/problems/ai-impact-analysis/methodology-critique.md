@@ -157,27 +157,37 @@ The user's question — "did you actually apply systems engineering?"
 
 ## What the corrective pass does
 
-`stpa-first-pass.md` delivers:
+`analysis.md` delivers (after a first pass and a second pass):
 
-- STPA Step 1 (losses, hazards, system-level constraints) — complete.
-- STPA Step 2 (control structure with rung tagging) — sketched at
-  the logical-architecture level. Not yet a full diagram.
-- STPA Steps 3 and 4 — seeded with the most tractable UCAs and loss
-  scenarios for each major control loop, as a starting set rather
-  than an exhaustive enumeration.
+- **Step 1** (losses, hazards, system-level constraints) — complete.
+  8 losses, 8 hazards, 8 constraints.
+- **Step 2** (control structure with rung tagging) — full enumerated
+  tables: 14 controllers, 10 controlled processes, 26 control actions,
+  13 feedback channels, 10 process-model entries, 12 rung-tagged
+  channels, 5 rung mismatches (M1–M5).
+- **Step 3** — 65 UCAs grouped by control action across the four
+  UCA types (P: 30, N: 13, T: 12, D: 10), with first-pass
+  cross-references.
+- **Step 4** — 9 loss scenarios with explicit five-class cause
+  analysis (process model / feedback / actuator / controlled-process
+  / external) covering all 65 UCAs.
 
-It is a *first pass*, deliberately framed as such. A complete STPA
-of this system would require multiple iterations and would produce
-an artefact comparable in size to `iran-hormuz-conflict/analysis.md`
-(~1000 lines). The first pass is enough to demonstrate which of the
-chat analysis's conclusions survive an SE treatment, which need
-revision, and which were missing entirely.
+`remedy-proposals.md` delivers 22 concrete remedy proposals
+(R-1 through R-22) linked to the loss scenarios, each with cost /
+tractability / time-horizon and sequencing notes (fast / medium /
+slow buckets, preconditions, adversarial coupling, coalition
+dependencies).
+
+A third pass would close the remaining gaps listed at the end of
+`analysis.md`: process-model coverage for the remaining 4
+controllers, more UCAs within sparsely-enumerated CAs, a graphical
+Step 2 diagram, and a sequenced `decision-memo.md` if a stakeholder
+commissioned one.
 
 ## What survives the SE pass
 
 Not everything in the chat analysis was wrong. The following claims
-do survive a first-pass STPA, and are carried forward into
-`stpa-first-pass.md`:
+do survive STPA treatment and are carried forward into `analysis.md`:
 
 - Software-engineering work bifurcates by judgment intensity.
 - Infrastructure (compute, energy, fabs) captures more durable rents
@@ -187,6 +197,9 @@ do survive a first-pass STPA, and are carried forward into
   given the productivity gain, not a property of the technology.
 
 What changes under SE treatment is the *structure* of the argument:
-these claims become consequences of specific identified UCAs and
-loss scenarios on specific identified control loops, rather than
-free-floating strategic observations.
+these claims become consequences of specific identified UCAs (e.g.
+UCA-46, UCA-50, UCA-55, UCA-32) and loss scenarios (LS-1, LS-2,
+LS-4, LS-5) on specific identified control loops, rather than
+free-floating strategic observations. Each is now linked to a
+concrete remedy proposal (R-1 through R-22) rather than a 2×2
+scenario speculation.

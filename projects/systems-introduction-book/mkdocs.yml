@@ -119,6 +119,7 @@ nav:
   - "Part IV — STPA Applied":
     - part4/index.md
     - "STPA on Religion": part4/religion-stpa.md
+    - "STPA on Frontier AI": part4/ai-stpa.md
     - "Control Structures in Social Systems": part4/control-structures.md
     - "Architectural Remedies": part4/remedies.md
   - About: about.md

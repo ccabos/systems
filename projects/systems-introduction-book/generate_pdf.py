@@ -67,6 +67,7 @@ NAV = [
     ("Hybrid Architectures", "part3/hybrids.md", 1),
     ("Part IV -- STPA Applied", "part4/index.md", 0),
     ("STPA on Religion", "part4/religion-stpa.md", 1),
+    ("STPA on Frontier AI", "part4/ai-stpa.md", 1),
     ("Control Structures in Social Systems", "part4/control-structures.md", 1),
     ("Architectural Remedies", "part4/remedies.md", 1),
     ("About", "about.md", 0),

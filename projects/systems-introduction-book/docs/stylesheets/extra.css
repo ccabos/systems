@@ -31,3 +31,45 @@
 .md-typeset li::marker {
   font-size: 0.8em;
 }
+
+/* ── PDF rendering overrides ─────────────────────────────────────────────────
+   The mkdocs-with-pdf plugin invokes WeasyPrint with @media print active.
+   Material's screen layout uses position:sticky/fixed, viewport-height
+   containers, and overflow:hidden in ways that break WeasyPrint's
+   pagination — content past religion-stpa.md silently truncates without
+   any build warning. These rules unwind those screen-only constraints so
+   long-form content paginates naturally. Screen rendering is untouched.
+*/
+@media print {
+  /* Hide chrome that has no meaning in a printed book */
+  .md-header, .md-tabs, .md-footer, .md-sidebar, .md-search,
+  .md-nav, .md-overlay, .md-skip, .md-source-file, .md-tooltip,
+  .md-feedback, .md-top, .md-banner, .md-announce {
+    display: none !important;
+  }
+  /* Let the document flow as one continuous block instead of a flexbox
+     of viewport-height columns */
+  html, body,
+  .md-container, .md-main, .md-main__inner,
+  .md-content, .md-content__inner, .md-content article {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+  /* Tables and code blocks: allow natural reflow, no clipped scrollers */
+  .md-typeset table, .md-typeset pre, .md-typeset code {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+  /* Each <article> in the with-pdf concat may break across pages */
+  article {
+    page-break-inside: auto;
+  }
+}

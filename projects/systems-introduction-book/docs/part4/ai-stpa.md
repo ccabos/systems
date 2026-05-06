@@ -296,11 +296,11 @@ flowchart TB
     LABS -. "capability evidence (r1-wrapped)" .-> CAPITAL
     OPEN -. "open benchmarks (r3)" .-> POLITY
 
-    classDef apex fill:#fef3c7,stroke:#b45309;
-    classDef state fill:#dbeafe,stroke:#1d4ed8;
-    classDef capital fill:#fce7f3,stroke:#be185d;
-    classDef tech fill:#dcfce7,stroke:#15803d;
-    classDef ground fill:#f3f4f6,stroke:#6b7280;
+    classDef apex fill:#fef3c7,stroke:#b45309,color:#1f2937;
+    classDef state fill:#dbeafe,stroke:#1d4ed8,color:#1f2937;
+    classDef capital fill:#fce7f3,stroke:#be185d,color:#1f2937;
+    classDef tech fill:#dcfce7,stroke:#15803d,color:#1f2937;
+    classDef ground fill:#f3f4f6,stroke:#6b7280,color:#1f2937;
 
     class POLITY apex;
     class STATES,LABMIN state;

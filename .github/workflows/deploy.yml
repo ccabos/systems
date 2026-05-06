@@ -29,6 +29,21 @@ jobs:
       - name: Install WeasyPrint system dependencies
         run: sudo apt-get install -y libpangocairo-1.0-0 libpangoft2-1.0-0 libgdk-pixbuf2.0-0
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Mermaid CLI and Chromium dependencies
+        # mmdc renders Mermaid diagrams to PNG server-side because
+        # WeasyPrint cannot execute the client-side Mermaid script.
+        # See projects/systems-introduction-book/hooks.py.
+        run: |
+          sudo apt-get install -y \
+            libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libxcomposite1 \
+            libxdamage1 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 \
+            libcairo2 libasound2t64
+          npm install -g @mermaid-js/mermaid-cli
+
       - name: Build MkDocs site
         working-directory: projects/systems-introduction-book
         env:

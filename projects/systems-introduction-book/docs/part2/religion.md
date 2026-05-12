@@ -4,6 +4,8 @@
 
 Religion was the first social system we decomposed through the five-level SE hierarchy. It serves as the worked example throughout this book and as the input to the STPA analysis in [Part IV](../part4/religion-stpa.md).
 
+[**→ Interactive D3 Visualization**](../interactive/religion.html){ .md-button }
+
 ## The Decomposition
 
 | Level | ID | Description |
@@ -51,3 +53,5 @@ Religion was the first social system we decomposed through the five-level SE hie
 ## See Also
 
 The political system that fuses religious authority with state governance shares many structural elements with this decomposition. Explore it in the [Theocracy Interactive Explorer](../interactive/theocracy.html).
+
+The accompanying STPA analysis built on this decomposition lives in [STPA on Religion](../part4/religion-stpa.md).

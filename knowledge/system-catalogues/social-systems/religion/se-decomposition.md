@@ -9,6 +9,10 @@ For the STPA analysis built on this decomposition (Steps 1–4,
 unsafe control actions, loss scenarios, and rung-tagged control
 structure) see `applied-se-analysis.md` in this folder.
 
+An interactive D3 explorer (graph + table view, with cross-level
+traceability highlighting) is published with the book at
+`projects/systems-introduction-book/docs/interactive/religion.html`.
+
 ## Goals (G)
 
 - **G1** — Provide existential meaning and purpose to human life

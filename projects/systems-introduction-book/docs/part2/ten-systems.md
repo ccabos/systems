@@ -143,6 +143,7 @@ Explore each social system's SE decomposition interactively:
 | Family | [→ Open](../interactive/family.html) |
 | Military | [→ Open](../interactive/military.html) |
 | One-Party State | [→ Open](../interactive/one-party-state.html) |
+| Religion | [→ Open](../interactive/religion.html) |
 | Theocracy | [→ Open](../interactive/theocracy.html) |
 | University | [→ Open](../interactive/university.html) |
 | Verein | [→ Open](../interactive/verein.html) |

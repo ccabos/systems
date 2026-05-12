@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - run: pip install "mkdocs>=1.5,<2.0" mkdocs-material pymdown-extensions mkdocs-with-pdf
+      - run: pip install "mkdocs>=1.5,<2.0" mkdocs-material pymdown-extensions mkdocs-with-pdf playwright
 
       - name: Install WeasyPrint system dependencies
         run: sudo apt-get install -y libpangocairo-1.0-0 libpangoft2-1.0-0 libgdk-pixbuf2.0-0
@@ -43,6 +43,17 @@ jobs:
             libxdamage1 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 \
             libcairo2 libasound2t64
           npm install -g @mermaid-js/mermaid-cli
+
+      - name: Install Playwright Chromium
+        # Playwright drives a headless Chromium to rasterise the D3
+        # interactive explorers into the PNGs that the MkDocs hook
+        # then embeds into the printed PDF (WeasyPrint can't execute
+        # the client-side D3 script itself).
+        run: python -m playwright install --with-deps chromium
+
+      - name: Pre-render interactive explorers to PNG
+        working-directory: projects/systems-introduction-book
+        run: python render_interactive.py
 
       - name: Build MkDocs site
         working-directory: projects/systems-introduction-book

@@ -27,4 +27,7 @@ Religion was chosen as the founding example because:
    escalation) are structural rather than individual, so STPA has
    leverage on them.
 
-See `se-decomposition.md` for the full G/R/F/L/P listing.
+See `se-decomposition.md` for the full G/R/F/L/P listing. An
+interactive D3 visualisation of the same decomposition is published
+alongside the book at
+`projects/systems-introduction-book/docs/interactive/religion.html`.

@@ -7,7 +7,7 @@ The introduction to this book used a secondary school to illustrate how structur
 This chapter applies the same logic across five social systems. For each, STPA identifies the unsafe control actions, traces their causal factors, and derives the architectural remedy. Where a remedy has been implemented and its effects measured, that evidence is included. The aim is to show that STPA is a design method — not merely a diagnostic — and that its prescriptions are testable.
 
 !!! info "Canonical reference"
-    The full case studies — unsafe control actions, causal factors, remedies, and the real-world evidence for each — are in `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`. This chapter gives a narrative walk-through of the five worked cases; the knowledge file is the reference.
+    The full case studies — unsafe control actions, causal factors, remedies, and the real-world evidence for each — are in [`knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md). This chapter gives a narrative walk-through of the five worked cases; the knowledge file is the reference.
 
 ---
 
@@ -47,7 +47,7 @@ For military justice, the US National Defense Authorization Act 2022 transferred
 
 ## Cross-System Pattern
 
-Across all five systems, the same three structural failures recur: an accountability void, a self-sealing process model, and a proxy metric that has replaced the goal. The full cross-system table — failure type by system, with each proven remedy mapped to the corresponding control-loop fix — is in `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`.
+Across all five systems, the same three structural failures recur: an accountability void, a self-sealing process model, and a proxy metric that has replaced the goal. The full cross-system table — failure type by system, with each proven remedy mapped to the corresponding control-loop fix — is in [`knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md).
 
 The remedies are not generic. Each closes a specific causal pathway identified by the structural analysis — and each has been tested in practice. That precision is what distinguishes architectural reform from exhortation.
 
@@ -67,7 +67,7 @@ The previous chapter introduced the seven [Justificatory Rungs](../part1/justifi
 | Parliamentary mandate (Bundeswehr) | 0/1 (executive decision) | 6 (parliamentary deliberation) |
 | Wehrbeauftragter (independent military prosecutor) | 1 (commander investigates own troops) | 3 (independent investigation) |
 
-The full thirteen-remedy table with detailed deltas is in `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md` §6.
+The full thirteen-remedy table with detailed deltas is in [`knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md) §6.
 
 **The remedies do not try to convert rung-1 controllers to higher rungs** — that would dissolve the institution they protect. They *parallel* the rung-1 channel with a rung-3 (or rung-2/6) channel routed to a separate oversight body whose existence does not depend on the controller. Where remedies have been incomplete (Vatican II's partial post-Council reversal) it is because the rung-elevated channel was made revocable by the same rung-1 hierarchy it was supposed to correct — which is the precondition this book's structural fixes already require.
 

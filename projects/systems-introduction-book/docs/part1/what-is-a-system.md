@@ -1,7 +1,7 @@
 # What Is a System?
 
 !!! info "Canonical reference"
-    The normative statement of the foundational concepts in this chapter — the working definition, the replaceability hierarchy, emergence, boundaries, and the distinction between technical and non-technical systems — is maintained as the project's knowledge base under `knowledge/foundations/`. This chapter is the narrative discussion; the knowledge base is the reference.
+    The normative statement of the foundational concepts in this chapter — the working definition, the replaceability hierarchy, emergence, boundaries, and the distinction between technical and non-technical systems — is maintained as the project's knowledge base under [`knowledge/foundations/`](https://github.com/ccabos/systems/tree/main/knowledge/foundations). This chapter is the narrative discussion; the knowledge base is the reference.
 
 ## Before We Decompose, We Must Define
 

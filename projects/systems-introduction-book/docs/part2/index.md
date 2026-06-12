@@ -31,3 +31,12 @@ Systems at the scale of direct human relationships:
 - [**Religion**](religion.md) — The founding decomposition that started this analysis
 - [**Kingdom & Republic**](kingdom-republic.md) — Side-by-side comparison with reuse analysis
 - [**Ten Social Systems Compared**](ten-systems.md) — Full decompositions, platform analysis, variation points, cross-family reuse, and interactive explorers
+- [**Governance as a Single Platform**](governance-as-platform.md) — A four-system zoom: kingdom, republic, theocracy, one-party state as four bindings on one polity platform
+
+## Additional worked examples
+
+Beyond the ten governance and organisation systems, the *Worked Examples* section also analyses:
+
+- [**The School**](examples/school.md) — Completes the worked case opened in the introduction (proxy-metric pathology)
+- [**The Hospital**](examples/hospital.md) — Triadic membership (patient, clinician, payer) and its structural failure modes
+- [**Wikipedia / Open Source**](examples/wikipedia.md) — Authority by demonstrated contribution against a rung-3 standard

@@ -4,6 +4,23 @@
 
 ---
 
+!!! abstract "At a glance"
+    **What this chapter does:** runs the four STPA steps on religion as
+    a social system — 8 hazards, a four-level control structure
+    (central doctrinal authority → clergy → congregation → individual),
+    25 unsafe control actions, 6 loss scenarios connecting structural
+    features to specific historical harms, 5 architectural remedies.
+
+    **What you need to read it:** the SE decomposition of religion
+    ([Part II, Religion](../part2/religion.md)), the four STPA steps
+    ([Part I, STPA and STAMP](../part1/stpa-introduction.md)), and the
+    rung apparatus only for §6.4 ([Part I, Justificatory Rungs](../part1/justification-rungs.md)).
+
+    **Skip to §6** if you want the cross-cutting structural findings
+    without the full UCA enumeration. **Skip to §7** if you came for the
+    architectural remedies and trust the analysis. **Skip §6.4** if
+    rungs are unfamiliar — the surrounding sections work without them.
+
 ## Abstract
 
 System-Theoretic Process Analysis (STPA) is a hazard analysis method developed by Nancy Leveson at MIT, based on the STAMP (Systems-Theoretic Accident Model and Processes) framework. STPA was designed for safety-critical engineering systems — aircraft, nuclear plants, medical devices — but its core logic applies wherever a complex system can produce unintended harmful outcomes through inadequate control rather than mere component failure. This paper applies STPA to religion, treated as a social system previously decomposed through a five-level systems engineering hierarchy. We define the system's losses, model its control structure, identify unsafe control actions across all four STPA categories, and trace loss scenarios to their causal factors. The result is a structural explanation of how religion — a system designed to provide meaning, morality, and community — can produce outcomes that are the exact opposite of its stated goals: meaninglessness, moral corruption, and social destruction.
@@ -240,48 +257,64 @@ STPA categorizes unsafe control actions (UCAs) into four types:
 
 ### 4.1 UCAs for Central Doctrinal Authority → Clergy
 
-| UCA ID | Type | Unsafe Control Action | Hazard |
-|--------|------|----------------------|--------|
-| UCA-1 | Not provided | Authority does NOT update doctrine when scientific evidence invalidates cosmological claims (e.g., geocentrism, age of earth, evolution) | H1 |
-| UCA-2 | Not provided | Authority does NOT remove or discipline clergy credibly accused of abuse | H2, H5 |
-| UCA-3 | Provided | Authority ISSUES doctrine that dehumanizes outsiders (infidels, heretics, apostates as subhuman or damned) | H3 |
-| UCA-4 | Provided | Authority EXCOMMUNICATES or PUNISHES members who raise legitimate doctrinal questions | H1, H4 |
-| UCA-5 | Provided | Authority APPOINTS clergy based on doctrinal loyalty rather than pastoral competence or moral character | H2, H5 |
-| UCA-6 | Too late | Authority CORRECTS a doctrinal error only after centuries of harm (e.g., Galileo rehabilitation in 1992, 359 years late) | H1, H6 |
-| UCA-7 | Too long | Authority MAINTAINS absolutist moral prohibition long after ethical understanding has evolved (e.g., blanket prohibitions that cause measurable suffering) | H4 |
-| UCA-8 | Not provided | Authority does NOT establish transparent financial auditing of religious institutions | H7 |
+Eight UCAs at this loop, dominated by *Not provided* (doctrine and discipline that should be issued and is not) and *Provided* (doctrine that should not be issued and is).
+
+???+ note "All eight UCAs — Central Authority → Clergy"
+
+    | UCA ID | Type | Unsafe Control Action | Hazard |
+    |--------|------|----------------------|--------|
+    | UCA-1 | Not provided | Authority does NOT update doctrine when scientific evidence invalidates cosmological claims (e.g., geocentrism, age of earth, evolution) | H1 |
+    | UCA-2 | Not provided | Authority does NOT remove or discipline clergy credibly accused of abuse | H2, H5 |
+    | UCA-3 | Provided | Authority ISSUES doctrine that dehumanizes outsiders (infidels, heretics, apostates as subhuman or damned) | H3 |
+    | UCA-4 | Provided | Authority EXCOMMUNICATES or PUNISHES members who raise legitimate doctrinal questions | H1, H4 |
+    | UCA-5 | Provided | Authority APPOINTS clergy based on doctrinal loyalty rather than pastoral competence or moral character | H2, H5 |
+    | UCA-6 | Too late | Authority CORRECTS a doctrinal error only after centuries of harm (e.g., Galileo rehabilitation in 1992, 359 years late) | H1, H6 |
+    | UCA-7 | Too long | Authority MAINTAINS absolutist moral prohibition long after ethical understanding has evolved (e.g., blanket prohibitions that cause measurable suffering) | H4 |
+    | UCA-8 | Not provided | Authority does NOT establish transparent financial auditing of religious institutions | H7 |
 
 ### 4.2 UCAs for Clergy → Congregation
 
-| UCA ID | Type | Unsafe Control Action | Hazard |
-|--------|------|----------------------|--------|
-| UCA-9 | Provided | Clergy USES pastoral relationship to sexually, emotionally, or financially exploit vulnerable individuals | H5 |
-| UCA-10 | Provided | Clergy PREACHES hatred or contempt toward out-groups (other religions, LGBTQ+ persons, ethnic minorities, apostates) | H3 |
-| UCA-11 | Provided | Clergy WITHHOLDS sacraments or pastoral care as punishment for questioning doctrine | H1, H4, H8 |
-| UCA-12 | Not provided | Clergy does NOT provide pastoral support during genuine crisis (grief, mental illness, abuse) because doctrinal framework has no model for the problem | H4 |
-| UCA-13 | Provided | Clergy DEMANDS financial contributions from impoverished believers through spiritual coercion (prosperity gospel, indulgences, obligatory tithing) | H7 |
-| UCA-14 | Too long | Clergy MAINTAINS shunning of excommunicated member long after the person has suffered disproportionate social death | H4, L3 |
-| UCA-15 | Not provided | Clergy does NOT report abuse to civil authorities, instead handling it "internally" | H2, H5 |
+Seven UCAs at this loop, including the highest-stakes UCA-9 (pastoral relationship used for exploitation) and the cover-up pattern at UCA-15.
+
+???+ note "All seven UCAs — Clergy → Congregation"
+
+    | UCA ID | Type | Unsafe Control Action | Hazard |
+    |--------|------|----------------------|--------|
+    | UCA-9 | Provided | Clergy USES pastoral relationship to sexually, emotionally, or financially exploit vulnerable individuals | H5 |
+    | UCA-10 | Provided | Clergy PREACHES hatred or contempt toward out-groups (other religions, LGBTQ+ persons, ethnic minorities, apostates) | H3 |
+    | UCA-11 | Provided | Clergy WITHHOLDS sacraments or pastoral care as punishment for questioning doctrine | H1, H4, H8 |
+    | UCA-12 | Not provided | Clergy does NOT provide pastoral support during genuine crisis (grief, mental illness, abuse) because doctrinal framework has no model for the problem | H4 |
+    | UCA-13 | Provided | Clergy DEMANDS financial contributions from impoverished believers through spiritual coercion (prosperity gospel, indulgences, obligatory tithing) | H7 |
+    | UCA-14 | Too long | Clergy MAINTAINS shunning of excommunicated member long after the person has suffered disproportionate social death | H4, L3 |
+    | UCA-15 | Not provided | Clergy does NOT report abuse to civil authorities, instead handling it "internally" | H2, H5 |
 
 ### 4.3 UCAs for Congregation → Individual
 
-| UCA ID | Type | Unsafe Control Action | Hazard |
-|--------|------|----------------------|--------|
-| UCA-16 | Provided | Congregation SHUNS member who expresses doubt, questions doctrine, or leaves the faith | H1, H4, H8 |
-| UCA-17 | Provided | Congregation ENFORCES social conformity on matters of personal conscience (dress, diet, relationships, career choices) through gossip and exclusion | H4, H8 |
-| UCA-18 | Not provided | Congregation does NOT intervene when they observe clergy abusing a member | H2, H5 |
-| UCA-19 | Provided | Congregation PRESSURES children into public faith commitments (baptism, confirmation, bar mitzvah) before they can meaningfully consent | H8 |
-| UCA-20 | Too early | Congregation LABELS children as sinful, damned, or spiritually deficient at a developmentally inappropriate age | H4 |
+Five UCAs at the peer-enforcement loop, dominated by social-pressure mechanisms operating at justificatory rung 1 (community authority) where rung-3 evidence (developmental harm) would warrant restraint.
+
+???+ note "All five UCAs — Congregation → Individual"
+
+    | UCA ID | Type | Unsafe Control Action | Hazard |
+    |--------|------|----------------------|--------|
+    | UCA-16 | Provided | Congregation SHUNS member who expresses doubt, questions doctrine, or leaves the faith | H1, H4, H8 |
+    | UCA-17 | Provided | Congregation ENFORCES social conformity on matters of personal conscience (dress, diet, relationships, career choices) through gossip and exclusion | H4, H8 |
+    | UCA-18 | Not provided | Congregation does NOT intervene when they observe clergy abusing a member | H2, H5 |
+    | UCA-19 | Provided | Congregation PRESSURES children into public faith commitments (baptism, confirmation, bar mitzvah) before they can meaningfully consent | H8 |
+    | UCA-20 | Too early | Congregation LABELS children as sinful, damned, or spiritually deficient at a developmentally inappropriate age | H4 |
 
 ### 4.4 UCAs for Individual (Self-Control / Internalized Beliefs)
 
-| UCA ID | Type | Unsafe Control Action | Hazard |
-|--------|------|----------------------|--------|
-| UCA-21 | Provided | Individual SUPPRESSES legitimate doubt, curiosity, or moral intuition because they have internalized "doubt = sin" | H1, H6 |
-| UCA-22 | Provided | Individual REMAINS in an abusive religious environment because they believe leaving = damnation | H4, H5 |
-| UCA-23 | Not provided | Individual does NOT seek professional mental health support because the religious framework teaches that faith alone should suffice | H4 |
-| UCA-24 | Provided | Individual REJECTS medical treatment for self or dependents based on doctrinal prohibition | H4, L1 |
-| UCA-25 | Too long | Individual CONTINUES religious practices that cause measurable psychological harm (extreme fasting, self-flagellation, sleep deprivation) beyond any devotional purpose | H4 |
+Five UCAs at the self-control loop: the individual's internalised model of the system acts as a controller that filters their own reasoning and choices.
+
+???+ note "All five UCAs — Individual self-control"
+
+    | UCA ID | Type | Unsafe Control Action | Hazard |
+    |--------|------|----------------------|--------|
+    | UCA-21 | Provided | Individual SUPPRESSES legitimate doubt, curiosity, or moral intuition because they have internalized "doubt = sin" | H1, H6 |
+    | UCA-22 | Provided | Individual REMAINS in an abusive religious environment because they believe leaving = damnation | H4, H5 |
+    | UCA-23 | Not provided | Individual does NOT seek professional mental health support because the religious framework teaches that faith alone should suffice | H4 |
+    | UCA-24 | Provided | Individual REJECTS medical treatment for self or dependents based on doctrinal prohibition | H4, L1 |
+    | UCA-25 | Too long | Individual CONTINUES religious practices that cause measurable psychological harm (extreme fasting, self-flagellation, sleep deprivation) beyond any devotional purpose | H4 |
 
 ---
 
@@ -418,7 +451,7 @@ The system simultaneously runs **Pattern B — Claimed-Rung Inflation**: it clai
 
 The architectural fixes in §7 are all attempts to insert **rung-3 channels that route around the rung-1 filter** without forcing the controller to abandon its rung-1 self-understanding. Mandatory civil reporting, independent ombudspersons, lay safeguarding boards, doctrinal version control with external scholarship, and pre-registered scientific-consultation processes are all implementations of the same architectural pattern.
 
-This is the single most important structural finding of the analysis: religion's harmful outcomes are not random malfunctions but the **predictable consequence of operating a sacralised rung-1 control architecture while claiming the authority of rung 6**. The canonical reference, including the rung-tagged control structure and the rung-acceptance filter as a recurring causal factor in every loss scenario, is in `knowledge/system-catalogues/social-systems/religion/applied-se-analysis.md`.
+This is the single most important structural finding of the analysis: religion's harmful outcomes are not random malfunctions but the **predictable consequence of operating a sacralised rung-1 control architecture while claiming the authority of rung 6**. The canonical reference, including the rung-tagged control structure and the rung-acceptance filter as a recurring causal factor in every loss scenario, is in [`knowledge/system-catalogues/social-systems/religion/applied-se-analysis.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/religion/applied-se-analysis.md).
 
 ---
 

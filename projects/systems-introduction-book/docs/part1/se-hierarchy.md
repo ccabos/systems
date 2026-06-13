@@ -1,7 +1,7 @@
 # The Five-Level SE Hierarchy
 
 !!! info "Canonical reference"
-    The normative definition of the five-level hierarchy, its traceability rules, ID conventions, decomposition order, and failure pathologies is maintained as the project's knowledge base under `knowledge/se-techniques/goals-requirements-hierarchy/`. This chapter is the narrative introduction; the knowledge base is the reference.
+    The normative definition of the five-level hierarchy, its traceability rules, ID conventions, decomposition order, and failure pathologies is maintained as the project's knowledge base under [`knowledge/se-techniques/goals-requirements-hierarchy/`](https://github.com/ccabos/systems/tree/main/knowledge/se-techniques/goals-requirements-hierarchy). This chapter is the narrative introduction; the knowledge base is the reference.
 
 ## A Universal Decomposition Instrument
 

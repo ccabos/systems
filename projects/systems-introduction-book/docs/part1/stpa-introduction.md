@@ -1,7 +1,7 @@
 # STPA and STAMP
 
 !!! info "Canonical reference"
-    The normative statements of STAMP (the accident model) and STPA (the four-step hazard analysis procedure, the four UCA types, and the rules for translating an SE decomposition into STPA inputs) are maintained as the project's knowledge base under `knowledge/se-techniques/stamp/` and `knowledge/se-techniques/stpa/`. This chapter is the narrative introduction; the knowledge base is the reference.
+    The normative statements of STAMP (the accident model) and STPA (the four-step hazard analysis procedure, the four UCA types, and the rules for translating an SE decomposition into STPA inputs) are maintained as the project's knowledge base under [`knowledge/se-techniques/stamp/`](https://github.com/ccabos/systems/tree/main/knowledge/se-techniques/stamp) and [`knowledge/se-techniques/stpa/`](https://github.com/ccabos/systems/tree/main/knowledge/se-techniques/stpa). This chapter is the narrative introduction; the knowledge base is the reference.
 
 ## System-Theoretic Process Analysis
 
@@ -55,7 +55,7 @@ command, under-rung command, asymmetric loop). The previous chapter
 [Justificatory Rungs](justification-rungs.md) introduces the ladder
 and the three dangerous mismatch patterns; the canonical
 integration with STPA Steps 1–4 is at
-`knowledge/se-techniques/justification-rungs/application-to-stpa.md`.
+[`knowledge/se-techniques/justification-rungs/application-to-stpa.md`](https://github.com/ccabos/systems/blob/main/knowledge/se-techniques/justification-rungs/application-to-stpa.md).
 
 For engineering systems where every loop operates at rung 3–4
 throughout, rung tagging adds nothing and is omitted. Use this

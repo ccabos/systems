@@ -102,6 +102,7 @@ nav:
     - "Religion": part2/religion.md
     - "Kingdom & Republic": part2/kingdom-republic.md
     - "Ten Social Systems Compared": part2/ten-systems.md
+    - "Governance as a Single Platform": part2/governance-as-platform.md
     - "Worked Examples":
       - "Verein (e.V.)": part2/examples/verein.md
       - "Democracy": part2/examples/democracy.md
@@ -111,6 +112,9 @@ nav:
       - "Military": part2/examples/military.md
       - "Family": part2/examples/family.md
       - "One-Party State": part2/examples/one-party-state.md
+      - "The School": part2/examples/school.md
+      - "The Hospital": part2/examples/hospital.md
+      - "Wikipedia / Open Source": part2/examples/wikipedia.md
   - "Part III — Development Frameworks":
     - part3/index.md
     - "Eight Frameworks Decomposed": part3/frameworks.md

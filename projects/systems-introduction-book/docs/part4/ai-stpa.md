@@ -4,6 +4,26 @@
 
 ---
 
+!!! abstract "At a glance"
+    **What this chapter does:** the longest worked example in the book.
+    Treats the global political economy of frontier AI as a
+    sociotechnical system, draws its 14 controllers, identifies five
+    structural mismatches (§3), traces them to nine failure scenarios
+    (§4), derives a four-phase sequence of 22 remedies (§5), and lists
+    what the analysis cannot tell you (§6).
+
+    **What you need to read it:** Part I in full — and especially
+    [Justificatory Rungs](../part1/justification-rungs.md), because the
+    chapter uses rung tags as routine shorthand. STPA's four steps are
+    folded into §§3–5 rather than labelled (see the heading map below).
+
+    **If you only have 30 minutes:** read §1 (questions), §2 (method),
+    §3.6 (what the five mismatches buy us), §4.10 (what the nine
+    scenarios buy us), §5.1 (the four-phase sequence), and §7 (coda).
+    Everything else is enumeration the conclusions rest on.
+
+    **Heading map onto STPA Steps:** §1–2 = framing · §3 (system + mismatches) = Step 2 (Control Structure) · §3.1–3.5 = Step 3 (Unsafe Control Actions) compressed by mismatch type · §4 = Step 4 (Loss Scenarios) · §5 = Architectural Remedies · §6 = scope limits · §7 = coda.
+
 ## Abstract
 
 The diffusion of frontier artificial intelligence is reshaping the global economy and political order, but most public analysis of this fact takes the form of strategic essays — narratives that identify forces and rank scenarios without pointing at specific levers. This chapter applies System-Theoretic Process Analysis (STPA), with justification-rung tagging from the social-systems extension developed in [Part I](../part1/justification-rungs.md), to the global political economy of frontier AI. We identify fourteen distinct controllers, twenty-six control actions, sixty-five unsafe control actions across the four standard categories, and nine loss scenarios connecting specific structural mismatches to specific harms. We then derive twenty-two concrete remedies organised into a four-phase sequence with explicit decision points. The result is a structural reformulation of the questions about AI's effects on jobs, power, and geopolitics — turning forecasting questions into action-shaped questions of which feedback channels are missing and which institutions are needed to install them. The full analytical artefacts are filed under [`projects/problems/ai-impact-analysis/`](https://github.com/ccabos/systems/tree/main/projects/problems/ai-impact-analysis); this chapter distils them into prose for a non-specialist reader.

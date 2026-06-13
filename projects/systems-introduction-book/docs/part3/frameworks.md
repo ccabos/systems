@@ -9,7 +9,7 @@
 The "methodology wars" of the past three decades — Waterfall vs. Agile, Scrum vs. Kanban, plan-driven vs. adaptive — have generated more heat than light. This chapter applies the same systems engineering decomposition and product line analysis previously used for social institutions to the domain of development and project management frameworks. By decomposing eight frameworks through a five-level SE hierarchy (Goals → Requirements → Functions → Logical Architecture → Physical Implementation), we discover that these seemingly opposed approaches share a remarkably large common platform and differ primarily at four well-defined variation points. We use this insight to propose three concrete hybrid architectures that merge the best of plan-driven and adaptive approaches — not as vague "be pragmatic" advice, but as structurally principled product-line configurations with explicit binding decisions.
 
 !!! info "Canonical reference"
-    The normative versions of the eight framework decompositions, the cross-framework platform, the variation points, the hybrid architectures, and the merging principles are maintained as the project's knowledge base under `knowledge/system-catalogues/dev-frameworks/`. This chapter is the narrative overview; the knowledge base is the reference.
+    The normative versions of the eight framework decompositions, the cross-framework platform, the variation points, the hybrid architectures, and the merging principles are maintained as the project's knowledge base under [`knowledge/system-catalogues/dev-frameworks/`](https://github.com/ccabos/systems/tree/main/knowledge/system-catalogues/dev-frameworks). This chapter is the narrative overview; the knowledge base is the reference.
 
 ---
 
@@ -46,14 +46,14 @@ The full tables are maintained in the knowledge base:
 
 | Framework | Decomposition file |
 |-----------|---------------------|
-| Waterfall | `knowledge/system-catalogues/dev-frameworks/waterfall/se-decomposition.md` |
-| V-Model | `knowledge/system-catalogues/dev-frameworks/v-model/se-decomposition.md` |
-| PRINCE2 | `knowledge/system-catalogues/dev-frameworks/prince2/se-decomposition.md` |
-| Scrum | `knowledge/system-catalogues/dev-frameworks/scrum/se-decomposition.md` |
-| Kanban | `knowledge/system-catalogues/dev-frameworks/kanban/se-decomposition.md` |
-| Design Thinking | `knowledge/system-catalogues/dev-frameworks/design-thinking/se-decomposition.md` |
-| DevOps | `knowledge/system-catalogues/dev-frameworks/devops/se-decomposition.md` |
-| SAFe | `knowledge/system-catalogues/dev-frameworks/safe/se-decomposition.md` |
+| Waterfall | [`knowledge/system-catalogues/dev-frameworks/waterfall/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/waterfall/se-decomposition.md) |
+| V-Model | [`knowledge/system-catalogues/dev-frameworks/v-model/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/v-model/se-decomposition.md) |
+| PRINCE2 | [`knowledge/system-catalogues/dev-frameworks/prince2/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/prince2/se-decomposition.md) |
+| Scrum | [`knowledge/system-catalogues/dev-frameworks/scrum/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/scrum/se-decomposition.md) |
+| Kanban | [`knowledge/system-catalogues/dev-frameworks/kanban/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/kanban/se-decomposition.md) |
+| Design Thinking | [`knowledge/system-catalogues/dev-frameworks/design-thinking/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/design-thinking/se-decomposition.md) |
+| DevOps | [`knowledge/system-catalogues/dev-frameworks/devops/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/devops/se-decomposition.md) |
+| SAFe | [`knowledge/system-catalogues/dev-frameworks/safe/se-decomposition.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/safe/se-decomposition.md) |
 
 ---
 
@@ -61,7 +61,7 @@ The full tables are maintained in the knowledge base:
 
 Once the eight decompositions are aligned level by level, ten universal functional slots emerge that every framework fills in some way. These are **Work Discovery**, **Prioritisation**, **Execution**, **Quality Assurance**, **Integration**, **Delivery**, **Feedback**, **Governance**, **Improvement**, and the framework-specific activity layer that carries the work through them.
 
-The full platform description — what the shared goals, requirements, functions, logical, and physical elements actually are — is in `knowledge/system-catalogues/dev-frameworks/cross-framework/platform.md`.
+The full platform description — what the shared goals, requirements, functions, logical, and physical elements actually are — is in [`knowledge/system-catalogues/dev-frameworks/cross-framework/platform.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/cross-framework/platform.md).
 
 What the platform means in practice: most framework disputes are not about whether to do a thing, but about *where* in the lifecycle to do it, *how often*, and *who decides*. Those are exactly the questions that variation points make explicit.
 
@@ -78,13 +78,13 @@ Four primary variation points produce the differences between frameworks:
 
 As with social systems, variants are not freely combinable: some binding combinations are coherent, others are structurally contradictory (e.g. "phase-gated temporal structure" with "requirements evolve throughout" is incoherent without a workaround).
 
-The full variation-point catalogue, observed variants, and interaction constraints are in `knowledge/system-catalogues/dev-frameworks/cross-framework/variation-points.md`.
+The full variation-point catalogue, observed variants, and interaction constraints are in [`knowledge/system-catalogues/dev-frameworks/cross-framework/variation-points.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/cross-framework/variation-points.md).
 
 ---
 
 ## 5. Reuse Analysis Across Frameworks
 
-Elements of one framework can sometimes be adopted by another, sometimes only with adaptation, and sometimes not at all without changing the framework's identity. The full reuse analysis — fully reusable, partially reusable with adaptation, and structurally incompatible — is in `knowledge/system-catalogues/dev-frameworks/cross-framework/reuse-analysis.md`.
+Elements of one framework can sometimes be adopted by another, sometimes only with adaptation, and sometimes not at all without changing the framework's identity. The full reuse analysis — fully reusable, partially reusable with adaptation, and structurally incompatible — is in [`knowledge/system-catalogues/dev-frameworks/cross-framework/reuse-analysis.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/cross-framework/reuse-analysis.md).
 
 ---
 
@@ -96,7 +96,7 @@ Three concrete hybrid framework configurations are proposed, each with explicit 
 - **Hybrid B — "Discovery-Driven Flow"** — for product teams optimising for innovation and speed. Combines Design Thinking discovery with Kanban delivery and DevOps continuous release.
 - **Hybrid C — "Scaled Governed Flow"** — for large organisations managing portfolios of diverse work. Combines SAFe portfolio structure with flow-based team execution and phase-gated compliance checkpoints.
 
-Full architectural sketches, binding tables, and trade-offs for all three hybrids are in `knowledge/system-catalogues/dev-frameworks/cross-framework/hybrids.md`.
+Full architectural sketches, binding tables, and trade-offs for all three hybrids are in [`knowledge/system-catalogues/dev-frameworks/cross-framework/hybrids.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/cross-framework/hybrids.md).
 
 ---
 
@@ -110,7 +110,7 @@ Five principles govern the design of coherent framework hybrids:
 - **Automate the Right Arm** — whatever part of the lifecycle is repetitive should be automated before it is standardised.
 - **Separate Discovery from Delivery** — requirements discovery and execution must not share the same temporal structure.
 
-Full statements of all five principles are in `knowledge/system-catalogues/dev-frameworks/cross-framework/merging-principles.md`.
+Full statements of all five principles are in [`knowledge/system-catalogues/dev-frameworks/cross-framework/merging-principles.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/dev-frameworks/cross-framework/merging-principles.md).
 
 ---
 

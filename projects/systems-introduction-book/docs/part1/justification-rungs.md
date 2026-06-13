@@ -1,10 +1,25 @@
 # Justificatory Rungs
 
+!!! abstract "At a glance"
+    **What this chapter adds:** a seven-rung ladder of standards under
+    which people accept a claim as a reason to act (rung 0 coercion →
+    rung 6 deliberative legitimacy), and three structural patterns —
+    Asymmetric Loop, Claimed-Rung Inflation, Cross-Loop Rung Imposition
+    — where the rungs do not match and the system fails predictably.
+
+    **What you need to read it:** Part I chapters 1–4 (system definition,
+    SE hierarchy, product lines, STPA).
+
+    **Skip to §3** if you already know what a justificatory standard
+    is and only want the three mismatch patterns. **Skip to §5** if
+    you came from Part IV and just need the rung-tag conventions used
+    in the STPA chapters.
+
 !!! info "Canonical reference"
     The normative statement of the seven-rung ladder, its three
     rung-mismatch patterns, and the seven hooks into STPA Steps 1–4
     are maintained as the project's knowledge base under
-    `knowledge/se-techniques/justification-rungs/`. This chapter is
+    [`knowledge/se-techniques/justification-rungs/`](https://github.com/ccabos/systems/tree/main/knowledge/se-techniques/justification-rungs). This chapter is
     the narrative introduction; the knowledge base is the reference.
 
 ## What this chapter adds to the book
@@ -62,7 +77,7 @@ Each later rung adds a *check* that earlier rungs lack:
   imposes on claims about *oughts*.
 
 The full rung definitions and examples are in
-`knowledge/se-techniques/justification-rungs/rungs.md`.
+[`knowledge/se-techniques/justification-rungs/rungs.md`](https://github.com/ccabos/systems/blob/main/knowledge/se-techniques/justification-rungs/rungs.md).
 
 ## The seven rungs in detail
 
@@ -310,7 +325,7 @@ subsidiarity rules and standing forums for the rung the question
 requires.
 
 The full catalogue is in
-`knowledge/se-techniques/justification-rungs/dangerous-mismatches.md`.
+[`knowledge/se-techniques/justification-rungs/dangerous-mismatches.md`](https://github.com/ccabos/systems/blob/main/knowledge/se-techniques/justification-rungs/dangerous-mismatches.md).
 
 ## Claimed rung vs operating rung
 
@@ -342,7 +357,7 @@ distribute as follows:
 | Verein | 6 | 6+2 | Smallest |
 
 The full per-system analysis is in
-`knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md`.
+[`knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/justification-rungs-by-system.md).
 
 ## A normative caveat
 
@@ -369,4 +384,4 @@ function* — not where the question is purely informational.
   [Control Structures in Social Systems](../part4/control-structures.md)
   and [Architectural Remedies](../part4/remedies.md).
 - The full canonical reference is at
-  `knowledge/se-techniques/justification-rungs/`.
+  [`knowledge/se-techniques/justification-rungs/`](https://github.com/ccabos/systems/tree/main/knowledge/se-techniques/justification-rungs).

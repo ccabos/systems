@@ -1,7 +1,11 @@
 # Family — SE Decomposition
 
 Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
-§2.3.1. IDs use the `F*` prefix as in the source.
+§2.3.1. IDs use the `F*` prefix as in the source. Sources for this
+folder: `sources.md` — note especially that the FL-level subsystems
+correspond closely to the constructs of structural family therapy
+[Minuchin1974], which applied systems analysis to families
+clinically long before this project.
 
 ## Goals (FG)
 

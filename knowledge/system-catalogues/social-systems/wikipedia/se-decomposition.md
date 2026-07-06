@@ -3,7 +3,9 @@
 The canonical five-level SE decomposition of Wikipedia and the
 canonical open-source project (Linux kernel, Debian, Python). They
 are catalogued together because they share VP1 (authority by
-demonstrated contribution evaluated against a rung-3 standard).
+demonstrated contribution evaluated against a rung-3 standard) —
+the production mode theorised as commons-based peer production
+[Benkler2006]. Sources for this folder: `sources.md`.
 
 ## Goals (G)
 
@@ -70,7 +72,8 @@ contested architectural decisions in software) or absent (matters of
 style, governance, community conduct), the system falls back on
 rough consensus — which has the failure modes documented for
 deliberative systems generally, plus the tyranny-of-structurelessness
-failure mode that the absence of formal authority creates.
+failure mode that the absence of formal authority creates
+[Freeman1972].
 
 **Backstop authority is structurally necessary.**
 Every long-lived wiki / OSS project has at some point installed a
@@ -80,7 +83,12 @@ groups — either remained small, fragmented into forks, or got
 captured. The structural finding is that pure VP1 = rung-3 is
 sufficient for content but not for governance; the governance layer
 needs at least a rung-2/6 mechanism for the cases rung-3 cannot
-adjudicate.
+adjudicate. The empirical support is good: Wikipedia's own
+installation of its governance layer is documented in field research
+[Forte2009], and a quantitative study of 683 wikis found Michels'
+oligarchic drift [Michels1911] operating *even under* VP1 — peer
+production softens the iron law but does not repeal it
+[ShawHill2014].
 
 The full applied STPA analysis is in the book's chapter
 `projects/systems-introduction-book/docs/part2/examples/wikipedia.md`.

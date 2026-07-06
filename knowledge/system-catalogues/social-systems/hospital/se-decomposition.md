@@ -3,6 +3,11 @@
 The canonical five-level SE decomposition of the acute-care hospital
 as a social system. The hospital is the only system in this catalogue
 with a triadic membership boundary (patient, professional, payer).
+Sources for this folder: `sources.md`. That patient safety is a
+system property rather than a clinician property is the founding
+position of the field's own literature [IOM2000] — the hospital is
+the one catalogued system whose practitioners arrived at the STAMP
+view independently.
 
 ## Goals (G)
 
@@ -72,15 +77,23 @@ Patient, clinician, and payer each have legitimate but distinct
 interests. The structural pathology appears when one corner of the
 triangle monopolises the signalling channel: payer dominance →
 billing-code distortion; clinician dominance → cost/access
-divergence; manager dominance → proxy-metric substitution
-(Mid-Staffordshire pattern).
+divergence; manager dominance → proxy-metric substitution — the
+pattern documented in the Mid Staffordshire public inquiry
+[Francis2013], where a trust met its access and financial targets
+while ward-level care collapsed.
 
 **F4 (monitoring and escalation) is the highest-stakes loop.**
-The early-warning literature and the rapid-response-team
-literature both identify this as the single loop whose failure
-most directly produces preventable in-hospital mortality, and the
-fix in both cases is a parallel rung-3 channel (standardised
-physiological score; team that bypasses normal hierarchy).
+The early-warning and rapid-response literatures both identify this
+as the single loop whose failure most directly produces preventable
+in-hospital mortality, and the proposed fix in both is a parallel
+rung-3 channel: a standardised physiological score [RCP2017] and a
+team that bypasses the normal hierarchy. The evidence for the two
+halves differs, though: standardised early-warning scores are now
+mandated practice, but the largest RCT of rapid-response teams (the
+MERIT trial) was null on its primary outcomes [Hillman2005] — a
+reminder that inserting a structurally correct channel does not by
+itself change outcomes if the surrounding escalation culture does
+not use it.
 
 The full applied STPA analysis is in the book's chapter
 `projects/systems-introduction-book/docs/part2/examples/hospital.md`.

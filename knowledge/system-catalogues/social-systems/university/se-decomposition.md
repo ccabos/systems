@@ -1,7 +1,10 @@
 # University — SE Decomposition
 
 Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
-§2.2.2. IDs use the `U*` prefix as in the source.
+§2.2.2. IDs use the `U*` prefix as in the source. Sources for this
+folder: `sources.md` — UG1/UG2/UG4 are the Humboldtian goals; the
+rung-3/4 standard claimed by UR1 is classically stated as the norms
+of science [Merton1973].
 
 ## Goals (UG)
 

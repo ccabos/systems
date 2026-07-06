@@ -8,7 +8,9 @@ system: a modern constitutional democracy whose head of state and
 government derive authority from periodic popular election.
 
 IDs use the `R*` prefix as in the source ten-systems.md (where `R`
-stands for Republic).
+stands for Republic). Sources for this folder: `sources.md`; the
+requirements below correspond closely to Dahl's institutional
+conditions for polyarchy [Dahl1971].
 
 ## Goals (RG)
 

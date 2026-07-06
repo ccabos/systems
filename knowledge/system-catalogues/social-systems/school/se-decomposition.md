@@ -4,6 +4,7 @@ The canonical five-level SE decomposition of the school (secondary
 education) as a social system. The school is the worked example used
 in the book's introduction (`projects/systems-introduction-book/docs/introduction.md`)
 to motivate the difference between declared goals and operative goals.
+Sources for this folder: `sources.md`.
 
 ## Goals (G)
 
@@ -64,13 +65,18 @@ Assessment (F2) feeds both the formative loop that adjusts teaching (G1)
 and the summative signal that selects pupils for the next stage (G3).
 When stakes attach asymmetrically to the selection use, the formative
 use is structurally crowded out. This is the canonical *proxy-metric*
-pathology in the book's cross-system catalogue.
+pathology in the book's cross-system catalogue — and high-stakes
+testing is Campbell's own running example of indicator corruption
+[Campbell1979].
 
 **R1 (qualified teachers) is the most consequential requirement.**
 The variation point at which the school system differentiates most
 sharply across jurisdictions is the level of teacher qualification,
-pay, status, and autonomy — and the Finnish reform of the 1990s
-isolates exactly this as the lever.
+pay, status, and autonomy. The standard account of the Finnish
+reform reads it as isolating exactly this lever [Sahlberg2011],
+though causal attribution of Finland's PISA performance to teacher
+qualification specifically remains contested in the comparative
+literature (see `sources.md`).
 
 **The system has very weak rung-3 feedback on G1.**
 There is no measurement of whether a 14-year-old becomes a flourishing

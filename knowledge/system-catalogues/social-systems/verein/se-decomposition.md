@@ -5,7 +5,10 @@ Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
 German legal form for a non-commercial voluntary association (eingetragener
 Verein, e.V.) and is used here as the canonical example of the
 voluntary-association pattern that also appears in clubs, co-ops, and
-civic associations in other jurisdictions.
+civic associations in other jurisdictions. Sources for this folder:
+`sources.md` — the VR-level is essentially BGB §§ 21–79 restated;
+the system type's civic significance is the Tocqueville–Putnam
+argument [Tocqueville1835; Putnam1993].
 
 ## Goals (VG)
 

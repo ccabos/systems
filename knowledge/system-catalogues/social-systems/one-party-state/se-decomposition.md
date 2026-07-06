@@ -1,7 +1,10 @@
 # One-Party State — SE Decomposition
 
 Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
-§2.1.4. IDs use the `O*` prefix as in the source.
+§2.1.4. IDs use the `O*` prefix as in the source. Sources for this
+folder: `sources.md` — the OR/OL structure follows the classical
+analyses of [Arendt1951] (party-state fusion, ideological control)
+and [Kornai1992] (planning subsystem and its feedback failures).
 
 ## Goals (OG)
 

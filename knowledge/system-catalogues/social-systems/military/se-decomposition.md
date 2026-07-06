@@ -4,7 +4,8 @@ Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
 §2.2.3. IDs use the `M*` prefix as in the source. Physical items in the
 source table are labelled `ML1P..ML6P` (logical ID with a `P` suffix);
 this file regularizes them to `MP1..MP6` to match the convention used
-by the other nine systems in the catalogue.
+by the other nine systems in the catalogue. Sources for this folder:
+`sources.md`.
 
 ## Goals (MG)
 
@@ -65,7 +66,12 @@ for the cross-system comparison see
 | Dominant rung pattern | **Pattern A — Asymmetric Loop** at the civil-military interface. The internal rung-0/1 operation is fit for combat; the failure mode is when rung-3 oversight needed by civilian authority is structurally captured by the rung-1 chain it is supposed to oversee |
 
 **The civil-military rung mismatch is the distinguishing feature of
-the modern professional military.** A soldier's loop with their
+the modern professional military.** This restates, in control
+terms, the central problem of the civil-military relations
+literature: Huntington's "objective civilian control" is a proposed
+rung architecture for it [Huntington1957], and Feaver's
+principal–agent model formalises the monitoring channel whose
+capture the table above describes [Feaver2003]. A soldier's loop with their
 commander operates legitimately at rung 0/1 — combat does not admit
 deliberation. But the *civilian* loop with the military operates at
 rung 6 (parliamentary mandate, democratic legitimacy), and that

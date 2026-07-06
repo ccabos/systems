@@ -3,7 +3,17 @@
 The seven-rung ladder is a synthesis. No single primary source
 defines all seven rungs together; the rungs are drawn from several
 overlapping traditions in epistemology, philosophy of science, and
-political theory.
+political theory. All entries below also appear, with stable
+`[AuthorYear]` keys, in the central
+`knowledge/references/bibliography.md`.
+
+## On treating the standard of justification as a variable
+
+- Toulmin, S. (1958). *The Uses of Argument.* Cambridge University
+  Press. Argument *fields*: different domains legitimately back
+  claims by different standards. This is the underlying licence for
+  tagging each control arrow with its own rung instead of judging
+  the whole system by one standard.
 
 ## On the lower rungs (0–1)
 
@@ -27,6 +37,10 @@ political theory.
   Scientific Research Programmes.* The progression from rung 3 to
   rung 4 — research programmes as the unit at which empirical
   testing and consilience operate.
+- Wilson, E.O. (1998). *Consilience: The Unity of Knowledge.* Knopf.
+  The modern statement of rung 4's *consilience* criterion
+  (originally Whewell's): independent lines of evidence converging
+  on the same conclusion.
 - Cochrane Collaboration handbooks. Operational rung 4 — what
   cumulative evidence looks like in evidence-based medicine.
 
@@ -63,6 +77,21 @@ political theory.
   treatment.
 - Leveson, N.G. & Thomas, J.P. (2018). *STPA Handbook.* MIT
   Partnership for Systems Approaches to Safety and Security.
+
+## On the claimed-rung vs operating-rung gap
+
+- Andrews, M., Pritchett, L. & Woolcock, M. (2017). *Building State
+  Capability: Evidence, Analysis, Action.* Oxford University Press.
+  Their "isomorphic mimicry" — institutions adopting the *form* of
+  high-performing systems for legitimacy while lacking the
+  *function* — is an independently developed, empirically grounded
+  treatment of what this project calls claimed-rung inflation, from
+  two decades of development-agency field data.
+- Meyer, J.W. & Rowan, B. (1977). "Institutionalized Organizations:
+  Formal Structure as Myth and Ceremony." *American Journal of
+  Sociology*, 83(2), 340–363. The original institutional-sociology
+  account of why organisations maintain formal structures decoupled
+  from actual operations.
 
 ## On the synthesis
 

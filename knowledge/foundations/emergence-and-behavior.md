@@ -15,7 +15,12 @@ in isolation.
 No individual neuron is conscious. No individual water molecule is
 wet. No individual trader sets market prices. Consciousness, wetness,
 and market prices are real; they exist; but they exist only at the
-level of the organised system, not at the level of its parts.
+level of the organised system, not at the level of its parts. The
+canonical statement of this position is Anderson's "More Is
+Different" [Anderson1972]: each new level of organisation exhibits
+behaviour that is lawful but not deducible in practice from the
+level below. (Citation keys resolve in
+`../references/bibliography.md`.)
 
 This provides an **observational test**:
 
@@ -56,9 +61,12 @@ in, and Theory I (structure) is re-introduced.
 emergence* (in principle reducible to lower-level description, but
 practically too complex to compute) from *strong emergence*
 (genuinely irreducible — a new causal power not explainable even in
-principle from the parts). Almost all emergence in social systems is
-weak: complex, non-linear, and surprising, but not metaphysically
-mysterious. Treating social emergence as *strong* emergence — as if
+principle from the parts). The distinction is developed in
+[Bedau1997] and [Chalmers2006]; Bedau argues that weak emergence is
+the scientifically relevant kind, and Chalmers that strong emergence
+may have no instances outside consciousness. Almost all emergence in
+social systems is weak: complex, non-linear, and surprising, but not
+metaphysically mysterious. Treating social emergence as *strong* emergence — as if
 "the system" were a force beyond analysis — is an error that
 forecloses the very analysis this project attempts.
 

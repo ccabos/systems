@@ -74,6 +74,7 @@ NAV = [
     ("STPA on Frontier AI", "part4/ai-stpa.md", 1),
     ("Control Structures in Social Systems", "part4/control-structures.md", 1),
     ("Architectural Remedies", "part4/remedies.md", 1),
+    ("Sources and Further Reading", "further-reading.md", 0),
     ("About", "about.md", 0),
 ]
 

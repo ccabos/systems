@@ -25,6 +25,24 @@ earlier rungs lack:
 
 The seven rungs are detailed in `rungs.md`.
 
+**Where the ladder comes from.** The seven-rung arrangement is this
+project's, but every rung is an established position with its own
+literature: rungs 0–1 are Weber's authority types [Weber1922] (with
+Arendt's power/violence distinction separating rung 0 from rung 1
+[Arendt1970]); rung 3 is Popperian falsifiability [Popper1959];
+rung 4 is consilience and cumulative evidence [Wilson1998;
+Lakatos1970]; rung 5 is post-normal science and decision-making
+under Knightian uncertainty [FuntowiczRavetz1993; Knight1921];
+rung 6 is Habermasian discourse ethics and deliberative democracy
+[Habermas1981; Fishkin2009]. Toulmin's *argument fields* — the
+observation that different domains legitimately use different
+standards of backing [Toulmin1958] — is the licence for treating
+the standard itself as a per-arrow variable rather than a global
+constant. The full annotated lineage is in `references.md`;
+citation keys resolve in `knowledge/references/bibliography.md`.
+The synthesis should be read as a checklist over known positions,
+not as a new theory of justification.
+
 ## When to use this technique
 
 Reach for this technique when:

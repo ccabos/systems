@@ -73,3 +73,7 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 ---
 
 *Navigate to the [interactive visualization](../../interactive/university.html) for the full graph and table.*
+
+## Sources
+
+The rung-3/4 standard the university claims is classically stated as Merton's norms of science (1973); the governance triangle across jurisdictions is Clark (1983); the reproducibility evidence is the Open Science Collaboration (*Science*, 2015) and Nosek et al. (*PNAS*, 2018). Annotated sources: [`university/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/university/sources.md).

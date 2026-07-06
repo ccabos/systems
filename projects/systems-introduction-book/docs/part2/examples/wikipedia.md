@@ -88,3 +88,7 @@ The kernel project distributes authority across hundreds of subsystem maintainer
 ---
 
 *For the full SE decomposition: [interactive visualization](../../interactive/wikipedia.html). For the comparative analysis across all systems: [Ten Social Systems Compared](../ten-systems.md). For the cross-system control-structure analysis: [Control Structures](../../part4/control-structures.md).*
+
+## Sources
+
+The production mode is Benkler's commons-based peer production (*The Wealth of Networks*, 2006); the structurelessness failure mode is Freeman (1972); Wikipedia's installation of its governance layer is documented in Forte, Larco & Bruckman (2009); and Shaw & Hill's study of 683 wikis (2014) shows Michels' iron law of oligarchy operating even under contribution-based authority. Annotated sources: [`wikipedia/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/wikipedia/sources.md).

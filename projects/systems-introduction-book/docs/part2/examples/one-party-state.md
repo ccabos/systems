@@ -73,3 +73,7 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 ---
 
 *Navigate to the [interactive visualization](../../interactive/one-party-state.html) for the full graph and table.*
+
+## Sources
+
+The party-state fusion and ideological-control requirements follow Arendt's *The Origins of Totalitarianism* (1951); the planning subsystem and its feedback failures are Kornai's *The Socialist System* (1992); the regime's two control problems are formalised in Svolik's *The Politics of Authoritarian Rule* (2012). The Great Leap Forward evidence is Dikötter (2010) and Yang Jisheng (2012). Annotated sources: [`one-party-state/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/one-party-state/sources.md).

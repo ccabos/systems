@@ -1,7 +1,10 @@
 # Theocracy — SE Decomposition
 
 Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
-§2.1.3. IDs use the `T*` prefix as in the source.
+§2.1.3. IDs use the `T*` prefix as in the source. Sources for this
+folder: `sources.md` — the decomposition instantiates Weber's ideal
+type of hierocratic domination [Weber1922] and composites several
+instances; see the scope note there.
 
 ## Goals (TG)
 

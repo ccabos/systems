@@ -79,3 +79,7 @@ The Federal Republic of Germany is the most thoroughly documented case of consti
 ---
 
 *For the full SE decomposition: [interactive visualization](../../interactive/democracy.html). For the comparative analysis across all ten systems: [Ten Social Systems Compared](../ten-systems.md). For the cross-system control structure analysis: [Control Structures](../../part4/control-structures.md).*
+
+## Sources
+
+The requirements correspond to Dahl's institutional conditions for polyarchy (*Polyarchy*, 1971); the variation within the type is mapped empirically in Lijphart's *Patterns of Democracy* (1999); the contemporary failure modes match Levitsky & Ziblatt's *How Democracies Die* (2018). Annotated sources: [`democracy/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/democracy/sources.md).

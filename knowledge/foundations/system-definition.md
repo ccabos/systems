@@ -11,7 +11,16 @@ the direct corollaries used throughout the rest of the project.
 > by goals**, whose behaviour at the boundary **cannot be predicted
 > from its parts in isolation**.
 
-This definition combines two perspectives that are complementary
+This definition is not original to this project. It restates a
+consensus position in the systems literature: Meadows defines a
+system as "elements, interconnections, and a function or purpose"
+[Meadows2008] — exactly the parts / connections / goals triad used
+here — and the pairing of structure with irreducible boundary-level
+behaviour goes back to general system theory [Bertalanffy1968] and
+Ackoff's system-of-concepts paper [Ackoff1971]. (Citation keys
+resolve in `../references/bibliography.md`.)
+
+The definition combines two perspectives that are complementary
 rather than rival:
 
 - **Inside view** — a system is a *structure*: organised parts,
@@ -52,6 +61,13 @@ same organism. A corporation can change its entire workforce and
 remain recognisably the same corporation. But a corporation whose
 goal shifts from profit to public service is, in any meaningful sense,
 a different institution wearing the same legal clothes.
+
+The hierarchy again tracks the literature. Meadows orders
+intervention points by exactly this gradient — changing elements
+does least, changing interconnections more, changing the system's
+purpose most [Meadows1999; Meadows2008]. The underlying identity
+claim — that a system *is* its organisation, not its components —
+is the autopoiesis position [MaturanaVarela1980].
 
 The replaceability hierarchy maps directly onto the five-level SE
 decomposition used throughout the project (see
@@ -95,3 +111,12 @@ institutional authority. When applying the SE hierarchy, the operative
 goals are what the STPA analysis (see
 `knowledge/se-techniques/stpa/`) must catch, because unsafe control
 actions typically arise from exactly this split.
+
+This distinction has a long pedigree under other names: Merton's
+*manifest* vs *latent* functions [Merton1968], Selznick's *goal
+displacement* — operative goals drifting from declared ones under
+environmental pressure, documented in the TVA field study
+[Selznick1949] — and Beer's dictum that "the purpose of a system is
+what it does" (POSIWID) [Beer2002]. The convergence of three
+independent traditions on the same distinction is part of why this
+project treats it as load-bearing.

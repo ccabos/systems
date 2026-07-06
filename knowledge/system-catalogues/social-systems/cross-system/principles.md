@@ -22,9 +22,23 @@ Reuse feasibility **decreases as you move upward in the SE hierarchy**.
 This gradient has a practical corollary: **start reform at the
 bottom.** Modernize physical implementations first (professional civil
 service, independent courts, transparent budgets), then work upward.
-Top-down reform — imposing new goals before building the implementing
-infrastructure — is the recipe for failed states and institutional
-collapse.
+
+The corollary is well supported outside this project — and the
+support also bounds it. Scott's case record of high-modernist
+schemes shows goal-first, top-down redesign failing precisely
+because it overwrites the local operational knowledge the formal
+model cannot see [Scott1998]; Lindblom argued on decision-theoretic
+grounds that incremental, bottom-up change is how institutional
+reform actually succeeds [Lindblom1959]; and the state-capability
+literature documents that transplanting upper-level institutional
+*forms* without working implementations produces "isomorphic
+mimicry", not capability [Andrews2017]. Two cautions from the same
+literature: institutions that merely *look* reformed at the P-level
+can persist for decades without functioning [MeyerRowan1977], and
+physical-level transplants also fail where the surrounding power
+distribution rejects them [AcemogluRobinson2012] — so "start at the
+bottom" is a default, not a guarantee. (Citation keys resolve in
+`knowledge/references/bibliography.md`.)
 
 ## The Coherence Rule
 
@@ -81,7 +95,12 @@ Other examples of workarounds:
 ## The Product Line Architect's Toolkit for Social Reform
 
 The product line framework offers institutional reformers a structured
-methodology:
+methodology. Before using it, read Ostrom's warning against
+institutional panaceas: designs that work are diagnosed into their
+context, not copied between contexts [Ostrom2007]. Steps 3–5 below
+(variation points, binding constraints, red items) are this
+project's way of operationalising that warning — a red item *is* a
+context the design cannot be copied into.
 
 1. **Decompose both systems** (source and target) through the five SE
    levels.

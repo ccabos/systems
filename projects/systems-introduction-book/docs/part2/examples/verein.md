@@ -73,3 +73,7 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 ---
 
 *Navigate to the [interactive visualization](../../interactive/verein.html) for the full graph and table.*
+
+## Sources
+
+The VR-level is essentially BGB §§ 21–79 restated. The civic-significance argument is Tocqueville (*Democracy in America*, 1835) and Putnam (*Making Democracy Work*, 1993); the convergence of the Verein's structure with Ostrom's design principles for durable self-governed institutions (*Governing the Commons*, 1990) is worked out in the knowledge base. Annotated sources: [`verein/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/verein/sources.md).

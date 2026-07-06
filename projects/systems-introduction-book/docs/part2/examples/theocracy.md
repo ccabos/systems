@@ -75,3 +75,7 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 ---
 
 *Navigate to the [interactive visualization](../../interactive/theocracy.html) for the full graph and table.*
+
+## Sources
+
+The decomposition instantiates Weber's ideal type of hierocratic domination (*Economy and Society*, 1922); the one modern constitutional implementation is the Iranian Constitution of 1979 (velayat-e faqih), whose assembly is analysed in Arjomand's *The Turban for the Crown* (1988). Annotated sources: [`theocracy/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/theocracy/sources.md).

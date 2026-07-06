@@ -1,7 +1,11 @@
 # Corporation (For-Profit) — SE Decomposition
 
 Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
-§2.2.1. IDs use the `C*` prefix as in the source.
+§2.2.1. IDs use the `C*` prefix as in the source. Sources for this
+folder: `sources.md` — the governance tension between CG1's
+principals and CP2's managers is the separation of ownership and
+control [BerleMeans1932], formalised as agency theory
+[JensenMeckling1976].
 
 ## Goals (CG)
 

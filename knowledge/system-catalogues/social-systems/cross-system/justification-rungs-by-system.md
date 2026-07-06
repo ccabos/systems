@@ -7,6 +7,17 @@ this page applies is in
 `knowledge/se-techniques/justification-rungs/`. The four-row
 profiles are in `control-structure-profiles.md`.
 
+**Method caveat.** The rung assignments in this table are
+single-analyst judgments, not measurements: no assignment procedure
+with inter-rater checks exists yet, and none of the entries has been
+contested by a participant of the system it describes. Treat each
+cell as a hypothesis. The claimed/operating distinction itself,
+however, is independently established: institutional sociology calls
+it decoupling of formal structure from operations [MeyerRowan1977],
+and the state-capability literature calls it isomorphic mimicry and
+measures it in the field [Andrews2017]. (Citation keys resolve in
+`knowledge/references/bibliography.md`.)
+
 ## At-a-glance comparison
 
 | System | Claimed rung | Operating rung | Loop symmetry | Dominant rung pattern |
@@ -40,11 +51,15 @@ profiles are in `control-structure-profiles.md`.
   cannot deliver, and the more violently the gap closes when the
   divergence is finally exposed.
 
-## Why the Verein scores best
+## Why the Verein shows the closest match
 
 The voluntary association under German law (Verein, e.V.) is the
 only catalogued system where claimed and operating rungs match
-across all major loops. Three structural features explain this:
+across all major loops. ("Closest match", not "best system": the
+ladder ranks standards of justification, not systems — a
+rung-matched system can still pursue bad goals, and a rung-mixed
+one can be healthy by design, as Republic shows below.) Three
+structural features explain the match:
 
 1. The General Assembly is rung-6 by design (deliberation among
    all members) but is constrained by rung-2 statutes (Satzung).
@@ -59,6 +74,22 @@ across all major loops. Three structural features explain this:
 The result is a control structure whose every loop is at least
 rung-2 and whose critical loops are rung-6 — without the
 claimed/operating gap that destabilises larger systems.
+
+This finding converges with Ostrom's field results on durable
+self-governed institutions [Ostrom1990]: her design principles —
+collective-choice arrangements open to those affected (the
+rung-6 General Assembly), monitors accountable to the members
+(the rung-2/3 audit), graduated sanctions and low-cost conflict
+resolution (statutory recall procedures), and external
+recognition of the right to self-organise (the e.V. registry) —
+map almost one-to-one onto the three features above. The
+convergence matters because Ostrom reached it empirically, from
+decades of commons case studies, with no rung vocabulary. It is
+also a scale result in both directions: small, voluntary,
+exit-permitting systems are exactly where matched rungs are
+cheap to maintain [Hirschman1970] — the finding does not licence
+copying Verein structures onto states (see the panacea warning
+in `principles.md` [Ostrom2007]).
 
 ## Why Republic is rung-mixed by design
 
@@ -78,6 +109,14 @@ Capture lowers the rung of the captured institution: media capture
 shifts citizen→legislature from rung 1+6 to rung 1; judicial
 capture shifts the courts from rung 2+6 to rung 1; administrative
 capture shifts implementation from rung 3+2 to rung 1.
+
+The design idea that different institutions should deliberately run
+on different, mutually checking standards is the separation-of-powers
+argument of [Madison1788]; Weber's legal-rational authority
+[Weber1922] supplies the rung-1/2 administrative layer. Michels'
+"iron law of oligarchy" [Michels1911] names the standing threat this
+page calls capture: organs claiming rung-6 legitimacy drifting to
+rung-1 rule by their own apparatus.
 
 The structural lesson is that *Republic is not a single rung*. It
 is a particular distribution of rungs across institutions, with
@@ -102,7 +141,11 @@ narrative to be true ("the masses are achieving record harvests
 through socialist enthusiasm"). Cadre who reported rung-3 data
 were treated as rung-1 disloyalty cases. The rung-3 information
 could not enter the apex's process model until tens of millions
-had died.
+had died. The archival evidence for exactly this
+information-suppression mechanism — falsified harvest reporting
+under political pressure, punishment of accurate reporters — is
+documented in [Dikotter2010] and, from inside the Chinese press
+system, [Yang2012].
 
 The lesson generalises: *the catastrophic failures of social
 systems are produced at the gap between claimed and operating

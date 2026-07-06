@@ -31,6 +31,16 @@ The boundary choice determines:
 A theory of systems that omits the boundary is like a theory of
 cells that omits the membrane.
 
+The point that the boundary is the analyst's first and most
+consequential choice is a classical one: Churchman made it the
+centre of the systems approach [Churchman1968], and Ulrich turned it
+into a discipline — *boundary critique*, the systematic questioning
+of whose concerns a chosen boundary includes, whose it excludes, and
+who gets to decide [Ulrich1983]. For social systems Ulrich's
+question ("who *ought* to be inside?") should be asked alongside the
+descriptive one ("who *is* inside?"). (Citation keys resolve in
+`../references/bibliography.md`.)
+
 ## Where boundaries come from
 
 Boundaries are not given by the system itself; they are drawn by the
@@ -58,6 +68,10 @@ does not contain. Environment elements show up as:
 - **Constraints** the environment imposes (laws, markets, weather).
 - **Other systems** the system competes or cooperates with.
 
+This input–throughput–output view of an organisation embedded in an
+environment is the *open systems* model, standard in organisation
+theory since [KatzKahn1966].
+
 For social systems the environment usually contains *other social
 systems*. A Verein exists within a legal environment (state), a
 cultural environment (norms, traditions), and an economic environment
@@ -71,9 +85,12 @@ interfaces at the L and P levels.
 
 Every part of a system is itself a system with its own parts,
 connections, and goals. This recursion is not a defect — it reflects
-the genuine nested structure of complex systems — but it means every
-SE decomposition needs a **recursion boundary**: a decision about
-where to stop decomposing. The stop decision is not given by the
+the genuine nested structure of complex systems, which Simon argued
+is not incidental but the *reason* complex systems can exist and
+evolve at all: hierarchic, nearly decomposable structures are the
+only ones stable enough to assemble incrementally [Simon1962]. But
+it means every SE decomposition needs a **recursion boundary**: a
+decision about where to stop decomposing. The stop decision is not given by the
 theory; it is a modelling choice driven by the question being asked.
 
 A typical project therefore carries two kinds of boundary: the

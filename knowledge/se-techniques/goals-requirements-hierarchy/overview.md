@@ -43,6 +43,30 @@ physical implementation — produces systems that "work" but are
 fragile, incoherent, and resistant to change. This is as true of a
 parliament as it is of a software architecture.
 
+## Where the hierarchy sits in the literature
+
+The five-level scheme is this project's working form of standard
+systems-engineering practice, not an invention. The stakeholder-needs
+→ requirements → architecture → implementation progression with full
+traceability is the core of the SE process standards
+[ISO15288; INCOSE2023; NASA2016]. The top of the hierarchy — deriving
+requirements from explicit goal models — is worked out most rigorously
+in goal-oriented requirements engineering (KAOS) [Lamsweerde2009],
+which also supplies the refinement discipline ("every requirement
+traces to a goal; every goal is refined until assignable") that
+`how-it-works.md` uses. The claim that levelled, nearly decomposable
+hierarchies are what makes complex systems analysable and evolvable
+at all is Simon's [Simon1962]. Citation keys resolve in
+`knowledge/references/bibliography.md`.
+
+One honest caveat from that literature: the standards describe the
+five levels as a *documentation* structure for systems someone is
+designing. Applying it to systems nobody designed (see
+`knowledge/foundations/technical-vs-non-technical.md`) turns it into
+a *reconstruction* instrument, which is a methodological extension —
+precedented by Soft Systems Methodology [Checkland1981] — rather
+than standard SE usage.
+
 ## Where this technique is used
 
 - In every entry under `knowledge/system-catalogues/` — each system

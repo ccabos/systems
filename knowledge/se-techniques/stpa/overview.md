@@ -5,7 +5,11 @@ analysis technique built on the STAMP accident model (see
 `../stamp/overview.md`). Where STAMP tells you *what* an accident
 is (a loss caused by inadequate control), STPA tells you *how* to
 find the places where inadequate control could occur, before the
-loss happens.
+loss happens. The authoritative procedure is the STPA Handbook
+[LevesonThomas2018], with the theory in [Leveson2012]; this folder
+follows both and adds only social-system examples. Sources and
+antecedents are in `../stamp/references.md`; citation keys resolve
+in `knowledge/references/bibliography.md`.
 
 ## What STPA produces
 

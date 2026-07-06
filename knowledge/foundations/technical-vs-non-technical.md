@@ -5,11 +5,30 @@ Extracted from `projects/systems-introduction-book/docs/part1/what-is-a-system.m
 hierarchy, which was developed in engineering, still applies to
 social systems, and what is different when it does.
 
+The distinction this page draws is well established under other
+names. Checkland's *hard* vs *soft* systems [Checkland1981] is the
+closest: hard systems have definable objectives and an engineerable
+structure; soft systems have contested purposes, and any
+decomposition of them is a negotiated model rather than a
+description. Scott calls the property that technical systems have
+and social systems lack *legibility*, and documents what happens
+when states try to impose it from above [Scott1998]. Rittel and
+Webber's *wicked problems* paper [RittelWebber1973] explains why
+social-system problems resist the define–solve–verify cycle: no
+definitive formulation, no stopping rule, no test of a solution.
+The sociotechnical-systems tradition, from the Tavistock coal-mining
+studies onward [TristBamforth1951], established that even inside
+engineered organisations the social and technical structures must be
+analysed jointly. This page compresses those results into the form
+the rest of the project uses. (Citation keys resolve in
+`../references/bibliography.md`.)
+
 ## Technical systems are legible by design
 
 Technical systems — aircraft, software, power grids — are designed
 with explicit goals, documented connections, and identifiable parts.
-Their structure is legible because engineers made it so:
+Their structure is legible — in Scott's sense [Scott1998] — because
+engineers made it so:
 
 - **Goals** are written into requirements specifications, regulatory
   standards, and contracts.
@@ -35,7 +54,11 @@ technical system you can *read off* the decomposition from existing
 documents. For a social system you have to *reconstruct* it from
 observation, comparison, and historical evidence. The resulting
 decomposition is a model — an explicit hypothesis about structure —
-not a description of something already written down.
+not a description of something already written down. This is the
+core move of Soft Systems Methodology [Checkland1981], where the
+models are explicitly instruments for structured debate among the
+system's participants; a decomposition of a social system that its
+participants have not contested should be treated as a draft.
 
 **2. Declared and operative goals diverge.** A regulatory agency
 declared to protect the public may operate primarily to protect the
@@ -43,7 +66,9 @@ regulated industry. A religion declared to save souls may operate
 primarily to perpetuate its own institutional authority. Technical
 systems have this problem too (specifications that don't match
 deployed behaviour), but in social systems the divergence is the
-norm, not the exception. The STPA analysis (see
+norm, not the exception — sociology has treated it as such since
+Merton's manifest/latent functions [Merton1968] and Selznick's TVA
+study [Selznick1949]. The STPA analysis (see
 `knowledge/se-techniques/stpa/`) targets unsafe control actions that
 arise from this split.
 

@@ -8,6 +8,17 @@ useful on its own as a diagnostic lens: once you have a system's
 control structure, a small number of generic questions will
 reveal most of its failure modes.
 
+The underlying theory is classical control and cybernetics: control
+as communication plus feedback [Wiener1948], and Ashby's Law of
+Requisite Variety — a controller must command at least as much
+variety as the process it regulates, which is why apex controllers
+*must* rely on aggregated (and therefore filterable) feedback
+[Ashby1956]. Applied to organisations, the same move was made by
+Beer's Viable System Model [Beer1972; Beer1979] and, for safety,
+by Rasmussen's sociotechnical control hierarchy [Rasmussen1997],
+which STAMP formalised [Leveson2012]. (Citation keys resolve in
+`knowledge/references/bibliography.md`.)
+
 ## The universal control pattern
 
 Across the non-technical systems studied in this project, control
@@ -23,6 +34,20 @@ structures have a common four-level shape:
 What varies across systems is *who* occupies each level, *what
 mechanisms* connect them, and *how honest* the upward flow is.
 The pattern itself is invariant.
+
+Two caveats on that invariance claim. First, it is not new: Beer's
+Viable System Model makes the stronger claim that one recursive
+control structure underlies *every* viable organisation [Beer1972],
+and Rasmussen's risk-management hierarchy is a near-identical
+four-to-six-level stack [Rasmussen1997] — so the four-level shape
+should be read as this project's instance of a well-established
+family, not an independent discovery. Second, the invariance is
+partly an artefact of the sample: the ten systems in the
+cross-system comparison are all hierarchical institutions.
+Deliberately flat or polycentric systems — Ostrom's self-governed
+commons regimes [Ostrom1990], or peer-production structures such as
+the catalogued Wikipedia case — fit the four-level shape only after
+some forcing, which is itself diagnostic.
 
 ## The five diagnostic questions
 

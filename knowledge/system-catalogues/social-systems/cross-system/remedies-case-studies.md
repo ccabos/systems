@@ -3,7 +3,15 @@
 For each of five social systems, STPA identifies unsafe control
 actions, traces their causal factors, and derives an architectural
 remedy. Where the remedy has been implemented and its effects
-measured, that evidence is included. The generic forms of the four
+measured, that evidence is included — with the caveat that none of
+these implementations was a controlled experiment, so every
+"evidence" entry below is an observational before/after reading,
+cited where the scholarly literature has examined it. The general
+architecture of these remedies — institutionalising *voice* so that
+corrective information can flow against the hierarchy [Hirschman1970],
+and making structure rather than virtue carry the load [Madison1788]
+— long predates this project. (Citation keys resolve in
+`knowledge/references/bibliography.md`.) The generic forms of the four
 dangerous patterns these remedies address live in
 `knowledge/se-techniques/control-structures/dangerous-patterns.md`,
 with the rung-specific patterns in
@@ -135,10 +143,15 @@ certification of financial statement accuracy by CEO and CFO
 under criminal penalty. The Public Company Accounting Oversight
 Board (PCAOB) replaces self-regulation with independent
 inspection.
-*Evidence:* No Enron-scale accounting fraud has recurred in
-US-listed companies at comparable magnitude in the 22 years
-since SOX. The structural conflict of interest was directly
-addressed.
+*Evidence:* The structural conflict of interest was directly
+addressed, and no Enron-scale accounting fraud has recurred in
+US-listed companies at comparable magnitude since. That absence
+should be read cautiously: the scholarly assessment is that SOX
+produced real governance improvements alongside significant and
+contested compliance costs, and that attributing the absence of
+mega-frauds to SOX alone is not supportable — enforcement
+intensity, market memory, and listing composition all changed at
+the same time [Coates2007].
 
 **Remedy for UCA-C2 and UCA-C3 — German co-determination
 (Mitbestimmung).**
@@ -151,8 +164,16 @@ capital holders structurally lack.
 stable employment during the 2008–2009 financial crisis and the
 2020 COVID recession than comparable US shareholder-governed
 firms, using mechanisms like Kurzarbeit that require worker-
-board buy-in. Volkswagen, Siemens, and BASF have maintained
-global technological leadership across multi-decade cycles.
+board buy-in. The best quasi-experimental evidence, however,
+counsels modesty: exploiting a 1994 reform cutoff, Jäger,
+Schoefer and Heining find that co-determination shifts firms
+toward more capital investment and shows *no* detectable
+negative effects on profitability, but also only modest positive
+effects overall [Jager2021]. Mitbestimmung is well supported as
+"a different stakeholder balance at no efficiency cost", not as
+a proven performance booster — the employment-stability reading
+above is consistent with, but stronger than, what the
+identified evidence shows.
 
 **Remedy for UCA-C2 — UK Corporate Governance Code
 (post-Cadbury 1992).**
@@ -191,10 +212,11 @@ procedures, institutional instruction, or confessional
 confidentiality. The legal channel bypasses the institutional
 hierarchy.
 *Evidence:* Australia's Royal Commission into Institutional
-Responses to Child Sexual Abuse (2013–2017) led to mandatory
-reporting requirements applying to all clergy across all
-Australian states (2017–2019). Ireland passed equivalent
-legislation following the Murphy Report (2009). In jurisdictions
+Responses to Child Sexual Abuse (2013–2017) documented the
+concealment mechanism across thousands of cases and led to
+mandatory reporting requirements applying to all clergy across
+all Australian states (2017–2019) [RoyalCommission2017]. Ireland
+passed equivalent legislation following the Murphy Report (2009). In jurisdictions
 with mandatory reporting, institutional concealment becomes a
 criminal act — the structural fix changes the cost calculus of
 the accountability void from "this protects us" to "this
@@ -240,7 +262,10 @@ positive results. Researcher careers depend on publication
 count and citation impact. Null results are difficult to
 publish and do not advance careers. The 2015 Open Science
 Collaboration reproducibility study found only 36% of 100
-psychology findings replicated when independently tested.
+psychology findings replicated when independently tested
+[OSC2015]. The proxy-metric mechanism driving this is Goodhart's
+law operating on publication counts and citation impact
+[Goodhart1975; Strathern1997].
 
 **UCA-U2:** Research quality is assessed by journal impact
 factor rather than by the quality of the work itself.
@@ -262,13 +287,14 @@ result.
 pre-registrations. Registered Reports are offered by more than
 300 journals across disciplines. Pre-registered studies
 replicate at substantially higher rates than non-pre-registered
-work.
+work. The design rationale and early evidence are set out in
+[Nosek2018].
 
 **Remedy for UCA-U2 — DORA and article-level assessment.**
 The San Francisco Declaration on Research Assessment (DORA,
 2013) is a commitment by over 20,000 researchers and 2,000
 organisations to evaluate research on its own merits, not by
-journal impact factor. The UK Research Excellence Framework has
+journal impact factor [DORA2013]. The UK Research Excellence Framework has
 moved toward article-level panel assessment. The Netherlands
 introduced a Recognition and Rewards framework in 2021
 replacing publication metrics with broader criteria including

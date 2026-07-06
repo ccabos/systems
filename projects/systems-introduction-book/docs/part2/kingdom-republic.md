@@ -36,3 +36,7 @@
 | Electoral administration for choosing the executive | Structurally replaces dynastic succession |
 
 The full decomposition of both systems and the detailed cross-system comparison are in [Ten Social Systems Compared](ten-systems.md).
+
+## Sources
+
+The kingdom decomposition is a Weberian ideal type — traditional authority, patrimonial administration (*Economy and Society*, 1922) — with the dynastic-continuity theory in Kantorowicz's *The King's Two Bodies* (1957) and the operational detail of loyalty and territorial administration in Bloch's *Feudal Society* (1939). The republic side rests on the designers' own rationale in *The Federalist Papers* (1788) and its modern operationalisation in Dahl's *Polyarchy* (1971). Annotated sources: [`kingdom/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/kingdom/sources.md) and [`democracy/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/democracy/sources.md).

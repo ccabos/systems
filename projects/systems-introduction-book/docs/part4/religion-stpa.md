@@ -508,3 +508,9 @@ The value of STPA is that it moves the conversation from "religion is good" vs. 
 - Leveson, N.G. (2012). *Engineering a Safer World: Systems Thinking Applied to Safety*. MIT Press.
 - Leveson, N.G. (2004). "A New Accident Model for Engineering Safer Systems." *Safety Science*, 42(4), 237–270.
 - Leveson, N.G. & Thomas, J.P. (2018). *STPA Handbook*. MIT Partnership for Systems Approaches to Safety and Security.
+- Durkheim, É. (1912). *Les formes élémentaires de la vie religieuse.* (The cohesion function behind G3.)
+- Berger, P.L. (1967). *The Sacred Canopy.* Doubleday. (Meaning-provision and the defence of plausibility structures — the sociological reading of the self-sealing pattern.)
+- Weber, M. (1922). *Wirtschaft und Gesellschaft.* (Routinisation of charisma; traditional authority.)
+- John Jay College of Criminal Justice (2004; 2011). *The Nature and Scope* and *The Causes and Context* studies. USCCB. (The primary quantitative record behind the concealment analysis.)
+- Royal Commission into Institutional Responses to Child Sexual Abuse (2017). *Final Report.* Commonwealth of Australia.
+- O'Malley, J.W. (2008). *What Happened at Vatican II.* Harvard University Press. (The historical assessment behind the partial-reversal caveat.)

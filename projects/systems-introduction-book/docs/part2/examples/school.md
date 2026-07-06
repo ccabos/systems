@@ -86,3 +86,7 @@ Several jurisdictions now require both a standardised exam and a portfolio of te
 ---
 
 *For the full SE decomposition: [interactive visualization](../../interactive/school.html). For the comparative analysis across all systems: [Ten Social Systems Compared](../ten-systems.md). For the cross-system control-structure analysis: [Control Structures](../../part4/control-structures.md). The introduction's worked example of the school's structural pathology is at [Introduction §A Closer Example](../../introduction.md#a-closer-example).*
+
+## Sources
+
+The decoupling of inspection-ready formal structure from classroom practice is the original case material of Meyer & Rowan (1977); the persistence of the "grammar of schooling" against goal-level reform is Tyack & Cuban's *Tinkering toward Utopia* (1995); the Finnish teacher-qualification account is Sahlberg (2011), with the causal attribution contested; high-stakes testing is Campbell's own example of indicator corruption (1979). Annotated sources: [`school/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/school/sources.md).

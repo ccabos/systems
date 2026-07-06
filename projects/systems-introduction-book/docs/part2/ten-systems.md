@@ -150,3 +150,7 @@ Explore each social system's SE decomposition interactively:
 | University | [→ Open](../interactive/university.html) |
 | Verein | [→ Open](../interactive/verein.html) |
 | Wikipedia / Open Source | [→ Open](../interactive/wikipedia.html) |
+
+## Sources
+
+A caveat that applies to all ten decompositions at once: for social systems the decomposition is *reconstructed*, not read off from documents — it is a model in the Soft Systems sense (Checkland, *Systems Thinking, Systems Practice*, 1981), and it has not been contested by participants of the systems it describes. Each system's decomposition is checked against its own domain literature in the knowledge base: every folder under [`knowledge/system-catalogues/social-systems/`](https://github.com/ccabos/systems/tree/main/knowledge/system-catalogues/social-systems) now carries a `sources.md` with the primary documents (statutes, constitutions, founding texts) and the standard scholarship for that system. The shared bibliography is [`knowledge/references/bibliography.md`](https://github.com/ccabos/systems/blob/main/knowledge/references/bibliography.md).

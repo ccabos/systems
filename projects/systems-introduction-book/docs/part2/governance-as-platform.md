@@ -94,3 +94,7 @@ Third, it surfaces the **shared failure modes**. The Accountability Void, the Se
 - [Ten Social Systems Compared](ten-systems.md) — the full ten-system platform analysis of which this chapter is a four-system zoom.
 - [`knowledge/system-catalogues/social-systems/cross-system/platform.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/platform.md) — canonical definition of the social-system platform.
 - [`knowledge/system-catalogues/social-systems/cross-system/variation-points.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/variation-points.md) — canonical catalogue of the six variation points.
+
+## Sources
+
+The platform / variation-point vocabulary is standard product-line engineering (Pohl, Böckle & van der Linden, *Software Product Line Engineering*, 2005; the founding idea is Parnas, 1976). The nearest published relative of the cross-system platform claim is Ostrom's programme of extracting shared design principles and a common institutional grammar from field cases (*Governing the Commons*, 1990; *Understanding Institutional Diversity*, 2005) — reached empirically rather than by engineering analogy. Her warning against institutional panaceas (*PNAS*, 2007) is the standing constraint on every reuse conclusion in this chapter: a binding that works is diagnosed into its context, not copied between contexts.

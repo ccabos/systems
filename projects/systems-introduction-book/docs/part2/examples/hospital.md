@@ -86,3 +86,7 @@ UK serious incident reporting to the NHS Patient Safety Incident Response Framew
 ---
 
 *For the full SE decomposition: [interactive visualization](../../interactive/hospital.html). For the comparative analysis across all systems: [Ten Social Systems Compared](../ten-systems.md). For the cross-system control-structure analysis: [Control Structures](../../part4/control-structures.md).*
+
+## Sources
+
+That patient safety is a system property is the founding position of the field's own literature (*To Err Is Human*, Institute of Medicine, 2000). The manager-dominance pathology is documented in the Mid Staffordshire public inquiry (Francis Report, 2013); the standardised early-warning score is NEWS2 (Royal College of Physicians, 2017); the null MERIT trial of rapid-response teams (Hillman et al., *The Lancet*, 2005) is the caution that a structurally correct channel does not by itself change outcomes. Annotated sources: [`hospital/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/hospital/sources.md).

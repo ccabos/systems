@@ -55,3 +55,7 @@ Religion was the first social system we decomposed through the five-level SE hie
 The political system that fuses religious authority with state governance shares many structural elements with this decomposition. Explore it in the [Theocracy Interactive Explorer](../interactive/theocracy.html).
 
 The accompanying STPA analysis built on this decomposition lives in [STPA on Religion](../part4/religion-stpa.md).
+
+## Sources
+
+The goal set of this decomposition follows the classical functional accounts of religion: social cohesion through shared ritual is Durkheim (*The Elementary Forms of Religious Life*, 1912); meaning-provision and comfort in the face of suffering is Berger (*The Sacred Canopy*, 1967); the emergence and hardening of the authority structure (R4) is Weber's routinisation of charisma (*Economy and Society*, 1922). Full annotated sources, including the primary documents behind the STPA chapter's abuse-crisis material, are in [`knowledge/system-catalogues/social-systems/religion/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/religion/sources.md).

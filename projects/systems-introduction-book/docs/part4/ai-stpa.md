@@ -1274,3 +1274,7 @@ levers exist.
 
 This chapter has tried to make the structure visible. The rest
 is up to whoever is reading.
+
+### Sources beyond Leveson
+
+The control-theoretic frame is Leveson (2012) and Rasmussen (1997) throughout. On the AI side, the failure taxonomy overlaps with the technical-safety agenda of Amodei et al., "Concrete Problems in AI Safety" (arXiv:1606.06565, 2016); the institutional layer corresponds to the governance instruments now in force or in draft — the EU AI Act (Regulation (EU) 2024/1689), the NIST AI Risk Management Framework (2023), and the frontier labs' published frameworks (responsible scaling / preparedness policies). The most comprehensive survey of the evidence base is the *International AI Safety Report* (Bengio et al., 2025), commissioned after the Bletchley summit. These are cited here as the field's own rung-3/4 reference points; the chapter's control-structure reading of them is this book's.

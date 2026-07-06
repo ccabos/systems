@@ -96,3 +96,7 @@ Following UK corporate scandals (Maxwell, BCCI, Polly Peck), the Cadbury Report 
 ---
 
 *For the full SE decomposition: [interactive visualization](../../interactive/corporation.html). For the comparative analysis across all ten systems: [Ten Social Systems Compared](../ten-systems.md). For the cross-system control structure analysis: [Control Structures](../../part4/control-structures.md).*
+
+## Sources
+
+The governance tension at the heart of this chapter is the separation of ownership and control (Berle & Means, 1932), formalised as agency theory (Jensen & Meckling, 1976); the boundary question is Coase's "The Nature of the Firm" (1937). The evidence behind the SOX and co-determination remedies — more cautious than the popular narratives — is Coates (*JEP*, 2007) and Jäger, Schoefer & Heining (*QJE*, 2021). Annotated sources: [`corporation/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/corporation/sources.md).

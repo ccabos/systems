@@ -71,3 +71,7 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 ---
 
 *Navigate to the [interactive visualization](../../interactive/military.html) for the full graph and table.*
+
+## Sources
+
+The civil-military rung mismatch restates the central problem of civil-military relations theory: Huntington's "objective civilian control" (*The Soldier and the State*, 1957), Janowitz's competing convergence account (1960), and Feaver's principal–agent formalisation (*Armed Servants*, 2003). Annotated sources, including the Wehrbeauftragter statute: [`military/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/military/sources.md).

@@ -77,3 +77,7 @@ This system fills all ten universal functional slots identified in the [Ten Soci
 ---
 
 *Navigate to the [interactive visualization](../../interactive/family.html) for the full graph and table.*
+
+## Sources
+
+Clinical family therapy applied systems analysis to families decades before this book: the subsystems, boundaries and hierarchies here correspond closely to structural family therapy (Minuchin, 1974), the feedback dynamics to Bowen's family systems theory (1978), and the external interfaces to Bronfenbrenner's ecological model (1979). Annotated sources: [`family/sources.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/family/sources.md).

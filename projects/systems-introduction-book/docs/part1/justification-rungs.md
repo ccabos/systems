@@ -385,3 +385,18 @@ function* — not where the question is purely informational.
   and [Architectural Remedies](../part4/remedies.md).
 - The full canonical reference is at
   [`knowledge/se-techniques/justification-rungs/`](https://github.com/ccabos/systems/tree/main/knowledge/se-techniques/justification-rungs).
+
+## Sources
+
+The seven-rung arrangement is this project's, but every rung is an established position with its own literature:
+
+- **Rungs 0–1** — Weber's three types of legitimate authority (*Economy and Society*, 1922), with Arendt's distinction between power and violence (*On Violence*, 1970) separating coercion from authority.
+- **Rung 2** — formal consistency as an internal check is the shared ground of logic and legal reasoning; no single source needed.
+- **Rung 3** — Popper's falsifiability (*The Logic of Scientific Discovery*, 1959), with Kuhn (1962) on how a community actually maintains the standard.
+- **Rung 4** — consilience and cumulative evidence: Lakatos's research programmes (1970) and Wilson's *Consilience* (1998); operationally, the Cochrane-style meta-analytic tradition.
+- **Rung 5** — post-normal science (Funtowicz & Ravetz, "Science for the Post-Normal Age", 1993) and Knightian uncertainty (1921), with Tetlock's *Superforecasting* (2015) as the empirical portrait.
+- **Rung 6** — Habermas's discourse ethics (*The Theory of Communicative Action*, 1981), Rawls (1971), and the deliberative-polling evidence in Fishkin's *When the People Speak* (2009).
+- **The licence to treat the standard as a per-arrow variable** — Toulmin's argument fields (*The Uses of Argument*, 1958).
+- **The claimed-rung vs operating-rung gap** — independently developed in institutional sociology as decoupling (Meyer & Rowan, 1977) and in development economics as isomorphic mimicry (Andrews, Pritchett & Woolcock, *Building State Capability*, 2017, open access).
+
+The annotated version, with a note on what each source contributes to which rung, is the canonical reference: [`knowledge/se-techniques/justification-rungs/references.md`](https://github.com/ccabos/systems/blob/main/knowledge/se-techniques/justification-rungs/references.md). Full keyed entries are in the shared [bibliography](https://github.com/ccabos/systems/blob/main/knowledge/references/bibliography.md), and the one-paragraph lineage summary also appears in [Sources and Further Reading](../further-reading.md).

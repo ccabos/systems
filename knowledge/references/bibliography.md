@@ -131,8 +131,12 @@ the citation trail below is what makes that visible.
 [Meadows2008]
   Meadows, D.H. (2008). *Thinking in Systems: A Primer*. Chelsea
   Green. — Defines a system as elements, interconnections, and a
-  function or purpose; orders these by how hard they are to change
-  and how much changing them transforms the system.
+  function or purpose. Two distinct orderings run through this book
+  and the companion leverage-points paper [Meadows1999], and merging
+  them is a standing hazard: how much changing an element
+  *transforms* the system, and how much *leverage* an intervention
+  has on its behaviour. Neither is an ordering by how hard the change
+  is to carry out. See `../foundations/system-definition.md`.
 
 [Medina2011]
   Medina, E. (2011). *Cybernetic Revolutionaries: Technology and

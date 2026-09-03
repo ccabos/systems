@@ -21,17 +21,20 @@ The first and most widely held view holds that a system is constituted by three 
 
 ### The Replaceability Hierarchy
 
-A significant observation follows from this ontology: the three elements are not equally essential to system identity, and they differ in how easily they can be replaced without the system ceasing to be *the same system*.
+A significant observation follows from this ontology: the three elements are not equally essential to system identity, and they differ in how easily they can be replaced without the system ceasing to be *the same system*. Two questions hide inside that sentence and have to be kept apart — whether changing an element makes the system *a different system*, and what changing it *costs*. They are not the same ordering, and for one class of element they point in opposite directions.
 
-| Element | Replaceability | Consequence of Change |
-|---------|---------------|-----------------------|
-| **Parts** | High — most easily swapped | System continues; this is routine maintenance |
-| **Connections** | Moderate — harder to change | System is restructured; behaviour shifts significantly |
-| **Goals** | Low — very difficult to change | System is transformed; what was there before is effectively a different system |
+| Element | Identity-constitutive | Effort to change | Consequence of Change |
+|---------|----------------------|------------------|-----------------------|
+| **Instances** | Low | Low | System continues; this is routine maintenance |
+| **Rule sets** | Low | **High** | System keeps its identity but behaves differently |
+| **Connections** | Moderate | High | System is restructured; behaviour shifts significantly |
+| **Goals** | High | Very high | System is transformed; what was there before is effectively a different system |
+
+**Parts split into two classes, and collapsing them is the most common error made with this hierarchy.** *Instances* are the concrete occupants of a role: this building, this office, this official, this form. *Rule sets* are the codified regularities that govern how the parts are coupled: a constitution, a career and tenure regime, a budget ordinance, signature-authority limits, a bonus scheme, reporting duties. Both are physical-level — concrete, nameable, writable — and neither is identity-constitutive. They differ in everything else. An instance can be swapped over a weekend and little follows from it. A rule set takes years to change, is owned by someone other than whoever wants it changed, and moves the system's behaviour when it moves.
 
 A human body replaces most of its cells over years and remains the same organism. A corporation can change its entire workforce and remain recognisably the same corporation. But a corporation whose goal shifts from profit to public service is, in any meaningful sense, a different institution wearing the same legal clothes. The Roman Catholic Church that abandoned the salvation of souls as its operative goal would not be a reformed Catholic Church — it would be something else entirely occupying the same physical infrastructure.
 
-This hierarchy maps directly onto the SE decomposition used throughout this book. Physical implementations (P) correspond to parts. Logical architecture and functions (L, F) encode the connection patterns. Goals and requirements (G, R) encode purpose. Institutional reform that touches only P-level elements is maintenance. Reform that reaches G-level is transformation — and the historical record shows it is both rare and destabilising.
+This hierarchy maps directly onto the SE decomposition used throughout this book. Physical implementations (P) correspond to parts — to both classes of them. Logical architecture and functions (L, F) encode the connection patterns. Goals and requirements (G, R) encode purpose. Institutional reform that touches only P-level *instances* is maintenance; reform that changes P-level *rule sets* is not, because rule sets decide how the parts are coupled. The distinction is not academic: in the worked democracy decomposition, `RP1` is "Parliament building, rules of procedure" and `RP2` is "Constitution, bill of rights" — both physical-level. Reading the undivided P level as maintenance would make a constitutional amendment a routine swap of the most easily replaced element in the state. Reform that reaches G-level is transformation — and the historical record shows it is both rare and destabilising.
 
 ### Critical Assessment
 

@@ -47,6 +47,8 @@ Our analysis reveals a general principle: **reuse feasibility decreases as you m
 
 This gradient has a practical corollary: **start reform at the bottom.** Modernize physical implementations first (professional civil service, independent courts, transparent budgets), then work upward. Top-down reform — imposing new goals before building the implementing infrastructure — is the recipe for failed states and institutional collapse.
 
+The corollary is not an invitation to start with whatever is easiest. All three examples above are *rule sets* rather than *instances* in the sense of [Part I's replaceability hierarchy](what-is-a-system.md) — the expensive half of the physical level, and the half that carries the leverage. Reform that stays among instances (a new agency, new staff, a new portal) is cheap and fast and changes very little. Start at the bottom means start with the rules.
+
 ### The Coherence Rule
 
 A system is coherent when its binding decisions at each variation point are mutually compatible, and when every element at every SE level traces consistently to the goals above it and the implementations below it. Incoherent systems — those with contradictory bindings — are unstable.

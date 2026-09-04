@@ -23,6 +23,18 @@ This gradient has a practical corollary: **start reform at the
 bottom.** Modernize physical implementations first (professional civil
 service, independent courts, transparent budgets), then work upward.
 
+The corollary is routinely misread as *start with the easy changes*,
+and the three examples just given show why that reading is wrong:
+a career and tenure regime, a judicial-independence rule, and an
+information-disclosure rule. All three are physical-level, and all
+three are **rule sets rather than instances** — the expensive half
+of the P level, and the half that carries the leverage (see
+`knowledge/foundations/system-definition.md`). Reform that stays
+among P-level *instances* — a new agency, new staff, a new portal —
+is cheap, fast, and is precisely the isomorphic mimicry the next
+paragraph warns about. Start at the bottom means start with the
+rules, not with the easy part.
+
 The corollary is well supported outside this project — and the
 support also bounds it. Scott's case record of high-modernist
 schemes shows goal-first, top-down redesign failing precisely

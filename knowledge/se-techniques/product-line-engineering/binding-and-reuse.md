@@ -46,6 +46,13 @@ upward. Top-down reform — imposing new goals before building the
 implementing infrastructure — is the recipe for failed states and
 failed methodology adoptions.
 
+"Bottom" here means the *rule sets* at the physical level — career
+and tenure regimes, independence rules, disclosure duties, pipeline
+gates — not the *instances* that occupy it. The distinction and why
+it matters are in `knowledge/foundations/system-definition.md`;
+changing instances (a new unit, new staff, a new tool) is the cheap
+half of the P level and moves little.
+
 ## The coherence rule
 
 A system is coherent when its binding decisions at each variation

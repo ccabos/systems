@@ -260,8 +260,17 @@ dabei selbst zu viel — nicht *die physische Ebene* ist zäh, sondern
 ihre Regeln. Die korrigierte Fassung steht in
 `knowledge/foundations/system-definition.md`.
 
-Was dem Projekt weiterhin fehlt und woran dieser Essay entlanglief: ein
-Modell der **Änderungsschleife** — wem eine Stellschraube gehört, wie
-lange sie bis zur Wirkung braucht, und ob die Amtszeit dessen, der sie
-drehen will, dafür reicht. Die Tabelle im Genehmigungsbeispiel ist eine
-solche Analyse von Hand.
+Woran dieser Essay entlanglief, war ein Modell der
+**Änderungsschleife** — wem eine Stellschraube gehört, wie lange sie
+bis zur Wirkung braucht, und ob die Amtszeit dessen, der sie drehen
+will, dafür reicht. Das fehlte dem Projekt, als der Text entstand. Seit
+dem 6. September 2026 gibt es es: `knowledge/se-techniques/change-loops/`.
+Die Tabelle im Genehmigungsbeispiel oben war die erste solche Analyse
+von Hand; in `lever-inventory.md` ist sie zur Methode ausgeschrieben,
+und die Technik trennt dort zwei Größen, die der Essay noch in eine
+Spalte wirft: die Zeit bis zur Geltung einer Regel und die Zeit bis zu
+ihrer Wirkung.
+
+Der Essay ist damit **Ausgangspunkt, nicht Ergebnis** des Kapitels. Was
+er beigesteuert hat, steht inzwischen belegt in `knowledge/` — mit
+Quellen, die er selbst nicht hatte.

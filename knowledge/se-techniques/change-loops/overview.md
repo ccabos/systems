@@ -124,7 +124,17 @@ the two latencies, and resistance are what stand behind that column.
 
 ## Where it is applied
 
-Nowhere yet. The method and one worked case are in
-`lever-inventory.md`; the first application to a catalogued system is
-still to be done. Until then this folder states a technique, not a
-result.
+- `lever-inventory.md` — the method, with a constructed permitting
+  case worked through.
+- `knowledge/system-catalogues/social-systems/corporation/change-loop-analysis.md`
+  — the first application to a catalogued system. It finds that for
+  the corporation's governance levers the actuator's owner and the
+  change's loser are the same actor, and that all three architectural
+  remedies in the catalogue were consequently installed from outside
+  the firm.
+
+One system is not a result about institutions in general. A
+cross-system view in the style of
+`knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md`
+is worth building once a second system has been worked to the same
+depth.

@@ -81,6 +81,14 @@ slow rules, and produce institutions with the form but not the
 function — is documented as isomorphic mimicry [Andrews2017;
 MeyerRowan1977].
 
+## Both patterns in one system
+
+The corporation exhibits both, and the catalogue had recorded the
+second before it had a name: the causal factor for UCA-C2 is that the
+incentive structure's time horizon is shorter than that of the
+decisions being made. Worked through in
+`knowledge/system-catalogues/social-systems/corporation/change-loop-analysis.md`.
+
 ## Why these two
 
 They correspond to the two ways a change loop can fail while the

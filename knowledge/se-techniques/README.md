@@ -19,6 +19,7 @@ analysing systems. Each technique has its own folder with:
 | STPA — System-Theoretic Process Analysis | `stpa/` |
 | Control structures | `control-structures/` |
 | Justificatory rungs (extension to STPA for social systems) | `justification-rungs/` |
+| Change loops — whether a proposed change can reach the operating loop at all | `change-loops/` |
 | Linear algebra — spectral and factorisation methods on existing matrix-shaped artefacts | `linear-algebra/` |
 | Order theory and Formal Concept Analysis — qualitative-structural formalisation of posets, lattices, and incidence relations | `order-theory-and-fca/` |
 

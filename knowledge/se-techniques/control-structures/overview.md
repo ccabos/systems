@@ -49,6 +49,17 @@ commons regimes [Ostrom1990], or peer-production structures such as
 the catalogued Wikipedia case — fit the four-level shape only after
 some forcing, which is itself diagnostic.
 
+## The loop this technique does not model
+
+Everything on this page concerns the **operating loop**: the
+controllers, the process they steer, and the feedback that returns.
+It says nothing about the loop by which the structure itself is
+changed — where the controlled process is not the world but the
+system's own rules, and where the reformer usually does not hold the
+actuator. That is `../change-loops/`, and it is the technique to reach
+for once a remedy has been identified and the question becomes whether
+anyone can install it.
+
 ## The five diagnostic questions
 
 Every control structure can be interrogated with the same five

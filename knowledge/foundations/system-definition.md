@@ -61,6 +61,11 @@ below keeps them in separate columns.
 | **Connections** — in an organisation, its written rules | Moderate | High | System is restructured; behaviour shifts significantly |
 | **Goals** | High | Very high | System is transformed; what was there before is effectively a different system |
 
+The "effort to change" column is qualitative here. What stands behind
+it — who owns the lever, how long until the change takes force, how
+long until it shows, and who loses something — is the subject of
+`knowledge/se-techniques/change-loops/`.
+
 **Where the rules belong.** In an organisation the connections are
 not abstract. They are written down: a constitution, a career and
 tenure regime, a budget ordinance, signature-authority limits, an

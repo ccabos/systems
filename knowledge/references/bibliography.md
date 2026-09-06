@@ -354,6 +354,37 @@ the citation trail below is what makes that visible.
   *function*. An independently developed empirical treatment of what
   this project calls the claimed-rung vs operating-rung gap.
 
+[PressmanWildavsky1973]
+  Pressman, J.L. & Wildavsky, A. (1973). *Implementation: How Great
+  Expectations in Washington Are Dashed in Oakland*. University of
+  California Press. — The founding study of the gap between a
+  decision and its effect. Counts the *clearance points* a programme
+  must pass and the cumulative probability of passing all of them;
+  read here as an actuator inventory. See
+  `../se-techniques/change-loops/`.
+
+[Lipsky1980]
+  Lipsky, M. (1980). *Street-Level Bureaucracy: Dilemmas of the
+  Individual in Public Services*. Russell Sage Foundation. — Why the
+  last step in an implementation chain dominates: caseworkers,
+  inspectors and teachers exercise discretion under caseload
+  pressure, and the aggregate of that discretion is what the public
+  actually meets.
+
+[MazmanianSabatier1983]
+  Mazmanian, D.A. & Sabatier, P.A. (1983). *Implementation and Public
+  Policy*. Scott, Foresman. — The systematising treatment: the
+  conditions under which an implementation chain holds, including
+  problem tractability, the statute's structuring capacity, and the
+  stability of political support over time.
+
+[WilsonJQ1989]
+  Wilson, J.Q. (1989). *Bureaucracy: What Government Agencies Do and
+  Why They Do It*. Basic Books. — Agency behaviour from the inside:
+  where discretion sits, what the organisation rewards, and why
+  formal authority over an agency is not control of it. Not to be
+  confused with [Wilson1998] (E.O. Wilson, *Consilience*).
+
 ## 6. Organisational learning and information pathologies
 
 [TristBamforth1951]

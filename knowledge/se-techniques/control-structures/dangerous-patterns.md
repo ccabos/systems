@@ -189,7 +189,12 @@ cosmetic:
    circuit breaker.
 3. **The remedy must survive leadership change.** If the fix
    can be undone by the next executive, it is a policy, not a
-   structural remedy.
+   structural remedy. This is the protective half of a two-sided
+   problem: it defends a finished remedy against the next
+   controller. The diagnostic half — whether the current
+   controller can reach the remedy at all, and whether it will
+   still be in office when the effect arrives — is
+   `../change-loops/`.
 
 These preconditions apply to every worked remedy in
 `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`.

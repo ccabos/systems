@@ -36,4 +36,4 @@ agreement.
 
 | File | Thesis |
 |---|---|
-| `das-uhrwerk-der-organisation.md` | Organisations are run by their rule sets; leadership reaches them only indirectly, through changes to the mechanism itself. |
+| `das-uhrwerk-der-organisation.md` | Organisations are run by their written rules; leadership reaches them only indirectly, through changes to the mechanism itself. |

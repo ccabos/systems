@@ -46,12 +46,13 @@ upward. Top-down reform — imposing new goals before building the
 implementing infrastructure — is the recipe for failed states and
 failed methodology adoptions.
 
-"Bottom" here means the *rule sets* at the physical level — career
-and tenure regimes, independence rules, disclosure duties, pipeline
-gates — not the *instances* that occupy it. The distinction and why
-it matters are in `knowledge/foundations/system-definition.md`;
-changing instances (a new unit, new staff, a new tool) is the cheap
-half of the P level and moves little.
+"Bottom" here means the written *rules* at the physical level —
+career and tenure regimes, independence rules, disclosure duties,
+pipeline gates — not the *parts* that occupy it. A written rule is a
+connection in physical form, which is why changing one restructures
+the system; see `knowledge/foundations/system-definition.md`.
+Changing parts (a new unit, new staff, a new tool) is the cheap half
+of the P level and moves little.
 
 ## The coherence rule
 

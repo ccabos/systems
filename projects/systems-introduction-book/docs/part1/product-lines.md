@@ -47,7 +47,7 @@ Our analysis reveals a general principle: **reuse feasibility decreases as you m
 
 This gradient has a practical corollary: **start reform at the bottom.** Modernize physical implementations first (professional civil service, independent courts, transparent budgets), then work upward. Top-down reform — imposing new goals before building the implementing infrastructure — is the recipe for failed states and institutional collapse.
 
-The corollary is not an invitation to start with whatever is easiest. All three examples above are *rule sets* rather than *instances* in the sense of [Part I's replaceability hierarchy](what-is-a-system.md) — the expensive half of the physical level, and the half that carries the leverage. Reform that stays among instances (a new agency, new staff, a new portal) is cheap and fast and changes very little. Start at the bottom means start with the rules.
+The corollary is not an invitation to start with whatever is easiest. None of the three examples above is a *part*: each is a written rule, and a written rule is a connection in physical form (see [Part I's replaceability hierarchy](what-is-a-system.md)). They are the expensive half of the physical level and the half that carries the leverage. Reform that stays among the parts — a new agency, new staff, a new portal — is cheap and fast and changes very little. Start at the bottom means start with the rules.
 
 ### The Coherence Rule
 

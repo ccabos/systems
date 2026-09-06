@@ -248,15 +248,17 @@ des Essays haben dort ihre präzisen Entsprechungen:
 | Kennzahl schlägt Rede | Pattern 3 — Proxy Metric, Goodhart (`se-techniques/control-structures/dangerous-patterns.md`) |
 | Niemand kennt alle Stellschrauben | Pattern 2 — Self-Sealing Process Model; Ashbys Gesetz der erforderlichen Varietät (ebenda und `control-structures/overview.md`) |
 | Ankündigen, ohne das Werk anzufassen | *Isomorphic mimicry* (`system-catalogues/social-systems/cross-system/principles.md`) |
-| Das Werk ist zäh, obwohl es „nur" die unterste Ebene ist | Die Unterscheidung von *instances* und *rule sets* im physischen Level (`foundations/system-definition.md`) |
+| Das Werk ist zäh, obwohl es „nur" die unterste Ebene ist | Geschriebene Regeln sind Verbindungen in physischer Form, keine Teile (`foundations/system-definition.md`) |
 
 Die letzte Zeile ist aus diesem Essay entstanden, nicht umgekehrt: Der
 Widerspruch zwischen „die physische Ebene ist am leichtesten
-austauschbar" und „das Werk ist das Zäheste, was es gibt" führte zu der
-Feststellung, dass das P-Level zwei kategorial verschiedene Dinge
-enthält. Der Essay behauptet dabei selbst zu viel — nicht *die
-physische Ebene* ist zäh, sondern ihre Regelwerke. Die korrigierte
-Fassung steht in `knowledge/foundations/system-definition.md`.
+austauschbar" und „das Werk ist das Zäheste, was es gibt" führte zu
+der Feststellung, dass auf der physischen Ebene zwei kategorial
+verschiedene Dinge liegen: die Teile und die geschriebenen Regeln,
+und Letztere sind Verbindungen, keine Teile. Der Essay behauptet
+dabei selbst zu viel — nicht *die physische Ebene* ist zäh, sondern
+ihre Regeln. Die korrigierte Fassung steht in
+`knowledge/foundations/system-definition.md`.
 
 Was dem Projekt weiterhin fehlt und woran dieser Essay entlanglief: ein
 Modell der **Änderungsschleife** — wem eine Stellschraube gehört, wie

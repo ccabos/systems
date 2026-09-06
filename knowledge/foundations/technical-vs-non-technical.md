@@ -46,7 +46,7 @@ structure already exists in a form that maps onto G / R / F / L / P.
 Social systems — states, religions, corporations, families — were
 not designed in the same deliberate sense. Their goals are often
 implicit, their connections informal, and their boundaries contested.
-Three consequences follow, and they shape how the SE techniques are
+Four consequences follow, and they shape how the SE techniques are
 applied throughout this project:
 
 **1. The decomposition is reconstructive, not documentary.** For a
@@ -72,7 +72,20 @@ study [Selznick1949]. The STPA analysis (see
 `knowledge/se-techniques/stpa/`) targets unsafe control actions that
 arise from this split.
 
-**3. The boundary is contested.** For a technical system the owning
+**3. The parts have interests.** A component in a technical system
+does what it was built to do, or it fails in a way that can be
+diagnosed. The parts of a social system interpret what they are
+told, defend the scope they hold, and can comply with an instruction
+in form while defeating it in substance. Working to rule is the
+plain case: nothing is broken, every procedure is followed, and the
+output collapses. Two questions therefore have to be kept apart that
+in a technical system collapse into one — *is the structure being
+followed?* and *is the system doing its job?* A social system can be
+running exactly to specification and still miss its purpose
+entirely, which is why conformance evidence is never sufficient
+evidence of function here.
+
+**4. The boundary is contested.** For a technical system the owning
 organisation draws the boundary. For a social system the boundary
 itself is a political and interpretive act. Who counts as a member
 of a nation, a church, or a family is not a fact; it is a decision
@@ -105,6 +118,10 @@ Does *not* carry over:
   social systems, a single physical element (a parish priest) may
   perform many functions; a single function (doctrinal governance)
   may be distributed across many physical elements.
+- The assumption that a conforming part is a functioning part. In a
+  technical system, a component within specification is doing its
+  job. In a social system it may be following every rule and
+  defeating the purpose of all of them.
 - The assumption that the system is the unit of moral agency. In
   social systems, moral responsibility is always distributed across
   the structure, never fully located in any single part — this is

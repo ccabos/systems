@@ -2,7 +2,9 @@
 
 Extracted from `projects/systems-introduction-book/docs/part2/ten-systems.md`
 §2.1.1. IDs use the `K*` prefix as in the source, for unambiguous
-cross-system reference.
+cross-system reference. Sources for this folder: `sources.md` —
+including the scope note that this decomposition is a Weberian ideal
+type [Weber1922], not any single historical kingdom.
 
 ## Goals (KG)
 

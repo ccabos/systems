@@ -49,3 +49,16 @@ agent-skill/
 subset of the project's `knowledge/` tree, so `SKILL.md` can read
 everything it needs from inside the skill bundle. No filesystem
 access outside `agent-skill/` is required.
+
+**`reference/` is generated — do not edit it.** `knowledge/` stays the
+canonical source. Change the file there and regenerate:
+
+```bash
+python3 scripts/sync-agent-skill-reference.py
+```
+
+`--check` reports drift without writing, and CI runs it on every push
+and pull request. The bundled file set is the `MANIFEST` list in that
+script. `memo-template.md` and `report-template.md` are the exception:
+they belong to the skill and are edited in place. See
+[`reference/README.md`](reference/README.md).

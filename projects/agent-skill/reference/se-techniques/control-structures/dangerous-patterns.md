@@ -9,6 +9,15 @@ that the harmful state is no longer reachable. Patterns 1–3 are
 domain-general; Pattern 4 (Rung Asymmetry) applies specifically
 to social systems and is detailed in `../justification-rungs/`.
 
+None of the first three patterns is a discovery of this project.
+Each has a substantial literature of its own, cited per pattern
+below; what this page adds is only the uniform control-structure
+framing that lets the same remedy logic apply to all of them.
+The principle behind that remedy logic — design so that structure,
+not virtue, carries the load — is itself old: "ambition must be
+made to counteract ambition" [Madison1788]. (Citation keys resolve
+in `knowledge/references/bibliography.md`.)
+
 ## Pattern 1 — The Accountability Void
 
 **Symptom.** The controller and the interested party are the
@@ -28,6 +37,13 @@ authority — meaning budget, staffing, and decisional
 independence that do not flow through the actor being
 overseen. The separating body must also have the power to act
 on its findings, not merely to report them.
+
+**Literature.** The separation-of-powers argument in
+[Madison1788] is the constitutional-design original. Power's
+*The Audit Society* [Power1997] documents the failure mode of
+half-remedies: oversight bodies that formally exist but whose
+verification has become ritual — precisely the "cosmetic remedy"
+this page warns against under Remedy preconditions.
 
 ## Pattern 2 — The Self-Sealing Process Model
 
@@ -52,6 +68,18 @@ channel must be *direct* (no filtering intermediary) and
 *protected* (the reporter must not be punishable by the actor
 being reported on).
 
+**Literature.** The term *self-sealing* is Argyris and Schön's:
+their theory-in-use analysis shows how organisations protect
+their governing assumptions from disconfirmation, and why fixing
+it requires double-loop (assumption-revising) rather than
+single-loop (error-correcting) learning [ArgyrisSchon1978].
+Wilensky documented how hierarchy, specialisation, and
+centralisation each systematically distort upward information
+flow [Wilensky1967]; Janis described the small-group variant
+[Janis1972]; Vaughan's Challenger study is the canonical field
+case of a process model drifting from reality one accepted
+anomaly at a time [Vaughan1996].
+
 ## Pattern 3 — The Proxy Metric
 
 **Symptom.** The system measures something that is correlated
@@ -73,6 +101,16 @@ Two structural defences work: (1) measure the goal directly
 even when it is more expensive to do so; (2) decouple the
 reward structure from the specific measure so that gaming the
 measure does not produce the reward.
+
+**Literature.** This pattern is known as Goodhart's law
+[Goodhart1975] and, independently and more generally, Campbell's
+law [Campbell1979]; Strathern's formulation — "when a measure
+becomes a target, it ceases to be a good measure" — is the one
+usually quoted [Strathern1997]. Muller catalogues contemporary
+cases and boundary conditions (metrics fail worst where judgment
+is displaced rather than informed) [Muller2018]. The second
+structural defence above is a direct application of Campbell's
+own recommendation to decouple indicators from consequences.
 
 ## Pattern 4 — Rung Asymmetry (social-systems extension)
 
@@ -103,6 +141,15 @@ studies; constitutional courts that can hear rung-3 evidence
 against rung-1 sovereign claims. Most of the canonical remedies in
 `knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`
 can be re-read as rung-elevation moves of this kind.
+
+**Literature.** The rung vocabulary is this project's, but the
+ingredients are established: Weber's authority types for rung 0–1
+[Weber1922], Habermasian discourse for rung 6 [Habermas1981], and
+Hirschman's *voice* for what the blocked upward channel carries
+[Hirschman1970]. The closest empirical treatment of the
+claimed/operating gap is "isomorphic mimicry" in state-capability
+research [Andrews2017]. See `../justification-rungs/references.md`
+for the full lineage.
 
 The pattern catalogue is complete only when this fourth pattern is
 included; without it, social-systems STPA misses the dominant

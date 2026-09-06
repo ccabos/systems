@@ -7,7 +7,16 @@ the founding worked example of the project.
 
 For the STPA analysis built on this decomposition (Steps 1–4,
 unsafe control actions, loss scenarios, and rung-tagged control
-structure) see `applied-se-analysis.md` in this folder.
+structure) see `applied-se-analysis.md` in this folder. Sources for
+this folder: `sources.md` — the goal set below follows the classical
+functional accounts: G3 is Durkheim's cohesion function
+[Durkheim1912], G1/G4 Berger's meaning-provision and theodicy
+functions [Berger1967], and R4's emergence from founder-charisma is
+Weber's routinisation [Weber1922].
+
+An interactive D3 explorer (graph + table view, with cross-level
+traceability highlighting) is published with the book at
+`projects/systems-introduction-book/docs/interactive/religion.html`.
 
 ## Goals (G)
 

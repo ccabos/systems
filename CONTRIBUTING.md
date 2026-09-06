@@ -19,6 +19,12 @@ Knowing which one you are editing is the single most important rule.
 - Allowed to be selective, narrative, and opinionated.
 - A project may reference or excerpt from `knowledge/`, but must not
   become the canonical home for any evidence.
+- One project copies from `knowledge/` rather than referencing it:
+  `agent-skill/reference/`, because the skill ships to claude.ai as a
+  self-contained bundle with no `knowledge/` to read. Those copies are
+  **generated, never edited** — change the file in `knowledge/` and run
+  `scripts/sync-agent-skill-reference.py`. CI fails on drift. Any future
+  bundle that needs the same treatment must be generated the same way.
 - Each project has its own `README.md` stating its audience, scope,
   and out-of-scope.
 - The `projects/systems-introduction-book/` project publishes a static

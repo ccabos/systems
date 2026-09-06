@@ -46,7 +46,6 @@ Derived artefacts:
 - `essays/` — narrative pieces arguing a single idea for a general
   reader. Not an evidence source; the folder is also the one place
   where German-language text is allowed.
-- `textbook/` — placeholder for a future derived textbook.
 
 ## The book
 

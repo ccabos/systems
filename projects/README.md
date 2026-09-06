@@ -9,7 +9,6 @@ independent project with its own audience, scope, and release cadence.
 | `problems/` | Problem-driven application area. One folder per concrete problem; each folder must contain a `problem.md` describing the problem clearly at its root. |
 | `agent-skill/` | A Claude Agent skill that facilitates applying SE techniques to a new non-technical system or problem. |
 | `essays/` | Narrative pieces arguing one idea for a general reader. Not an evidence source. May be written in German. |
-| `textbook/` | (Placeholder) A future derived textbook. |
 
 ## Rule of thumb
 

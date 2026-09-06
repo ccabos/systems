@@ -22,7 +22,7 @@ comparison matrices, bibliography) see the repository-level
   `knowledge/`.
 
 Out of scope: the problem-driven projects, the AI agent skill, and the
-textbook — each lives in its own sibling directory under `projects/`.
+essays — each lives in its own sibling directory under `projects/`.
 
 ## Build
 

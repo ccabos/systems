@@ -73,6 +73,8 @@ The full thirteen-remedy table with detailed deltas is in [`knowledge/system-cat
 
 This is the canonical architectural pattern for repairing **Pattern A — Asymmetric Loop** in the social-systems catalogue. It is the unifying idea behind the apparently disparate reforms above.
 
+Each of these remedies had to be installed by somebody, and in twelve of the thirteen cases that somebody sat outside the institution being repaired. [Installing the Remedy](change-loops.md) asks the actuator question of this chapter's own material.
+
 ## Sources
 
 The general architecture — institutionalising *voice* so corrective information can flow against the hierarchy — is Hirschman's (*Exit, Voice, and Loyalty*, 1970). The evidence for individual remedies is assessed in the knowledge base with the scholarly literature attached: Coates (*JEP*, 2007) on what can and cannot be attributed to Sarbanes–Oxley; Jäger, Schoefer & Heining (*QJE*, 2021) on co-determination's modest measured effects; the Open Science Collaboration (2015) and Nosek et al. (2018) on pre-registration; the Australian Royal Commission's final report (2017) on mandatory reporting. See [`knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md`](https://github.com/ccabos/systems/blob/main/knowledge/system-catalogues/social-systems/cross-system/remedies-case-studies.md) for the per-remedy citations and the tempering notes on evidence strength.

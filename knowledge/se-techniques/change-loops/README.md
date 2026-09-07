@@ -10,8 +10,11 @@ institution's own rules.
 - `dangerous-patterns.md` — the two recurring patterns behind changes that never arrive
 - `references.md` — sources
 
-Applied to one catalogued system in
-`knowledge/system-catalogues/social-systems/corporation/change-loop-analysis.md`.
+Applied in
+`knowledge/system-catalogues/social-systems/corporation/change-loop-analysis.md`
+(full lever inventory for one system) and
+`knowledge/system-catalogues/social-systems/cross-system/change-loops-by-system.md`
+(the actuator of every catalogued remedy).
 
 For the loop this one acts on see `../control-structures/`. The
 distinction between an institution's parts and the written rules that

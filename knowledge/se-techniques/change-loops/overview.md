@@ -133,8 +133,13 @@ the two latencies, and resistance are what stand behind that column.
   remedies in the catalogue were consequently installed from outside
   the firm.
 
-One system is not a result about institutions in general. A
-cross-system view in the style of
-`knowledge/system-catalogues/social-systems/cross-system/control-structure-profiles.md`
-is worth building once a second system has been worked to the same
-depth.
+- `knowledge/system-catalogues/social-systems/cross-system/change-loops-by-system.md`
+  — the actuator of each of the thirteen catalogued remedies. Twelve
+  of the thirteen were installed from outside the control structure
+  they repair, and the thirteenth is the one recorded as partially
+  reversed.
+
+The actuator column generalises across the catalogue. The latency and
+resistance findings do not yet: only the corporation has a full lever
+inventory, and a second one is what would turn those into a result
+about institutions rather than about one system.
